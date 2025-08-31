@@ -5,7 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'Versions/**'
-      - '_site/**'     # optional: include if you want /latest updated automatically
+      - '_site/**'   # optional
 
 permissions:
   contents: read
@@ -15,17 +15,23 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    # ✅ This is the bit you're missing
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Prepare publish directory
         run: |
           mkdir -p public
-          # Copy all version folders so they sit at the site root as /v1.0, /v1.1, etc.
           rsync -av --delete "Versions/" "public/"
-
-          # Optional: also expose your current local build at /latest/
           if [ -d "_site" ]; then
             mkdir -p public/latest
             rsync -av --delete "_site/" "public/latest/"
@@ -37,4 +43,5 @@ jobs:
           path: public
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
