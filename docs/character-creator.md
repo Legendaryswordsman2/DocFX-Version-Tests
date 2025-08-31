@@ -3,4 +3,4 @@ uid: character-creator
 ---
 
 # Character Creator
-123
+THIS IS THE CHARACTER CREATOR

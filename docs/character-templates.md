@@ -3,7 +3,7 @@ uid: character-templates
 ---
 
 # Character Templates
-
+TEMPLATES
 A **Character Template** is a blueprint for creating characters from a defined **Character Type**.  
 They provide an easy way to use characters anywhere in your project.
 
