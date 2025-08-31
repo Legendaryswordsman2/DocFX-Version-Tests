@@ -1,32 +1,114 @@
-name: Deploy DocFX _site to GitHub Pages
+name: Deploy versioned docs to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]        # change if your default branch is different
+    paths:
+      - 'Versions/**'         # ONLY redeploy if something under Versions/ changed
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch: {}        # allow manual runs
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # Required for write access to the repository
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Check if _site or docfx.json changed
-        id: check_changes
+      - name: Prepare dist folder
         run: |
-          if git diff --quiet HEAD^ HEAD -- _site docfx.json; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
+          set -e
+          rm -rf dist
+          mkdir -p dist
+          cp -R Versions dist/Versions
+          # Optional: publish your dev build under /wip/
+          if [ -d "_site" ]; then
+            cp -R _site dist/wip
           fi
 
-      - name: Deploy _site folder
-        if: steps.check_changes.outputs.changed == 'true'
-        uses: peaceiris/actions-gh-pages@v4
+          # Create .nojekyll so GitHub Pages serves folders starting with underscores
+          touch dist/.nojekyll
+
+      - name: Generate versions.json and landing + latest redirect
+        shell: bash
+        run: |
+          set -e
+          mkdir -p dist
+          # Gather version folder names, sorted descending (V1.2 before V1.1)
+          mapfile -t vers < <(ls -1 dist/Versions | grep -E '^V' | sort -Vr)
+          # Write versions.json as ["V1.2","V1.1",...]
+          node -e 'const fs=require("fs");const d="dist/Versions";const v=fs.readdirSync(d).filter(x=>/^V/.test(x)).sort((a,b)=>b.localeCompare(a,undefined,{numeric:true}));fs.writeFileSync("dist/versions.json",JSON.stringify(v,null,2));'
+
+          # Create /latest (JS redirect to newest version)
+          if [ ${#vers[@]} -gt 0 ]; then
+            latest="${vers[0]}"
+            mkdir -p dist/latest
+            cat > dist/latest/index.html <<HTML
+<!doctype html><meta charset="utf-8">
+<title>Redirecting…</title>
+<meta http-equiv="refresh" content="0; url=/Versions/${latest}/">
+<script>location.replace("/Versions/${latest}/");</script>
+<p><a href="/Versions/${latest}/">Continue to ${latest}</a></p>
+HTML
+          fi
+
+          # Create minimal root landing with a dropdown version switcher
+          cat > dist/index.html <<'HTML'
+<!doctype html><meta charset="utf-8">
+<title>BlazerTech CMS Docs</title>
+<style>
+  body{font:16px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:40px}
+  .wrap{max-width:720px}
+  select{font:inherit}
+  .note{opacity:.7}
+</style>
+<div class="wrap">
+  <h1>BlazerTech Character Management System — Documentation</h1>
+  <p class="note">Choose a version below. <a href="./latest/">Latest</a> always points to the newest stable.</p>
+  <label>Version: <select id="ver"></select></label>
+  <p><a href="./wip/">Work in Progress</a> (if available)</p>
+  <script>
+    (async ()=>{
+      try{
+        const res = await fetch('./versions.json');
+        const vers = await res.json();
+        const sel = document.getElementById('ver');
+        vers.forEach(v=>{
+          const o=document.createElement('option');
+          o.value=v; o.text=v; sel.appendChild(o);
+        });
+        sel.onchange = ()=> location.href = './Versions/'+sel.value+'/';
+      }catch(e){
+        document.body.insertAdjacentHTML('beforeend','<p>Could not load versions.</p>');
+      }
+    })();
+  </script>
+</div>
+HTML
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          path: dist
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
