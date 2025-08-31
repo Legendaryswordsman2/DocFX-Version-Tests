@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Character Types | BlazerTech Character Management System </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Character Types | BlazerTech Character Management System ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Legendaryswordsman2/BT-Character-Management-System-Docs/blob/main/docs/character-types.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="BlazerTech Character Management System">
+            BlazerTech Character Management System
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="character-types">
+<h1 id="character-types">Character Types</h1>
+
+<p>Character types are <a href="https://docs.unity3d.com/6000.0/Documentation/Manual/class-ScriptableObject.html">Scriptable Objects</a> that define core aspects of a character. They are the heart of the <strong>Character Management System</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>All characters <strong>Require</strong> a <strong>Character Type</strong>.</p>
+</div>
+<hr>
+<h2 id="character-type-base">Character Type Base</h2>
+<p>All Character Types inherit from <a class="xref" href="../api/BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html">CharacterTypeBaseSO</a>, which contains the core properties shared across all Character Types.</p>
+<h3 id="core-character-type-properties">Core Character Type Properties</h3>
+<p>The following properties are shared across all character types.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="character-type-fields.html#charactertypeid">CharacterTypeID</a></strong></td>
+<td>String</td>
+<td>A <strong>unique</strong> identifer</td>
+</tr>
+<tr>
+<td><strong><a href="character-type-fields.html#basespritesheet">BaseSpritesheet</a></strong></td>
+<td>Sprite</td>
+<td>The default character spritesheet</td>
+</tr>
+<tr>
+<td><strong><a href="character-type-fields.html#charactercontroller">CharacterController</a></strong></td>
+<td>RuntimeAnimatorController</td>
+<td>The Animator Controller used</td>
+</tr>
+</tbody>
+</table>
+<p><a class="xref" href="character-type-fields.html">🔗 Read More → Character Type Properties</a></p>
+<hr>
+<h2 id="character-type-variants">Character Type Variants</h2>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Modularity</th>
+<th>Runtime Customization</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unified</strong></td>
+<td>Single spritesheet</td>
+<td>None</td>
+<td>Pre-created, fixed characters</td>
+</tr>
+<tr>
+<td><strong>Layered</strong></td>
+<td>Layered spritesheets</td>
+<td>High</td>
+<td>Modular, editable characters</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="1-unified-character-type">1. Unified Character Type</h3>
+<p>Each character uses a single spritesheet containing the fully assembled character. No runtime customization is possible.</p>
+<ul>
+<li><strong>Use Case:</strong> Characters with fixed, pre-created appearances.</li>
+<li><strong>Example:</strong> Simplistic characters where their appearance is pre-determined and won't need to be changed.</li>
+</ul>
+<p><a href="unified-character-type.html">🔗 Read More → Unified Character Type</a></p>
+<hr>
+<h3 id="2-layered-character-type">2. Layered Character Type</h3>
+<p>A set of separate spritesheets, each containing one visual layer of the character.</p>
+<ul>
+<li><strong>Use Case:</strong> Customizable player characters or dynamically generated NPCs.</li>
+<li><strong>Example:</strong> Body, Outfit, Hairstyle, Accessory.</li>
+</ul>
+<p><a href="layered-character-type.html">🔗 Read More → Layered Character Type</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Legendaryswordsman2/BT-Character-Management-System-Docs/blob/main/docs/character-types.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
