@@ -3,8 +3,6 @@ name: Deploy versioned docs to GitHub Pages
 on:
   push:
     branches: [ main ]
-    # paths:
-    #   - 'Versions/**'   # only redeploy when finished builds change
 
 permissions:
   contents: read
@@ -15,7 +13,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    # Required by actions/deploy-pages
+    # ✅ This is the bit you're missing
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -27,40 +25,10 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare publish directory (use newest folder in Versions as root)
+      - name: Prepare publish directory
         run: |
-          set -euo pipefail
-
-          if [ ! -d "Versions" ]; then
-            echo "::error::No Versions directory found. Create Versions/vX.Y/ and put your built DocFX _site contents there."
-            exit 1
-          fi
-
-          # Create output dir
-          rm -rf public
           mkdir -p public
-
-          # 1) Copy ALL versions so they’re browsable at /v1.0, /v1.1, etc.
           rsync -av --delete "Versions/" "public/"
-
-          # 2) Detect the newest version folder by semver-ish sort (v1.0 < v1.1 < v1.2 ...)
-          mapfile -t version_dirs < <(ls -1d Versions/*/ 2>/dev/null | sed 's:/$::' | xargs -n1 basename | sort -V)
-          if [ "${#version_dirs[@]}" -eq 0 ]; then
-            echo "::error::No version folders inside Versions/. Each version should be a subfolder (e.g., Versions/v1.0/)."
-            exit 1
-          fi
-          latest="${version_dirs[-1]}"
-          echo "Latest version detected: $latest"
-
-          # 3) Make the newest version available at site root (/)
-          rsync -av --delete "Versions/$latest/" "public/"
-
-          # 4) Also expose it as /latest/ for a stable pointer
-          mkdir -p "public/latest"
-          rsync -av --delete "Versions/$latest/" "public/latest/"
-
-          # 5) GitHub Pages: disable Jekyll so files with underscores are served
-          touch public/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
