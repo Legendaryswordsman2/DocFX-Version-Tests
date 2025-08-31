@@ -1,0 +1,35 @@
+<!doctype html><meta charset="utf-8">
+<title>BlazerTech CMS Docs</title>
+<style>
+  body{font:16px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:40px}
+  .wrap{max-width:720px}
+  select{font:inherit}
+  .note{opacity:.7}
+</style>
+<div class="wrap">
+  <h1>BlazerTech Character Management System — Documentation</h1>
+  <p class="note">Pick a version below. <a href="./latest/">Latest</a> points to the newest stable.</p>
+  <label>Version:
+    <select id="ver">
+      <!-- Keep this list in sync with your Versions folder names -->
+      <!-- Example: -->
+      <!-- <option value="V1.1">V1.1</option> -->
+      <!-- <option value="V1.0">V1.0</option> -->
+    </select>
+  </label>
+
+  <script>
+    // If you’d rather not maintain the list above manually, you can replace this
+    // with a static JSON you keep in PagesRoot/versions.json and fetch it here.
+    // For now, this just navigates to /Versions/<selected>/
+    document.addEventListener('change', e=>{
+      if(e.target && e.target.id==='ver' && e.target.value){
+        location.href = './Versions/'+ e.target.value +'/';
+      }
+    });
+  </script>
+
+  <p style="margin-top:1rem;opacity:.7">
+    Tip: add options to the dropdown that match your folder names under <code>/Versions</code>.
+  </p>
+</div>
