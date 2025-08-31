@@ -1,0 +1,266 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay
+  commentId: T:BlazerTech.CharacterManagement.CharacterCreator.CCMRelay
+  id: CCMRelay
+  parent: BlazerTech.CharacterManagement.CharacterCreator
+  children:
+  - BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.CloseMenu
+  - BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.OpenCharacterCreationMenuWithSingleCharacter(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  - BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.SaveCharacter
+  langs:
+  - csharp
+  - vb
+  name: CCMRelay
+  nameWithType: CCMRelay
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/CCMRelay.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CCMRelay
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/CCMRelay.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: >-
+      [DisallowMultipleComponent]
+
+      public class CCMRelay : MonoBehaviour
+    content.vb: >-
+      <DisallowMultipleComponent>
+
+      Public Class CCMRelay Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  attributes:
+  - type: UnityEngine.DisallowMultipleComponent
+    ctor: UnityEngine.DisallowMultipleComponent.#ctor
+    arguments: []
+- uid: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.OpenCharacterCreationMenuWithSingleCharacter(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  commentId: M:BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.OpenCharacterCreationMenuWithSingleCharacter(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  id: OpenCharacterCreationMenuWithSingleCharacter(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  parent: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay
+  langs:
+  - csharp
+  - vb
+  name: OpenCharacterCreationMenuWithSingleCharacter(LayeredCharacterTypeSO)
+  nameWithType: CCMRelay.OpenCharacterCreationMenuWithSingleCharacter(LayeredCharacterTypeSO)
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.OpenCharacterCreationMenuWithSingleCharacter(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/CCMRelay.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: OpenCharacterCreationMenuWithSingleCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/CCMRelay.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: public void OpenCharacterCreationMenuWithSingleCharacter(LayeredCharacterTypeSO characterType)
+    parameters:
+    - id: characterType
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    content.vb: Public Sub OpenCharacterCreationMenuWithSingleCharacter(characterType As LayeredCharacterTypeSO)
+  overload: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.OpenCharacterCreationMenuWithSingleCharacter*
+- uid: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.SaveCharacter
+  commentId: M:BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.SaveCharacter
+  id: SaveCharacter
+  parent: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay
+  langs:
+  - csharp
+  - vb
+  name: SaveCharacter()
+  nameWithType: CCMRelay.SaveCharacter()
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.SaveCharacter()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/CCMRelay.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SaveCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/CCMRelay.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: public void SaveCharacter()
+    content.vb: Public Sub SaveCharacter()
+  overload: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.SaveCharacter*
+- uid: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.CloseMenu
+  commentId: M:BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.CloseMenu
+  id: CloseMenu
+  parent: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay
+  langs:
+  - csharp
+  - vb
+  name: CloseMenu()
+  nameWithType: CCMRelay.CloseMenu()
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.CloseMenu()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/CCMRelay.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CloseMenu
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/CCMRelay.cs
+    startLine: 37
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: public void CloseMenu()
+    content.vb: Public Sub CloseMenu()
+  overload: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.CloseMenu*
+references:
+- uid: BlazerTech.CharacterManagement.CharacterCreator
+  commentId: N:BlazerTech.CharacterManagement.CharacterCreator
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.CharacterCreator
+  nameWithType: BlazerTech.CharacterManagement.CharacterCreator
+  fullName: BlazerTech.CharacterManagement.CharacterCreator
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.OpenCharacterCreationMenuWithSingleCharacter*
+  commentId: Overload:BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.OpenCharacterCreationMenuWithSingleCharacter
+  href: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.html#BlazerTech_CharacterManagement_CharacterCreator_CCMRelay_OpenCharacterCreationMenuWithSingleCharacter_BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_
+  name: OpenCharacterCreationMenuWithSingleCharacter
+  nameWithType: CCMRelay.OpenCharacterCreationMenuWithSingleCharacter
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.OpenCharacterCreationMenuWithSingleCharacter
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html
+  name: LayeredCharacterTypeSO
+  nameWithType: LayeredCharacterTypeSO
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.SaveCharacter*
+  commentId: Overload:BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.SaveCharacter
+  href: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.html#BlazerTech_CharacterManagement_CharacterCreator_CCMRelay_SaveCharacter
+  name: SaveCharacter
+  nameWithType: CCMRelay.SaveCharacter
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.SaveCharacter
+- uid: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.CloseMenu*
+  commentId: Overload:BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.CloseMenu
+  href: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.html#BlazerTech_CharacterManagement_CharacterCreator_CCMRelay_CloseMenu
+  name: CloseMenu
+  nameWithType: CCMRelay.CloseMenu
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.CCMRelay.CloseMenu

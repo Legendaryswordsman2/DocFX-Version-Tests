@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Editor.Inspectors
+  commentId: N:BlazerTech.CharacterManagement.Editor.Inspectors
+  id: BlazerTech.CharacterManagement.Editor.Inspectors
+  children:
+  - BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor
+  langs:
+  - csharp
+  - vb
+  name: BlazerTech.CharacterManagement.Editor.Inspectors
+  nameWithType: BlazerTech.CharacterManagement.Editor.Inspectors
+  fullName: BlazerTech.CharacterManagement.Editor.Inspectors
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp-Editor
+references:
+- uid: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor
+  commentId: T:BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor
+  href: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor.html
+  name: CharacterTypeSOEditor
+  nameWithType: CharacterTypeSOEditor
+  fullName: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor

@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer
+  id: CharacterPieceDefinition.LoadedSpriteDataContainer
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO,UnityEngine.Sprite,System.String)
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.DisplayName
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.GetAndCreateCharacterPreview
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.Spritesheet
+  langs:
+  - csharp
+  - vb
+  name: CharacterPieceDefinition.LoadedSpriteDataContainer
+  nameWithType: CharacterPieceDefinition.LoadedSpriteDataContainer
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadedSpriteDataContainer
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+    startLine: 217
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public class CharacterPieceDefinition.LoadedSpriteDataContainer
+    content.vb: Public Class CharacterPieceDefinition.LoadedSpriteDataContainer
+  inheritance:
+  - System.Object
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.Spritesheet
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.Spritesheet
+  id: Spritesheet
+  parent: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer
+  langs:
+  - csharp
+  - vb
+  name: Spritesheet
+  nameWithType: CharacterPieceDefinition.LoadedSpriteDataContainer.Spritesheet
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.Spritesheet
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Spritesheet
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+    startLine: 221
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public readonly Sprite Spritesheet
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public ReadOnly Spritesheet As Sprite
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.DisplayName
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.DisplayName
+  id: DisplayName
+  parent: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer
+  langs:
+  - csharp
+  - vb
+  name: DisplayName
+  nameWithType: CharacterPieceDefinition.LoadedSpriteDataContainer.DisplayName
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.DisplayName
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: DisplayName
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+    startLine: 222
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public readonly string DisplayName
+    return:
+      type: System.String
+    content.vb: Public ReadOnly DisplayName As String
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO,UnityEngine.Sprite,System.String)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO,UnityEngine.Sprite,System.String)
+  id: '#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO,UnityEngine.Sprite,System.String)'
+  parent: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer
+  langs:
+  - csharp
+  - vb
+  name: LoadedSpriteDataContainer(LayeredCharacterTypeSO, Sprite, string)
+  nameWithType: CharacterPieceDefinition.LoadedSpriteDataContainer.LoadedSpriteDataContainer(LayeredCharacterTypeSO, Sprite, string)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.LoadedSpriteDataContainer(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO, UnityEngine.Sprite, string)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+    startLine: 225
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public LoadedSpriteDataContainer(LayeredCharacterTypeSO characterTypeSO, Sprite spritesheet, string displayName)
+    parameters:
+    - id: characterTypeSO
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    - id: spritesheet
+      type: UnityEngine.Sprite
+    - id: displayName
+      type: System.String
+    content.vb: Public Sub New(characterTypeSO As LayeredCharacterTypeSO, spritesheet As Sprite, displayName As String)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.#ctor*
+  nameWithType.vb: CharacterPieceDefinition.LoadedSpriteDataContainer.New(LayeredCharacterTypeSO, Sprite, String)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.New(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO, UnityEngine.Sprite, String)
+  name.vb: New(LayeredCharacterTypeSO, Sprite, String)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.GetAndCreateCharacterPreview
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.GetAndCreateCharacterPreview
+  id: GetAndCreateCharacterPreview
+  parent: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer
+  langs:
+  - csharp
+  - vb
+  name: GetAndCreateCharacterPreview()
+  nameWithType: CharacterPieceDefinition.LoadedSpriteDataContainer.GetAndCreateCharacterPreview()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.GetAndCreateCharacterPreview()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GetAndCreateCharacterPreview
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+    startLine: 237
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  summary: Get the created character preview and create a new one if one does not already exist.
+  example: []
+  syntax:
+    content: public Sprite GetAndCreateCharacterPreview()
+    return:
+      type: UnityEngine.Sprite
+      description: The generated character preview sprite
+    content.vb: Public Function GetAndCreateCharacterPreview() As Sprite
+  overload: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.GetAndCreateCharacterPreview*
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Sprite
+  commentId: T:UnityEngine.Sprite
+  parent: UnityEngine
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: UnityEngine.Sprite
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.#ctor*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.#ctor
+  href: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.html#BlazerTech_CharacterManagement_Characters_CharacterPieceDefinition_LoadedSpriteDataContainer__ctor_BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_UnityEngine_Sprite_System_String_
+  name: LoadedSpriteDataContainer
+  nameWithType: CharacterPieceDefinition.LoadedSpriteDataContainer.LoadedSpriteDataContainer
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.LoadedSpriteDataContainer
+  nameWithType.vb: CharacterPieceDefinition.LoadedSpriteDataContainer.New
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.New
+  name.vb: New
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html
+  name: LayeredCharacterTypeSO
+  nameWithType: LayeredCharacterTypeSO
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.GetAndCreateCharacterPreview*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.GetAndCreateCharacterPreview
+  href: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.html#BlazerTech_CharacterManagement_Characters_CharacterPieceDefinition_LoadedSpriteDataContainer_GetAndCreateCharacterPreview
+  name: GetAndCreateCharacterPreview
+  nameWithType: CharacterPieceDefinition.LoadedSpriteDataContainer.GetAndCreateCharacterPreview
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.LoadedSpriteDataContainer.GetAndCreateCharacterPreview

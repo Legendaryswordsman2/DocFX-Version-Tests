@@ -1,0 +1,477 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  commentId: T:BlazerTech.CharacterManagement.Components.CharacterAnimator
+  id: CharacterAnimator
+  parent: BlazerTech.CharacterManagement.Components
+  children:
+  - BlazerTech.CharacterManagement.Components.CharacterAnimator.Animator
+  - BlazerTech.CharacterManagement.Components.CharacterAnimator.ForceDirection(BlazerTech.CharacterManagement.Essentials.Direction)
+  - BlazerTech.CharacterManagement.Components.CharacterAnimator.GetCurrentAnimationNormalizedTime
+  - BlazerTech.CharacterManagement.Components.CharacterAnimator.GetParamaterInfo(System.String)
+  - BlazerTech.CharacterManagement.Components.CharacterAnimator.Instance
+  - BlazerTech.CharacterManagement.Components.CharacterAnimator.PlayAnimation(System.String)
+  - BlazerTech.CharacterManagement.Components.CharacterAnimator.RestartCurrentAnimation
+  - BlazerTech.CharacterManagement.Components.CharacterAnimator.SetTrigger(System.String)
+  langs:
+  - csharp
+  - vb
+  name: CharacterAnimator
+  nameWithType: CharacterAnimator
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterAnimator
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: 'public class CharacterAnimator : MonoBehaviour'
+    content.vb: Public Class CharacterAnimator Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.Instance
+  commentId: F:BlazerTech.CharacterManagement.Components.CharacterAnimator.Instance
+  id: Instance
+  parent: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: CharacterAnimator.Instance
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.Instance
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Instance
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: public static CharacterAnimator Instance
+    return:
+      type: BlazerTech.CharacterManagement.Components.CharacterAnimator
+    content.vb: Public Shared Instance As CharacterAnimator
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.Animator
+  commentId: P:BlazerTech.CharacterManagement.Components.CharacterAnimator.Animator
+  id: Animator
+  parent: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  langs:
+  - csharp
+  - vb
+  name: Animator
+  nameWithType: CharacterAnimator.Animator
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.Animator
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Animator
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: public Animator Animator { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Animator
+    content.vb: Public ReadOnly Property Animator As Animator
+  overload: BlazerTech.CharacterManagement.Components.CharacterAnimator.Animator*
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.ForceDirection(BlazerTech.CharacterManagement.Essentials.Direction)
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterAnimator.ForceDirection(BlazerTech.CharacterManagement.Essentials.Direction)
+  id: ForceDirection(BlazerTech.CharacterManagement.Essentials.Direction)
+  parent: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  langs:
+  - csharp
+  - vb
+  name: ForceDirection(Direction)
+  nameWithType: CharacterAnimator.ForceDirection(Direction)
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.ForceDirection(BlazerTech.CharacterManagement.Essentials.Direction)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: ForceDirection
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+    startLine: 40
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: public void ForceDirection(Direction newDirection)
+    parameters:
+    - id: newDirection
+      type: BlazerTech.CharacterManagement.Essentials.Direction
+    content.vb: Public Sub ForceDirection(newDirection As Direction)
+  overload: BlazerTech.CharacterManagement.Components.CharacterAnimator.ForceDirection*
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.PlayAnimation(System.String)
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterAnimator.PlayAnimation(System.String)
+  id: PlayAnimation(System.String)
+  parent: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  langs:
+  - csharp
+  - vb
+  name: PlayAnimation(string)
+  nameWithType: CharacterAnimator.PlayAnimation(string)
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.PlayAnimation(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: PlayAnimation
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+    startLine: 63
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: public void PlayAnimation(string name)
+    parameters:
+    - id: name
+      type: System.String
+    content.vb: Public Sub PlayAnimation(name As String)
+  overload: BlazerTech.CharacterManagement.Components.CharacterAnimator.PlayAnimation*
+  nameWithType.vb: CharacterAnimator.PlayAnimation(String)
+  fullName.vb: BlazerTech.CharacterManagement.Components.CharacterAnimator.PlayAnimation(String)
+  name.vb: PlayAnimation(String)
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.SetTrigger(System.String)
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterAnimator.SetTrigger(System.String)
+  id: SetTrigger(System.String)
+  parent: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  langs:
+  - csharp
+  - vb
+  name: SetTrigger(string)
+  nameWithType: CharacterAnimator.SetTrigger(string)
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.SetTrigger(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SetTrigger
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+    startLine: 68
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: public void SetTrigger(string name)
+    parameters:
+    - id: name
+      type: System.String
+    content.vb: Public Sub SetTrigger(name As String)
+  overload: BlazerTech.CharacterManagement.Components.CharacterAnimator.SetTrigger*
+  nameWithType.vb: CharacterAnimator.SetTrigger(String)
+  fullName.vb: BlazerTech.CharacterManagement.Components.CharacterAnimator.SetTrigger(String)
+  name.vb: SetTrigger(String)
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.GetParamaterInfo(System.String)
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterAnimator.GetParamaterInfo(System.String)
+  id: GetParamaterInfo(System.String)
+  parent: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  langs:
+  - csharp
+  - vb
+  name: GetParamaterInfo(string)
+  nameWithType: CharacterAnimator.GetParamaterInfo(string)
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.GetParamaterInfo(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GetParamaterInfo
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+    startLine: 99
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: public float GetParamaterInfo(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Single
+    content.vb: Public Function GetParamaterInfo(name As String) As Single
+  overload: BlazerTech.CharacterManagement.Components.CharacterAnimator.GetParamaterInfo*
+  nameWithType.vb: CharacterAnimator.GetParamaterInfo(String)
+  fullName.vb: BlazerTech.CharacterManagement.Components.CharacterAnimator.GetParamaterInfo(String)
+  name.vb: GetParamaterInfo(String)
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.RestartCurrentAnimation
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterAnimator.RestartCurrentAnimation
+  id: RestartCurrentAnimation
+  parent: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  langs:
+  - csharp
+  - vb
+  name: RestartCurrentAnimation()
+  nameWithType: CharacterAnimator.RestartCurrentAnimation()
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.RestartCurrentAnimation()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: RestartCurrentAnimation
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+    startLine: 104
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: public void RestartCurrentAnimation()
+    content.vb: Public Sub RestartCurrentAnimation()
+  overload: BlazerTech.CharacterManagement.Components.CharacterAnimator.RestartCurrentAnimation*
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.GetCurrentAnimationNormalizedTime
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterAnimator.GetCurrentAnimationNormalizedTime
+  id: GetCurrentAnimationNormalizedTime
+  parent: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentAnimationNormalizedTime()
+  nameWithType: CharacterAnimator.GetCurrentAnimationNormalizedTime()
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.GetCurrentAnimationNormalizedTime()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GetCurrentAnimationNormalizedTime
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/CharacterAnimator.cs
+    startLine: 109
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: public float GetCurrentAnimationNormalizedTime()
+    return:
+      type: System.Single
+    content.vb: Public Function GetCurrentAnimationNormalizedTime() As Single
+  overload: BlazerTech.CharacterManagement.Components.CharacterAnimator.GetCurrentAnimationNormalizedTime*
+references:
+- uid: BlazerTech.CharacterManagement.Components
+  commentId: N:BlazerTech.CharacterManagement.Components
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Components
+  nameWithType: BlazerTech.CharacterManagement.Components
+  fullName: BlazerTech.CharacterManagement.Components
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Components
+    name: Components
+    href: BlazerTech.CharacterManagement.Components.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Components
+    name: Components
+    href: BlazerTech.CharacterManagement.Components.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  commentId: T:BlazerTech.CharacterManagement.Components.CharacterAnimator
+  parent: BlazerTech.CharacterManagement.Components
+  href: BlazerTech.CharacterManagement.Components.CharacterAnimator.html
+  name: CharacterAnimator
+  nameWithType: CharacterAnimator
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.Animator*
+  commentId: Overload:BlazerTech.CharacterManagement.Components.CharacterAnimator.Animator
+  href: BlazerTech.CharacterManagement.Components.CharacterAnimator.html#BlazerTech_CharacterManagement_Components_CharacterAnimator_Animator
+  name: Animator
+  nameWithType: CharacterAnimator.Animator
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.Animator
+- uid: UnityEngine.Animator
+  commentId: T:UnityEngine.Animator
+  parent: UnityEngine
+  isExternal: true
+  name: Animator
+  nameWithType: Animator
+  fullName: UnityEngine.Animator
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.ForceDirection*
+  commentId: Overload:BlazerTech.CharacterManagement.Components.CharacterAnimator.ForceDirection
+  href: BlazerTech.CharacterManagement.Components.CharacterAnimator.html#BlazerTech_CharacterManagement_Components_CharacterAnimator_ForceDirection_BlazerTech_CharacterManagement_Essentials_Direction_
+  name: ForceDirection
+  nameWithType: CharacterAnimator.ForceDirection
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.ForceDirection
+- uid: BlazerTech.CharacterManagement.Essentials.Direction
+  commentId: T:BlazerTech.CharacterManagement.Essentials.Direction
+  parent: BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.CharacterManagement.Essentials.Direction.html
+  name: Direction
+  nameWithType: Direction
+  fullName: BlazerTech.CharacterManagement.Essentials.Direction
+- uid: BlazerTech.CharacterManagement.Essentials
+  commentId: N:BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Essentials
+  nameWithType: BlazerTech.CharacterManagement.Essentials
+  fullName: BlazerTech.CharacterManagement.Essentials
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.PlayAnimation*
+  commentId: Overload:BlazerTech.CharacterManagement.Components.CharacterAnimator.PlayAnimation
+  href: BlazerTech.CharacterManagement.Components.CharacterAnimator.html#BlazerTech_CharacterManagement_Components_CharacterAnimator_PlayAnimation_System_String_
+  name: PlayAnimation
+  nameWithType: CharacterAnimator.PlayAnimation
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.PlayAnimation
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.SetTrigger*
+  commentId: Overload:BlazerTech.CharacterManagement.Components.CharacterAnimator.SetTrigger
+  href: BlazerTech.CharacterManagement.Components.CharacterAnimator.html#BlazerTech_CharacterManagement_Components_CharacterAnimator_SetTrigger_System_String_
+  name: SetTrigger
+  nameWithType: CharacterAnimator.SetTrigger
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.SetTrigger
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.GetParamaterInfo*
+  commentId: Overload:BlazerTech.CharacterManagement.Components.CharacterAnimator.GetParamaterInfo
+  href: BlazerTech.CharacterManagement.Components.CharacterAnimator.html#BlazerTech_CharacterManagement_Components_CharacterAnimator_GetParamaterInfo_System_String_
+  name: GetParamaterInfo
+  nameWithType: CharacterAnimator.GetParamaterInfo
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.GetParamaterInfo
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.RestartCurrentAnimation*
+  commentId: Overload:BlazerTech.CharacterManagement.Components.CharacterAnimator.RestartCurrentAnimation
+  href: BlazerTech.CharacterManagement.Components.CharacterAnimator.html#BlazerTech_CharacterManagement_Components_CharacterAnimator_RestartCurrentAnimation
+  name: RestartCurrentAnimation
+  nameWithType: CharacterAnimator.RestartCurrentAnimation
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.RestartCurrentAnimation
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator.GetCurrentAnimationNormalizedTime*
+  commentId: Overload:BlazerTech.CharacterManagement.Components.CharacterAnimator.GetCurrentAnimationNormalizedTime
+  href: BlazerTech.CharacterManagement.Components.CharacterAnimator.html#BlazerTech_CharacterManagement_Components_CharacterAnimator_GetCurrentAnimationNormalizedTime
+  name: GetCurrentAnimationNormalizedTime
+  nameWithType: CharacterAnimator.GetCurrentAnimationNormalizedTime
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator.GetCurrentAnimationNormalizedTime

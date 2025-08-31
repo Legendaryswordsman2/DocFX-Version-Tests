@@ -1,0 +1,820 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  id: LayeredCharacterTypeSO
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync(System.Action{System.Single})
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorSettings
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterMaterial
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Initialize(UnityEngine.Material)
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInResourcesFolder_EditMode
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInitialized
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsValid
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Layers
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.ReleaseAllCharacterPieces
+  langs:
+  - csharp
+  - vb
+  name: LayeredCharacterTypeSO
+  nameWithType: LayeredCharacterTypeSO
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LayeredCharacterTypeSO
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: >-
+      [HelpURL("https://legendaryswordsman2.github.io/BT-Character-Management-System-Docs/api/BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html")]
+
+      [CreateAssetMenu(menuName = "BlazerTech Character Management System/Layered Character Type", fileName = "New Layered Character Type")]
+
+      public class LayeredCharacterTypeSO : CharacterTypeBaseSO, IValidatable
+    content.vb: >-
+      <HelpURL("https://legendaryswordsman2.github.io/BT-Character-Management-System-Docs/api/BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html")>
+
+      <CreateAssetMenu(menuName:="BlazerTech Character Management System/Layered Character Type", fileName:="New Layered Character Type")>
+
+      Public Class LayeredCharacterTypeSO Inherits CharacterTypeBaseSO Implements IValidatable
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  implements:
+  - BlazerTech.CharacterManagement.Essentials.IValidatable
+  inheritedMembers:
+  - BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterTypeID
+  - BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.BaseSpritesheet
+  - BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterController
+  - BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+  attributes:
+  - type: UnityEngine.HelpURLAttribute
+    ctor: UnityEngine.HelpURLAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: https://legendaryswordsman2.github.io/BT-Character-Management-System-Docs/api/BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: menuName
+      type: System.String
+      value: BlazerTech Character Management System/Layered Character Type
+    - name: fileName
+      type: System.String
+      value: New Layered Character Type
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorSettings
+  commentId: P:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorSettings
+  id: CharacterCreatorSettings
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  langs:
+  - csharp
+  - vb
+  name: CharacterCreatorSettings
+  nameWithType: LayeredCharacterTypeSO.CharacterCreatorSettings
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorSettings
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterCreatorSettings
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public LayeredCharacterTypeSO.CharacterCreatorConfig CharacterCreatorSettings { get; }
+    parameters: []
+    return:
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorConfig
+    content.vb: Public Property CharacterCreatorSettings As LayeredCharacterTypeSO.CharacterCreatorConfig
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorSettings*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Layers
+  commentId: P:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Layers
+  id: Layers
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  langs:
+  - csharp
+  - vb
+  name: Layers
+  nameWithType: LayeredCharacterTypeSO.Layers
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Layers
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Layers
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public List<CharacterLayerSO> Layers { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{BlazerTech.CharacterManagement.Characters.CharacterLayerSO}
+    content.vb: Public Property Layers As List(Of CharacterLayerSO)
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Layers*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterMaterial
+  commentId: P:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterMaterial
+  id: CharacterMaterial
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  langs:
+  - csharp
+  - vb
+  name: CharacterMaterial
+  nameWithType: LayeredCharacterTypeSO.CharacterMaterial
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterMaterial
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterMaterial
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public Material CharacterMaterial { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Material
+    content.vb: Public Property CharacterMaterial As Material
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterMaterial*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Initialize(UnityEngine.Material)
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Initialize(UnityEngine.Material)
+  id: Initialize(UnityEngine.Material)
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  langs:
+  - csharp
+  - vb
+  name: Initialize(Material)
+  nameWithType: LayeredCharacterTypeSO.Initialize(Material)
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Initialize(UnityEngine.Material)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Initialize
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public bool Initialize(Material characterMaterial)
+    parameters:
+    - id: characterMaterial
+      type: UnityEngine.Material
+    return:
+      type: System.Boolean
+    content.vb: Public Function Initialize(characterMaterial As Material) As Boolean
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Initialize*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsValid
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsValid
+  id: IsValid
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  langs:
+  - csharp
+  - vb
+  name: IsValid()
+  nameWithType: LayeredCharacterTypeSO.IsValid()
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsValid()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: IsValid
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+    startLine: 42
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  example: []
+  syntax:
+    content: public bool IsValid()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsValid() As Boolean
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsValid*
+  implements:
+  - BlazerTech.CharacterManagement.Essentials.IValidatable.IsValid
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync(System.Action{System.Single})
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync(System.Action{System.Single})
+  id: AcquireAllCharacterPiecesAsync(System.Action{System.Single})
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  langs:
+  - csharp
+  - vb
+  name: AcquireAllCharacterPiecesAsync(Action<float>)
+  nameWithType: LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync(Action<float>)
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync(System.Action<float>)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: AcquireAllCharacterPiecesAsync
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+    startLine: 62
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public Task AcquireAllCharacterPiecesAsync(Action<float> onProgress = null)
+    parameters:
+    - id: onProgress
+      type: System.Action{System.Single}
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function AcquireAllCharacterPiecesAsync(onProgress As Action(Of Single) = Nothing) As Task
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync*
+  nameWithType.vb: LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync(Action(Of Single))
+  fullName.vb: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync(System.Action(Of Single))
+  name.vb: AcquireAllCharacterPiecesAsync(Action(Of Single))
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.ReleaseAllCharacterPieces
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.ReleaseAllCharacterPieces
+  id: ReleaseAllCharacterPieces
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  langs:
+  - csharp
+  - vb
+  name: ReleaseAllCharacterPieces()
+  nameWithType: LayeredCharacterTypeSO.ReleaseAllCharacterPieces()
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.ReleaseAllCharacterPieces()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: ReleaseAllCharacterPieces
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+    startLine: 87
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public void ReleaseAllCharacterPieces()
+    content.vb: Public Sub ReleaseAllCharacterPieces()
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.ReleaseAllCharacterPieces*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInitialized
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInitialized
+  id: IsInitialized
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  langs:
+  - csharp
+  - vb
+  name: IsInitialized()
+  nameWithType: LayeredCharacterTypeSO.IsInitialized()
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInitialized()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: IsInitialized
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+    startLine: 97
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public bool IsInitialized()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsInitialized() As Boolean
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInitialized*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInResourcesFolder_EditMode
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInResourcesFolder_EditMode
+  id: IsInResourcesFolder_EditMode
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  langs:
+  - csharp
+  - vb
+  name: IsInResourcesFolder_EditMode()
+  nameWithType: LayeredCharacterTypeSO.IsInResourcesFolder_EditMode()
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInResourcesFolder_EditMode()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: IsInResourcesFolder_EditMode
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/LayeredCharacterTypeSO.cs
+    startLine: 113
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public bool IsInResourcesFolder_EditMode()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsInResourcesFolder_EditMode() As Boolean
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInResourcesFolder_EditMode*
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html
+  name: CharacterTypeBaseSO
+  nameWithType: CharacterTypeBaseSO
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+- uid: BlazerTech.CharacterManagement.Essentials.IValidatable
+  commentId: T:BlazerTech.CharacterManagement.Essentials.IValidatable
+  parent: BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.CharacterManagement.Essentials.IValidatable.html
+  name: IValidatable
+  nameWithType: IValidatable
+  fullName: BlazerTech.CharacterManagement.Essentials.IValidatable
+- uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterTypeID
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterTypeID
+  parent: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_CharacterTypeID
+  name: CharacterTypeID
+  nameWithType: CharacterTypeBaseSO.CharacterTypeID
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterTypeID
+- uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.BaseSpritesheet
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.BaseSpritesheet
+  parent: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_BaseSpritesheet
+  name: BaseSpritesheet
+  nameWithType: CharacterTypeBaseSO.BaseSpritesheet
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.BaseSpritesheet
+- uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterController
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterController
+  parent: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_CharacterController
+  name: CharacterController
+  nameWithType: CharacterTypeBaseSO.CharacterController
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterController
+- uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  isExternal: true
+  href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_IsValidCharacterSpriteSheet_UnityEngine_Sprite_
+  name: IsValidCharacterSpriteSheet(Sprite)
+  nameWithType: CharacterTypeBaseSO.IsValidCharacterSpriteSheet(Sprite)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+    name: IsValidCharacterSpriteSheet
+    href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_IsValidCharacterSpriteSheet_UnityEngine_Sprite_
+  - name: (
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+    name: IsValidCharacterSpriteSheet
+    href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_IsValidCharacterSpriteSheet_UnityEngine_Sprite_
+  - name: (
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.Essentials
+  commentId: N:BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Essentials
+  nameWithType: BlazerTech.CharacterManagement.Essentials
+  fullName: BlazerTech.CharacterManagement.Essentials
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorSettings*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorSettings
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_CharacterCreatorSettings
+  name: CharacterCreatorSettings
+  nameWithType: LayeredCharacterTypeSO.CharacterCreatorSettings
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorSettings
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorConfig
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorConfig
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html
+  name: LayeredCharacterTypeSO.CharacterCreatorConfig
+  nameWithType: LayeredCharacterTypeSO.CharacterCreatorConfig
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorConfig
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    name: LayeredCharacterTypeSO
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorConfig
+    name: CharacterCreatorConfig
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorConfig.html
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    name: LayeredCharacterTypeSO
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorConfig
+    name: CharacterCreatorConfig
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterCreatorConfig.html
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Layers*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Layers
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_Layers
+  name: Layers
+  nameWithType: LayeredCharacterTypeSO.Layers
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Layers
+- uid: System.Collections.Generic.List{BlazerTech.CharacterManagement.Characters.CharacterLayerSO}
+  commentId: T:System.Collections.Generic.List{BlazerTech.CharacterManagement.Characters.CharacterLayerSO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<CharacterLayerSO>
+  nameWithType: List<CharacterLayerSO>
+  fullName: System.Collections.Generic.List<BlazerTech.CharacterManagement.Characters.CharacterLayerSO>
+  nameWithType.vb: List(Of CharacterLayerSO)
+  fullName.vb: System.Collections.Generic.List(Of BlazerTech.CharacterManagement.Characters.CharacterLayerSO)
+  name.vb: List(Of CharacterLayerSO)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+    name: CharacterLayerSO
+    href: BlazerTech.CharacterManagement.Characters.CharacterLayerSO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+    name: CharacterLayerSO
+    href: BlazerTech.CharacterManagement.Characters.CharacterLayerSO.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterMaterial*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterMaterial
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_CharacterMaterial
+  name: CharacterMaterial
+  nameWithType: LayeredCharacterTypeSO.CharacterMaterial
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.CharacterMaterial
+- uid: UnityEngine.Material
+  commentId: T:UnityEngine.Material
+  parent: UnityEngine
+  isExternal: true
+  name: Material
+  nameWithType: Material
+  fullName: UnityEngine.Material
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Initialize*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Initialize
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_Initialize_UnityEngine_Material_
+  name: Initialize
+  nameWithType: LayeredCharacterTypeSO.Initialize
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.Initialize
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsValid*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsValid
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_IsValid
+  name: IsValid
+  nameWithType: LayeredCharacterTypeSO.IsValid
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsValid
+- uid: BlazerTech.CharacterManagement.Essentials.IValidatable.IsValid
+  commentId: M:BlazerTech.CharacterManagement.Essentials.IValidatable.IsValid
+  parent: BlazerTech.CharacterManagement.Essentials.IValidatable
+  href: BlazerTech.CharacterManagement.Essentials.IValidatable.html#BlazerTech_CharacterManagement_Essentials_IValidatable_IsValid
+  name: IsValid()
+  nameWithType: IValidatable.IsValid()
+  fullName: BlazerTech.CharacterManagement.Essentials.IValidatable.IsValid()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Essentials.IValidatable.IsValid
+    name: IsValid
+    href: BlazerTech.CharacterManagement.Essentials.IValidatable.html#BlazerTech_CharacterManagement_Essentials_IValidatable_IsValid
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Essentials.IValidatable.IsValid
+    name: IsValid
+    href: BlazerTech.CharacterManagement.Essentials.IValidatable.html#BlazerTech_CharacterManagement_Essentials_IValidatable_IsValid
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_AcquireAllCharacterPiecesAsync_System_Action_System_Single__
+  name: AcquireAllCharacterPiecesAsync
+  nameWithType: LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.AcquireAllCharacterPiecesAsync
+- uid: System.Action{System.Single}
+  commentId: T:System.Action{System.Single}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<float>
+  nameWithType: Action<float>
+  fullName: System.Action<float>
+  nameWithType.vb: Action(Of Single)
+  fullName.vb: System.Action(Of Single)
+  name.vb: Action(Of Single)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.ReleaseAllCharacterPieces*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.ReleaseAllCharacterPieces
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_ReleaseAllCharacterPieces
+  name: ReleaseAllCharacterPieces
+  nameWithType: LayeredCharacterTypeSO.ReleaseAllCharacterPieces
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.ReleaseAllCharacterPieces
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInitialized*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInitialized
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_IsInitialized
+  name: IsInitialized
+  nameWithType: LayeredCharacterTypeSO.IsInitialized
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInitialized
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInResourcesFolder_EditMode*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInResourcesFolder_EditMode
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_IsInResourcesFolder_EditMode
+  name: IsInResourcesFolder_EditMode
+  nameWithType: LayeredCharacterTypeSO.IsInResourcesFolder_EditMode
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.IsInResourcesFolder_EditMode

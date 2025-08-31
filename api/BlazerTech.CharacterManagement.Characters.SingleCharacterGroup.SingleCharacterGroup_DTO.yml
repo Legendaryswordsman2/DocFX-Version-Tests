@@ -1,0 +1,270 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO
+  commentId: T:BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO
+  id: SingleCharacterGroup.SingleCharacterGroup_DTO
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter,System.String)
+  - BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.#ctor(BlazerTech.CharacterManagement.Characters.SingleCharacterGroup)
+  - BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.Character
+  - BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.GroupName
+  langs:
+  - csharp
+  - vb
+  name: SingleCharacterGroup.SingleCharacterGroup_DTO
+  nameWithType: SingleCharacterGroup.SingleCharacterGroup_DTO
+  fullName: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupDefinitions.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SingleCharacterGroup_DTO
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupDefinitions.cs
+    startLine: 70
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class SingleCharacterGroup.SingleCharacterGroup_DTO
+    content.vb: >-
+      <Serializable>
+
+      Public Class SingleCharacterGroup.SingleCharacterGroup_DTO
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.GroupName
+  commentId: F:BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.GroupName
+  id: GroupName
+  parent: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO
+  langs:
+  - csharp
+  - vb
+  name: GroupName
+  nameWithType: SingleCharacterGroup.SingleCharacterGroup_DTO.GroupName
+  fullName: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.GroupName
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupDefinitions.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GroupName
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupDefinitions.cs
+    startLine: 73
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public string GroupName
+    return:
+      type: System.String
+    content.vb: Public GroupName As String
+- uid: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.Character
+  commentId: F:BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.Character
+  id: Character
+  parent: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO
+  langs:
+  - csharp
+  - vb
+  name: Character
+  nameWithType: SingleCharacterGroup.SingleCharacterGroup_DTO.Character
+  fullName: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.Character
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupDefinitions.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Character
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupDefinitions.cs
+    startLine: 74
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public LayeredCharacter.Character_DTO Character
+    return:
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacter.Character_DTO
+    content.vb: Public Character As LayeredCharacter.Character_DTO
+- uid: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter,System.String)
+  commentId: M:BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter,System.String)
+  id: '#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter,System.String)'
+  parent: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO
+  langs:
+  - csharp
+  - vb
+  name: SingleCharacterGroup_DTO(LayeredCharacter, string)
+  nameWithType: SingleCharacterGroup.SingleCharacterGroup_DTO.SingleCharacterGroup_DTO(LayeredCharacter, string)
+  fullName: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.SingleCharacterGroup_DTO(BlazerTech.CharacterManagement.Characters.LayeredCharacter, string)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupDefinitions.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupDefinitions.cs
+    startLine: 76
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public SingleCharacterGroup_DTO(LayeredCharacter character, string groupName)
+    parameters:
+    - id: character
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+    - id: groupName
+      type: System.String
+    content.vb: Public Sub New(character As LayeredCharacter, groupName As String)
+  overload: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.#ctor*
+  nameWithType.vb: SingleCharacterGroup.SingleCharacterGroup_DTO.New(LayeredCharacter, String)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.New(BlazerTech.CharacterManagement.Characters.LayeredCharacter, String)
+  name.vb: New(LayeredCharacter, String)
+- uid: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.#ctor(BlazerTech.CharacterManagement.Characters.SingleCharacterGroup)
+  commentId: M:BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.#ctor(BlazerTech.CharacterManagement.Characters.SingleCharacterGroup)
+  id: '#ctor(BlazerTech.CharacterManagement.Characters.SingleCharacterGroup)'
+  parent: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO
+  langs:
+  - csharp
+  - vb
+  name: SingleCharacterGroup_DTO(SingleCharacterGroup)
+  nameWithType: SingleCharacterGroup.SingleCharacterGroup_DTO.SingleCharacterGroup_DTO(SingleCharacterGroup)
+  fullName: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.SingleCharacterGroup_DTO(BlazerTech.CharacterManagement.Characters.SingleCharacterGroup)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupDefinitions.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupDefinitions.cs
+    startLine: 82
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public SingleCharacterGroup_DTO(SingleCharacterGroup singleCharacterGroup)
+    parameters:
+    - id: singleCharacterGroup
+      type: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup
+    content.vb: Public Sub New(singleCharacterGroup As SingleCharacterGroup)
+  overload: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.#ctor*
+  nameWithType.vb: SingleCharacterGroup.SingleCharacterGroup_DTO.New(SingleCharacterGroup)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.New(BlazerTech.CharacterManagement.Characters.SingleCharacterGroup)
+  name.vb: New(SingleCharacterGroup)
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacter.Character_DTO
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacter.Character_DTO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacter.html
+  name: LayeredCharacter.Character_DTO
+  nameWithType: LayeredCharacter.Character_DTO
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacter.Character_DTO
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+    name: LayeredCharacter
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacter.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacter.Character_DTO
+    name: Character_DTO
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacter.Character_DTO.html
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+    name: LayeredCharacter
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacter.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacter.Character_DTO
+    name: Character_DTO
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacter.Character_DTO.html
+- uid: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.#ctor*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.#ctor
+  href: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.html#BlazerTech_CharacterManagement_Characters_SingleCharacterGroup_SingleCharacterGroup_DTO__ctor_BlazerTech_CharacterManagement_Characters_LayeredCharacter_System_String_
+  name: SingleCharacterGroup_DTO
+  nameWithType: SingleCharacterGroup.SingleCharacterGroup_DTO.SingleCharacterGroup_DTO
+  fullName: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.SingleCharacterGroup_DTO
+  nameWithType.vb: SingleCharacterGroup.SingleCharacterGroup_DTO.New
+  fullName.vb: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.SingleCharacterGroup_DTO.New
+  name.vb: New
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacter
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacter.html
+  name: LayeredCharacter
+  nameWithType: LayeredCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+- uid: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup
+  commentId: T:BlazerTech.CharacterManagement.Characters.SingleCharacterGroup
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.html
+  name: SingleCharacterGroup
+  nameWithType: SingleCharacterGroup
+  fullName: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup

@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO
+  id: CharacterPieceDefinition.CharacterPieceDefinition_DTO
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.#ctor(BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition)
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.#ctor(System.String,System.String)
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceCollectionName
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceKey
+  langs:
+  - csharp
+  - vb
+  name: CharacterPieceDefinition.CharacterPieceDefinition_DTO
+  nameWithType: CharacterPieceDefinition.CharacterPieceDefinition_DTO
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterPieceDefinition_DTO
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+    startLine: 272
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  summary: Data Transfer Object (DTO) used to save and load a <xref href="BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class CharacterPieceDefinition.CharacterPieceDefinition_DTO
+    content.vb: >-
+      <Serializable>
+
+      Public Class CharacterPieceDefinition.CharacterPieceDefinition_DTO
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceCollectionName
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceCollectionName
+  id: CharacterPieceCollectionName
+  parent: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO
+  langs:
+  - csharp
+  - vb
+  name: CharacterPieceCollectionName
+  nameWithType: CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceCollectionName
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceCollectionName
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterPieceCollectionName
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+    startLine: 275
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public string CharacterPieceCollectionName
+    return:
+      type: System.String
+    content.vb: Public CharacterPieceCollectionName As String
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceKey
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceKey
+  id: CharacterPieceKey
+  parent: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO
+  langs:
+  - csharp
+  - vb
+  name: CharacterPieceKey
+  nameWithType: CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceKey
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceKey
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterPieceKey
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+    startLine: 276
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public string CharacterPieceKey
+    return:
+      type: System.String
+    content.vb: Public CharacterPieceKey As String
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.#ctor(System.String,System.String)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO
+  langs:
+  - csharp
+  - vb
+  name: CharacterPieceDefinition_DTO(string, string)
+  nameWithType: CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceDefinition_DTO(string, string)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceDefinition_DTO(string, string)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+    startLine: 278
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public CharacterPieceDefinition_DTO(string characterPieceCollectionName, string characterPieceKey)
+    parameters:
+    - id: characterPieceCollectionName
+      type: System.String
+    - id: characterPieceKey
+      type: System.String
+    content.vb: Public Sub New(characterPieceCollectionName As String, characterPieceKey As String)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.#ctor*
+  nameWithType.vb: CharacterPieceDefinition.CharacterPieceDefinition_DTO.New(String, String)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.New(String, String)
+  name.vb: New(String, String)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.#ctor(BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.#ctor(BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition)
+  id: '#ctor(BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition)'
+  parent: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO
+  langs:
+  - csharp
+  - vb
+  name: CharacterPieceDefinition_DTO(CharacterPieceDefinition)
+  nameWithType: CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceDefinition_DTO(CharacterPieceDefinition)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceDefinition_DTO(BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/CharacterPieceDefinition.cs
+    startLine: 284
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public CharacterPieceDefinition_DTO(CharacterPieceDefinition characterPieceInfo)
+    parameters:
+    - id: characterPieceInfo
+      type: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+    content.vb: Public Sub New(characterPieceInfo As CharacterPieceDefinition)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.#ctor*
+  nameWithType.vb: CharacterPieceDefinition.CharacterPieceDefinition_DTO.New(CharacterPieceDefinition)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.New(BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition)
+  name.vb: New(CharacterPieceDefinition)
+references:
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.html
+  name: CharacterPieceDefinition
+  nameWithType: CharacterPieceDefinition
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.#ctor*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.#ctor
+  href: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.html#BlazerTech_CharacterManagement_Characters_CharacterPieceDefinition_CharacterPieceDefinition_DTO__ctor_System_String_System_String_
+  name: CharacterPieceDefinition_DTO
+  nameWithType: CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceDefinition_DTO
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.CharacterPieceDefinition_DTO
+  nameWithType.vb: CharacterPieceDefinition.CharacterPieceDefinition_DTO.New
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.CharacterPieceDefinition_DTO.New
+  name.vb: New

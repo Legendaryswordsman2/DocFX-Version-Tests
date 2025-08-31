@@ -1,0 +1,144 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Utilities.SerializableInterface`1
+  commentId: T:BlazerTech.CharacterManagement.Utilities.SerializableInterface`1
+  id: SerializableInterface`1
+  parent: BlazerTech.CharacterManagement.Utilities
+  children:
+  - BlazerTech.CharacterManagement.Utilities.SerializableInterface`1.Interface
+  langs:
+  - csharp
+  - vb
+  name: SerializableInterface<T>
+  nameWithType: SerializableInterface<T>
+  fullName: BlazerTech.CharacterManagement.Utilities.SerializableInterface<T>
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Wrappers/SerializableInterface.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SerializableInterface
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Wrappers/SerializableInterface.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Utilities
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class SerializableInterface<T> where T : class
+    typeParameters:
+    - id: T
+    content.vb: >-
+      <Serializable>
+
+      Public Class SerializableInterface(Of T As Class)
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  nameWithType.vb: SerializableInterface(Of T)
+  fullName.vb: BlazerTech.CharacterManagement.Utilities.SerializableInterface(Of T)
+  name.vb: SerializableInterface(Of T)
+- uid: BlazerTech.CharacterManagement.Utilities.SerializableInterface`1.Interface
+  commentId: P:BlazerTech.CharacterManagement.Utilities.SerializableInterface`1.Interface
+  id: Interface
+  parent: BlazerTech.CharacterManagement.Utilities.SerializableInterface`1
+  langs:
+  - csharp
+  - vb
+  name: Interface
+  nameWithType: SerializableInterface<T>.Interface
+  fullName: BlazerTech.CharacterManagement.Utilities.SerializableInterface<T>.Interface
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Wrappers/SerializableInterface.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Interface
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Wrappers/SerializableInterface.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Utilities
+  syntax:
+    content: public T Interface { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public ReadOnly Property [Interface] As T
+  overload: BlazerTech.CharacterManagement.Utilities.SerializableInterface`1.Interface*
+  nameWithType.vb: SerializableInterface(Of T).Interface
+  fullName.vb: BlazerTech.CharacterManagement.Utilities.SerializableInterface(Of T).Interface
+references:
+- uid: BlazerTech.CharacterManagement.Utilities
+  commentId: N:BlazerTech.CharacterManagement.Utilities
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Utilities
+  nameWithType: BlazerTech.CharacterManagement.Utilities
+  fullName: BlazerTech.CharacterManagement.Utilities
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Utilities
+    name: Utilities
+    href: BlazerTech.CharacterManagement.Utilities.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Utilities
+    name: Utilities
+    href: BlazerTech.CharacterManagement.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BlazerTech.CharacterManagement.Utilities.SerializableInterface`1.Interface*
+  commentId: Overload:BlazerTech.CharacterManagement.Utilities.SerializableInterface`1.Interface
+  href: BlazerTech.CharacterManagement.Utilities.SerializableInterface-1.html#BlazerTech_CharacterManagement_Utilities_SerializableInterface_1_Interface
+  name: Interface
+  nameWithType: SerializableInterface<T>.Interface
+  fullName: BlazerTech.CharacterManagement.Utilities.SerializableInterface<T>.Interface
+  nameWithType.vb: SerializableInterface(Of T).Interface
+  fullName.vb: BlazerTech.CharacterManagement.Utilities.SerializableInterface(Of T).Interface
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

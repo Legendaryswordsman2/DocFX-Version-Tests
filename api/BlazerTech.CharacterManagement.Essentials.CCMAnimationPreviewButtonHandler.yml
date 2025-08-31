@@ -1,0 +1,117 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Essentials.CCMAnimationPreviewButtonHandler
+  commentId: T:BlazerTech.CharacterManagement.Essentials.CCMAnimationPreviewButtonHandler
+  id: CCMAnimationPreviewButtonHandler
+  parent: BlazerTech.CharacterManagement.Essentials
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: CCMAnimationPreviewButtonHandler
+  nameWithType: CCMAnimationPreviewButtonHandler
+  fullName: BlazerTech.CharacterManagement.Essentials.CCMAnimationPreviewButtonHandler
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Preview/CCMAnimationPreviewButtonHandler.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CCMAnimationPreviewButtonHandler
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Preview/CCMAnimationPreviewButtonHandler.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: 'public class CCMAnimationPreviewButtonHandler : MonoBehaviour'
+    content.vb: Public Class CCMAnimationPreviewButtonHandler Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+references:
+- uid: BlazerTech.CharacterManagement.Essentials
+  commentId: N:BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Essentials
+  nameWithType: BlazerTech.CharacterManagement.Essentials
+  fullName: BlazerTech.CharacterManagement.Essentials
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

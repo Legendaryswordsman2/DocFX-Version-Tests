@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO
+  id: UnifiedCharacterTypeSO
+  parent: BlazerTech.CharacterManagement.Characters
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: UnifiedCharacterTypeSO
+  nameWithType: UnifiedCharacterTypeSO
+  fullName: BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/UnifiedCharacterTypeSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: UnifiedCharacterTypeSO
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Types/UnifiedCharacterTypeSO.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: >-
+      [CreateAssetMenu(menuName = "BlazerTech Character Management System/Unified Character Type", fileName = "New Unified Character Type")]
+
+      public class UnifiedCharacterTypeSO : CharacterTypeBaseSO
+    content.vb: >-
+      <CreateAssetMenu(menuName:="BlazerTech Character Management System/Unified Character Type", fileName:="New Unified Character Type")>
+
+      Public Class UnifiedCharacterTypeSO Inherits CharacterTypeBaseSO
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  inheritedMembers:
+  - BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterTypeID
+  - BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.BaseSpritesheet
+  - BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterController
+  - BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+  attributes:
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: menuName
+      type: System.String
+      value: BlazerTech Character Management System/Unified Character Type
+    - name: fileName
+      type: System.String
+      value: New Unified Character Type
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html
+  name: CharacterTypeBaseSO
+  nameWithType: CharacterTypeBaseSO
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+- uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterTypeID
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterTypeID
+  parent: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_CharacterTypeID
+  name: CharacterTypeID
+  nameWithType: CharacterTypeBaseSO.CharacterTypeID
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterTypeID
+- uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.BaseSpritesheet
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.BaseSpritesheet
+  parent: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_BaseSpritesheet
+  name: BaseSpritesheet
+  nameWithType: CharacterTypeBaseSO.BaseSpritesheet
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.BaseSpritesheet
+- uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterController
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterController
+  parent: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_CharacterController
+  name: CharacterController
+  nameWithType: CharacterTypeBaseSO.CharacterController
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.CharacterController
+- uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+  isExternal: true
+  href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_IsValidCharacterSpriteSheet_UnityEngine_Sprite_
+  name: IsValidCharacterSpriteSheet(Sprite)
+  nameWithType: CharacterTypeBaseSO.IsValidCharacterSpriteSheet(Sprite)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+    name: IsValidCharacterSpriteSheet
+    href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_IsValidCharacterSpriteSheet_UnityEngine_Sprite_
+  - name: (
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.IsValidCharacterSpriteSheet(UnityEngine.Sprite)
+    name: IsValidCharacterSpriteSheet
+    href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html#BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_IsValidCharacterSpriteSheet_UnityEngine_Sprite_
+  - name: (
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

@@ -1,0 +1,272 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier
+  commentId: T:BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier
+  id: GameObjectStateNotifier
+  parent: BlazerTech.CharacterManagement.CharacterCreator
+  children:
+  - BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectDisabled
+  - BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectEnabled
+  - BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectStateChanged
+  langs:
+  - csharp
+  - vb
+  name: GameObjectStateNotifier
+  nameWithType: GameObjectStateNotifier
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/GameObjectStateNotifier.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GameObjectStateNotifier
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/GameObjectStateNotifier.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: 'public class GameObjectStateNotifier : MonoBehaviour'
+    content.vb: Public Class GameObjectStateNotifier Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectEnabled
+  commentId: E:BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectEnabled
+  id: OnGameObjectEnabled
+  parent: BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier
+  langs:
+  - csharp
+  - vb
+  name: OnGameObjectEnabled
+  nameWithType: GameObjectStateNotifier.OnGameObjectEnabled
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectEnabled
+  type: Event
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/GameObjectStateNotifier.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: OnGameObjectEnabled
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/GameObjectStateNotifier.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: public event EventHandler OnGameObjectEnabled
+    return:
+      type: System.EventHandler
+    content.vb: Public Event OnGameObjectEnabled As EventHandler
+- uid: BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectDisabled
+  commentId: E:BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectDisabled
+  id: OnGameObjectDisabled
+  parent: BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier
+  langs:
+  - csharp
+  - vb
+  name: OnGameObjectDisabled
+  nameWithType: GameObjectStateNotifier.OnGameObjectDisabled
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectDisabled
+  type: Event
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/GameObjectStateNotifier.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: OnGameObjectDisabled
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/GameObjectStateNotifier.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: public event EventHandler OnGameObjectDisabled
+    return:
+      type: System.EventHandler
+    content.vb: Public Event OnGameObjectDisabled As EventHandler
+- uid: BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectStateChanged
+  commentId: E:BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectStateChanged
+  id: OnGameObjectStateChanged
+  parent: BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier
+  langs:
+  - csharp
+  - vb
+  name: OnGameObjectStateChanged
+  nameWithType: GameObjectStateNotifier.OnGameObjectStateChanged
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.GameObjectStateNotifier.OnGameObjectStateChanged
+  type: Event
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/GameObjectStateNotifier.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: OnGameObjectStateChanged
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/GameObjectStateNotifier.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: public event EventHandler<bool> OnGameObjectStateChanged
+    return:
+      type: System.EventHandler{System.Boolean}
+    content.vb: Public Event OnGameObjectStateChanged As EventHandler(Of Boolean)
+references:
+- uid: BlazerTech.CharacterManagement.CharacterCreator
+  commentId: N:BlazerTech.CharacterManagement.CharacterCreator
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.CharacterCreator
+  nameWithType: BlazerTech.CharacterManagement.CharacterCreator
+  fullName: BlazerTech.CharacterManagement.CharacterCreator
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler
+- uid: System.EventHandler{System.Boolean}
+  commentId: T:System.EventHandler{System.Boolean}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<bool>
+  nameWithType: EventHandler<bool>
+  fullName: System.EventHandler<bool>
+  nameWithType.vb: EventHandler(Of Boolean)
+  fullName.vb: System.EventHandler(Of Boolean)
+  name.vb: EventHandler(Of Boolean)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )

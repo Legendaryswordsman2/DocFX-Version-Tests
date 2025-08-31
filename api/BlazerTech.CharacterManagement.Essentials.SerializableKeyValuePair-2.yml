@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2
+  commentId: T:BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2
+  id: SerializableKeyValuePair`2
+  parent: BlazerTech.CharacterManagement.Essentials
+  children:
+  - BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.#ctor(`0,`1)
+  - BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.key
+  - BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.value
+  langs:
+  - csharp
+  - vb
+  name: SerializableKeyValuePair<TKey, TValue>
+  nameWithType: SerializableKeyValuePair<TKey, TValue>
+  fullName: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair<TKey, TValue>
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/SerializableDictionary.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SerializableKeyValuePair
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/SerializableDictionary.cs
+    startLine: 37
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class SerializableKeyValuePair<TKey, TValue>
+    typeParameters:
+    - id: TKey
+    - id: TValue
+    content.vb: >-
+      <Serializable>
+
+      Public Class SerializableKeyValuePair(Of TKey, TValue)
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  nameWithType.vb: SerializableKeyValuePair(Of TKey, TValue)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair(Of TKey, TValue)
+  name.vb: SerializableKeyValuePair(Of TKey, TValue)
+- uid: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.#ctor(`0,`1)
+  commentId: M:BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.#ctor(`0,`1)
+  id: '#ctor(`0,`1)'
+  parent: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2
+  langs:
+  - csharp
+  - vb
+  name: SerializableKeyValuePair(TKey, TValue)
+  nameWithType: SerializableKeyValuePair<TKey, TValue>.SerializableKeyValuePair(TKey, TValue)
+  fullName: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair<TKey, TValue>.SerializableKeyValuePair(TKey, TValue)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/SerializableDictionary.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/SerializableDictionary.cs
+    startLine: 45
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: public SerializableKeyValuePair(TKey key, TValue value)
+    parameters:
+    - id: key
+      type: '{TKey}'
+    - id: value
+      type: '{TValue}'
+    content.vb: Public Sub New(key As TKey, value As TValue)
+  overload: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.#ctor*
+  nameWithType.vb: SerializableKeyValuePair(Of TKey, TValue).New(TKey, TValue)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair(Of TKey, TValue).New(TKey, TValue)
+  name.vb: New(TKey, TValue)
+- uid: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.key
+  commentId: P:BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.key
+  id: key
+  parent: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2
+  langs:
+  - csharp
+  - vb
+  name: key
+  nameWithType: SerializableKeyValuePair<TKey, TValue>.key
+  fullName: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair<TKey, TValue>.key
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/SerializableDictionary.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: key
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/SerializableDictionary.cs
+    startLine: 51
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: public TKey key { get; set; }
+    parameters: []
+    return:
+      type: '{TKey}'
+    content.vb: Public Property key As TKey
+  overload: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.key*
+  nameWithType.vb: SerializableKeyValuePair(Of TKey, TValue).key
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair(Of TKey, TValue).key
+- uid: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.value
+  commentId: P:BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.value
+  id: value
+  parent: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2
+  langs:
+  - csharp
+  - vb
+  name: value
+  nameWithType: SerializableKeyValuePair<TKey, TValue>.value
+  fullName: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair<TKey, TValue>.value
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/SerializableDictionary.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: value
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/SerializableDictionary.cs
+    startLine: 52
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: public TValue value { get; set; }
+    parameters: []
+    return:
+      type: '{TValue}'
+    content.vb: Public Property value As TValue
+  overload: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.value*
+  nameWithType.vb: SerializableKeyValuePair(Of TKey, TValue).value
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair(Of TKey, TValue).value
+references:
+- uid: BlazerTech.CharacterManagement.Essentials
+  commentId: N:BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Essentials
+  nameWithType: BlazerTech.CharacterManagement.Essentials
+  fullName: BlazerTech.CharacterManagement.Essentials
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.#ctor*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.#ctor
+  href: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair-2.html#BlazerTech_CharacterManagement_Essentials_SerializableKeyValuePair_2__ctor__0__1_
+  name: SerializableKeyValuePair
+  nameWithType: SerializableKeyValuePair<TKey, TValue>.SerializableKeyValuePair
+  fullName: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair<TKey, TValue>.SerializableKeyValuePair
+  nameWithType.vb: SerializableKeyValuePair(Of TKey, TValue).New
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair(Of TKey, TValue).New
+  name.vb: New
+- uid: '{TKey}'
+  commentId: '!:TKey'
+  definition: TKey
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: '{TValue}'
+  commentId: '!:TValue'
+  definition: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: TKey
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.key*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.key
+  href: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair-2.html#BlazerTech_CharacterManagement_Essentials_SerializableKeyValuePair_2_key
+  name: key
+  nameWithType: SerializableKeyValuePair<TKey, TValue>.key
+  fullName: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair<TKey, TValue>.key
+  nameWithType.vb: SerializableKeyValuePair(Of TKey, TValue).key
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair(Of TKey, TValue).key
+- uid: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.value*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2.value
+  href: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair-2.html#BlazerTech_CharacterManagement_Essentials_SerializableKeyValuePair_2_value
+  name: value
+  nameWithType: SerializableKeyValuePair<TKey, TValue>.value
+  fullName: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair<TKey, TValue>.value
+  nameWithType.vb: SerializableKeyValuePair(Of TKey, TValue).value
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair(Of TKey, TValue).value

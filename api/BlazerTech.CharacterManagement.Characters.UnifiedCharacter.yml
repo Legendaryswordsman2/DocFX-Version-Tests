@@ -1,0 +1,842 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacter
+  commentId: T:BlazerTech.CharacterManagement.Characters.UnifiedCharacter
+  id: UnifiedCharacter
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.UnifiedCharacter.#ctor(BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO)
+  - BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandler
+  - BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandlerAsync
+  langs:
+  - csharp
+  - vb
+  name: UnifiedCharacter
+  nameWithType: UnifiedCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.UnifiedCharacter
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Unified Character/UnifiedCharacter.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: UnifiedCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Unified Character/UnifiedCharacter.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: 'public class UnifiedCharacter : CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>'
+    content.vb: Public Class UnifiedCharacter Inherits CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler)
+  inheritance:
+  - System.Object
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  inheritedMembers:
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterType
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadedCharacterHandler
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterGUID
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterName
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterDisplayName
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.IsValidCharacter
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.ValidationCheck
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.SetCharacterInvalid
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.AcquireCharacterHandler(System.Object)
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.AcquireCharacterHandlerAsync(System.Object)
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.ReleaseCharacterHandler(System.Object)
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandler
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandlerAsync
+  - BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.UnloadCharacterHandler
+- uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.#ctor(BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO)
+  commentId: M:BlazerTech.CharacterManagement.Characters.UnifiedCharacter.#ctor(BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO)
+  id: '#ctor(BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO)'
+  parent: BlazerTech.CharacterManagement.Characters.UnifiedCharacter
+  langs:
+  - csharp
+  - vb
+  name: UnifiedCharacter(UnifiedCharacterTemplateSO)
+  nameWithType: UnifiedCharacter.UnifiedCharacter(UnifiedCharacterTemplateSO)
+  fullName: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.UnifiedCharacter(BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Unified Character/UnifiedCharacter.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Unified Character/UnifiedCharacter.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public UnifiedCharacter(UnifiedCharacterTemplateSO unifiedCharacterTemplate)
+    parameters:
+    - id: unifiedCharacterTemplate
+      type: BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO
+    content.vb: Public Sub New(unifiedCharacterTemplate As UnifiedCharacterTemplateSO)
+  overload: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.#ctor*
+  nameWithType.vb: UnifiedCharacter.New(UnifiedCharacterTemplateSO)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.New(BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO)
+  name.vb: New(UnifiedCharacterTemplateSO)
+- uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandler
+  commentId: M:BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandler
+  id: LoadCharacterHandler
+  parent: BlazerTech.CharacterManagement.Characters.UnifiedCharacter
+  langs:
+  - csharp
+  - vb
+  name: LoadCharacterHandler()
+  nameWithType: UnifiedCharacter.LoadCharacterHandler()
+  fullName: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandler()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Unified Character/UnifiedCharacter.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadCharacterHandler
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Unified Character/UnifiedCharacter.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  example: []
+  syntax:
+    content: protected override void LoadCharacterHandler()
+    content.vb: Protected Overrides Sub LoadCharacterHandler()
+  overridden: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandler
+  overload: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandler*
+- uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandlerAsync
+  commentId: M:BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandlerAsync
+  id: LoadCharacterHandlerAsync
+  parent: BlazerTech.CharacterManagement.Characters.UnifiedCharacter
+  langs:
+  - csharp
+  - vb
+  name: LoadCharacterHandlerAsync()
+  nameWithType: UnifiedCharacter.LoadCharacterHandlerAsync()
+  fullName: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandlerAsync()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Unified Character/UnifiedCharacter.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadCharacterHandlerAsync
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Unified Character/UnifiedCharacter.cs
+    startLine: 35
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  example: []
+  syntax:
+    content: protected override Task LoadCharacterHandlerAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Protected Overrides Function LoadCharacterHandlerAsync() As Task
+  overridden: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandlerAsync
+  overload: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandlerAsync*
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  parent: BlazerTech.CharacterManagement.Characters
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html
+  name: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler)
+  name.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+    name: CharacterBase
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html
+  - name: <
+  - uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO
+    name: UnifiedCharacterTypeSO
+    href: BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO.html
+  - name: ','
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacter
+    name: UnifiedCharacter
+    href: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler
+    name: LoadedUnifiedCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+    name: CharacterBase
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO
+    name: UnifiedCharacterTypeSO
+    href: BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO.html
+  - name: ','
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacter
+    name: UnifiedCharacter
+    href: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler
+    name: LoadedUnifiedCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler.html
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterType
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterType
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterType
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_CharacterType
+  name: CharacterType
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.CharacterType
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.CharacterType
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).CharacterType
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).CharacterType
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadedCharacterHandler
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadedCharacterHandler
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadedCharacterHandler
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadedCharacterHandler
+  name: LoadedCharacterHandler
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.LoadedCharacterHandler
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.LoadedCharacterHandler
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).LoadedCharacterHandler
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).LoadedCharacterHandler
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterGUID
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterGUID
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterGUID
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_CharacterGUID
+  name: CharacterGUID
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.CharacterGUID
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.CharacterGUID
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).CharacterGUID
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).CharacterGUID
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterName
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterName
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterName
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_CharacterName
+  name: CharacterName
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.CharacterName
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.CharacterName
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).CharacterName
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).CharacterName
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterDisplayName
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.CharacterDisplayName
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterDisplayName
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_CharacterDisplayName
+  name: CharacterDisplayName
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.CharacterDisplayName
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.CharacterDisplayName
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).CharacterDisplayName
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).CharacterDisplayName
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.IsValidCharacter
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.IsValidCharacter
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.IsValidCharacter
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_IsValidCharacter
+  name: IsValidCharacter
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.IsValidCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.IsValidCharacter
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).IsValidCharacter
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).IsValidCharacter
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.ValidationCheck
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.ValidationCheck
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ValidationCheck
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ValidationCheck
+  name: ValidationCheck()
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.ValidationCheck()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.ValidationCheck()
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).ValidationCheck()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).ValidationCheck()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.ValidationCheck
+    name: ValidationCheck
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ValidationCheck
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.ValidationCheck
+    name: ValidationCheck
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ValidationCheck
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.SetCharacterInvalid
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.SetCharacterInvalid
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.SetCharacterInvalid
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_SetCharacterInvalid
+  name: SetCharacterInvalid()
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.SetCharacterInvalid()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.SetCharacterInvalid()
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).SetCharacterInvalid()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).SetCharacterInvalid()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.SetCharacterInvalid
+    name: SetCharacterInvalid
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_SetCharacterInvalid
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.SetCharacterInvalid
+    name: SetCharacterInvalid
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_SetCharacterInvalid
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.AcquireCharacterHandler(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.AcquireCharacterHandler(System.Object)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandler(System.Object)
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandler_System_Object_
+  name: AcquireCharacterHandler(object)
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.AcquireCharacterHandler(object)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.AcquireCharacterHandler(object)
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).AcquireCharacterHandler(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).AcquireCharacterHandler(Object)
+  name.vb: AcquireCharacterHandler(Object)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.AcquireCharacterHandler(System.Object)
+    name: AcquireCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandler_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.AcquireCharacterHandler(System.Object)
+    name: AcquireCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandler_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.AcquireCharacterHandlerAsync(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.AcquireCharacterHandlerAsync(System.Object)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandlerAsync(System.Object)
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandlerAsync_System_Object_
+  name: AcquireCharacterHandlerAsync(object)
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.AcquireCharacterHandlerAsync(object)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.AcquireCharacterHandlerAsync(object)
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).AcquireCharacterHandlerAsync(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).AcquireCharacterHandlerAsync(Object)
+  name.vb: AcquireCharacterHandlerAsync(Object)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.AcquireCharacterHandlerAsync(System.Object)
+    name: AcquireCharacterHandlerAsync
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandlerAsync_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.AcquireCharacterHandlerAsync(System.Object)
+    name: AcquireCharacterHandlerAsync
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandlerAsync_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.ReleaseCharacterHandler(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.ReleaseCharacterHandler(System.Object)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ReleaseCharacterHandler(System.Object)
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ReleaseCharacterHandler_System_Object_
+  name: ReleaseCharacterHandler(object)
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.ReleaseCharacterHandler(object)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.ReleaseCharacterHandler(object)
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).ReleaseCharacterHandler(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).ReleaseCharacterHandler(Object)
+  name.vb: ReleaseCharacterHandler(Object)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.ReleaseCharacterHandler(System.Object)
+    name: ReleaseCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ReleaseCharacterHandler_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.ReleaseCharacterHandler(System.Object)
+    name: ReleaseCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ReleaseCharacterHandler_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandler
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandler
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandler
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandler
+  name: LoadCharacterHandler()
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.LoadCharacterHandler()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.LoadCharacterHandler()
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).LoadCharacterHandler()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).LoadCharacterHandler()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandler
+    name: LoadCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandler
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandler
+    name: LoadCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandler
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandlerAsync
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandlerAsync
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandlerAsync
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandlerAsync
+  name: LoadCharacterHandlerAsync()
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.LoadCharacterHandlerAsync()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.LoadCharacterHandlerAsync()
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).LoadCharacterHandlerAsync()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).LoadCharacterHandlerAsync()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandlerAsync
+    name: LoadCharacterHandlerAsync
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandlerAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.LoadCharacterHandlerAsync
+    name: LoadCharacterHandlerAsync
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandlerAsync
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.UnloadCharacterHandler
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.UnloadCharacterHandler
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}
+  definition: BlazerTech.CharacterManagement.Characters.CharacterBase`2.UnloadCharacterHandler
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_UnloadCharacterHandler
+  name: UnloadCharacterHandler()
+  nameWithType: CharacterBase<UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler>.UnloadCharacterHandler()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler>.UnloadCharacterHandler()
+  nameWithType.vb: CharacterBase(Of UnifiedCharacterTypeSO, UnifiedCharacter.LoadedUnifiedCharacterHandler).UnloadCharacterHandler()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO, BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler).UnloadCharacterHandler()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.UnloadCharacterHandler
+    name: UnloadCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_UnloadCharacterHandler
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase{BlazerTech.CharacterManagement.Characters.UnifiedCharacterTypeSO,BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler}.UnloadCharacterHandler
+    name: UnloadCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_UnloadCharacterHandler
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html
+  name: CharacterBase<TCharacterType, TCharacterHandler>
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler)
+  name.vb: CharacterBase(Of TCharacterType, TCharacterHandler)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+    name: CharacterBase
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html
+  - name: <
+  - name: TCharacterType
+  - name: ','
+  - name: " "
+  - name: TCharacterHandler
+  - name: '>'
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+    name: CharacterBase
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCharacterType
+  - name: ','
+  - name: " "
+  - name: TCharacterHandler
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterType
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterType
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_CharacterType
+  name: CharacterType
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.CharacterType
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.CharacterType
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).CharacterType
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).CharacterType
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadedCharacterHandler
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadedCharacterHandler
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadedCharacterHandler
+  name: LoadedCharacterHandler
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.LoadedCharacterHandler
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.LoadedCharacterHandler
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).LoadedCharacterHandler
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).LoadedCharacterHandler
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterGUID
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterGUID
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_CharacterGUID
+  name: CharacterGUID
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.CharacterGUID
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.CharacterGUID
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).CharacterGUID
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).CharacterGUID
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterName
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterName
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_CharacterName
+  name: CharacterName
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.CharacterName
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.CharacterName
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).CharacterName
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).CharacterName
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterDisplayName
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterDisplayName
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_CharacterDisplayName
+  name: CharacterDisplayName
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.CharacterDisplayName
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.CharacterDisplayName
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).CharacterDisplayName
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).CharacterDisplayName
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.IsValidCharacter
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterBase`2.IsValidCharacter
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_IsValidCharacter
+  name: IsValidCharacter
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.IsValidCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.IsValidCharacter
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).IsValidCharacter
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).IsValidCharacter
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ValidationCheck
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.ValidationCheck
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ValidationCheck
+  name: ValidationCheck()
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.ValidationCheck()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.ValidationCheck()
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).ValidationCheck()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).ValidationCheck()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ValidationCheck
+    name: ValidationCheck
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ValidationCheck
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ValidationCheck
+    name: ValidationCheck
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ValidationCheck
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.SetCharacterInvalid
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.SetCharacterInvalid
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_SetCharacterInvalid
+  name: SetCharacterInvalid()
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.SetCharacterInvalid()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.SetCharacterInvalid()
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).SetCharacterInvalid()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).SetCharacterInvalid()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.SetCharacterInvalid
+    name: SetCharacterInvalid
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_SetCharacterInvalid
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.SetCharacterInvalid
+    name: SetCharacterInvalid
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_SetCharacterInvalid
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandler(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandler(System.Object)
+  isExternal: true
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandler_System_Object_
+  name: AcquireCharacterHandler(object)
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandler(object)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandler(object)
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandler(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandler(Object)
+  name.vb: AcquireCharacterHandler(Object)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandler(System.Object)
+    name: AcquireCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandler_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandler(System.Object)
+    name: AcquireCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandler_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandlerAsync(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandlerAsync(System.Object)
+  isExternal: true
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandlerAsync_System_Object_
+  name: AcquireCharacterHandlerAsync(object)
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandlerAsync(object)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandlerAsync(object)
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandlerAsync(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandlerAsync(Object)
+  name.vb: AcquireCharacterHandlerAsync(Object)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandlerAsync(System.Object)
+    name: AcquireCharacterHandlerAsync
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandlerAsync_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandlerAsync(System.Object)
+    name: AcquireCharacterHandlerAsync
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandlerAsync_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ReleaseCharacterHandler(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.ReleaseCharacterHandler(System.Object)
+  isExternal: true
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ReleaseCharacterHandler_System_Object_
+  name: ReleaseCharacterHandler(object)
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.ReleaseCharacterHandler(object)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.ReleaseCharacterHandler(object)
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).ReleaseCharacterHandler(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).ReleaseCharacterHandler(Object)
+  name.vb: ReleaseCharacterHandler(Object)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ReleaseCharacterHandler(System.Object)
+    name: ReleaseCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ReleaseCharacterHandler_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ReleaseCharacterHandler(System.Object)
+    name: ReleaseCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ReleaseCharacterHandler_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandler
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandler
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandler
+  name: LoadCharacterHandler()
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandler()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandler()
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandler()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandler()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandler
+    name: LoadCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandler
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandler
+    name: LoadCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandler
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandlerAsync
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandlerAsync
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandlerAsync
+  name: LoadCharacterHandlerAsync()
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandlerAsync()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandlerAsync()
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandlerAsync()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandlerAsync()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandlerAsync
+    name: LoadCharacterHandlerAsync
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandlerAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandlerAsync
+    name: LoadCharacterHandlerAsync
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandlerAsync
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.UnloadCharacterHandler
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.UnloadCharacterHandler
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_UnloadCharacterHandler
+  name: UnloadCharacterHandler()
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.UnloadCharacterHandler()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.UnloadCharacterHandler()
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).UnloadCharacterHandler()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).UnloadCharacterHandler()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.UnloadCharacterHandler
+    name: UnloadCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_UnloadCharacterHandler
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.UnloadCharacterHandler
+    name: UnloadCharacterHandler
+    href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_UnloadCharacterHandler
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.#ctor*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.UnifiedCharacter.#ctor
+  href: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.html#BlazerTech_CharacterManagement_Characters_UnifiedCharacter__ctor_BlazerTech_CharacterManagement_Characters_UnifiedCharacterTemplateSO_
+  name: UnifiedCharacter
+  nameWithType: UnifiedCharacter.UnifiedCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.UnifiedCharacter
+  nameWithType.vb: UnifiedCharacter.New
+  fullName.vb: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.New
+  name.vb: New
+- uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO.html
+  name: UnifiedCharacterTemplateSO
+  nameWithType: UnifiedCharacterTemplateSO
+  fullName: BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO
+- uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandler*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandler
+  href: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.html#BlazerTech_CharacterManagement_Characters_UnifiedCharacter_LoadCharacterHandler
+  name: LoadCharacterHandler
+  nameWithType: UnifiedCharacter.LoadCharacterHandler
+  fullName: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandler
+- uid: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandlerAsync*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandlerAsync
+  href: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.html#BlazerTech_CharacterManagement_Characters_UnifiedCharacter_LoadCharacterHandlerAsync
+  name: LoadCharacterHandlerAsync
+  nameWithType: UnifiedCharacter.LoadCharacterHandlerAsync
+  fullName: BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadCharacterHandlerAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

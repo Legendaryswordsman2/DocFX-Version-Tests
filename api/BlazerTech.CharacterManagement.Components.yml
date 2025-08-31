@@ -1,0 +1,107 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Components
+  commentId: N:BlazerTech.CharacterManagement.Components
+  id: BlazerTech.CharacterManagement.Components
+  children:
+  - BlazerTech.CharacterManagement.Components.CharacterAnimator
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+  - BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+  - BlazerTech.CharacterManagement.Components.LayeredCharacterLoader
+  - BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader
+  - BlazerTech.CharacterManagement.Components.PlayerMovementController
+  - BlazerTech.CharacterManagement.Components.UnifiedCharacterLoader
+  langs:
+  - csharp
+  - vb
+  name: BlazerTech.CharacterManagement.Components
+  nameWithType: BlazerTech.CharacterManagement.Components
+  fullName: BlazerTech.CharacterManagement.Components
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: BlazerTech.CharacterManagement.Components.UnifiedCharacterLoader
+  commentId: T:BlazerTech.CharacterManagement.Components.UnifiedCharacterLoader
+  href: BlazerTech.CharacterManagement.Components.UnifiedCharacterLoader.html
+  name: UnifiedCharacterLoader
+  nameWithType: UnifiedCharacterLoader
+  fullName: BlazerTech.CharacterManagement.Components.UnifiedCharacterLoader
+- uid: BlazerTech.CharacterManagement.Components.CharacterAnimator
+  commentId: T:BlazerTech.CharacterManagement.Components.CharacterAnimator
+  parent: BlazerTech.CharacterManagement.Components
+  href: BlazerTech.CharacterManagement.Components.CharacterAnimator.html
+  name: CharacterAnimator
+  nameWithType: CharacterAnimator
+  fullName: BlazerTech.CharacterManagement.Components.CharacterAnimator
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  commentId: T:BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  parent: BlazerTech.CharacterManagement.Components
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html
+  name: CharacterLoaderBase
+  nameWithType: CharacterLoaderBase
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+- uid: BlazerTech.CharacterManagement.Components.PlayerMovementController
+  commentId: T:BlazerTech.CharacterManagement.Components.PlayerMovementController
+  parent: BlazerTech.CharacterManagement.Components
+  href: BlazerTech.CharacterManagement.Components.PlayerMovementController.html
+  name: PlayerMovementController
+  nameWithType: PlayerMovementController
+  fullName: BlazerTech.CharacterManagement.Components.PlayerMovementController
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+  commentId: T:BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+  parent: BlazerTech.CharacterManagement.Components
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode.html
+  name: CharacterLoaderLoadingMode
+  nameWithType: CharacterLoaderLoadingMode
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+- uid: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+  commentId: T:BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+  parent: BlazerTech.CharacterManagement.Components
+  href: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.html
+  name: CharacterMultiGroupLoadMethod
+  nameWithType: CharacterMultiGroupLoadMethod
+  fullName: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+- uid: BlazerTech.CharacterManagement.Components.LayeredCharacterLoader
+  commentId: T:BlazerTech.CharacterManagement.Components.LayeredCharacterLoader
+  href: BlazerTech.CharacterManagement.Components.LayeredCharacterLoader.html
+  name: LayeredCharacterLoader
+  nameWithType: LayeredCharacterLoader
+  fullName: BlazerTech.CharacterManagement.Components.LayeredCharacterLoader
+- uid: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader
+  commentId: T:BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader
+  href: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.html
+  name: LayeredCharacterTemplateLoader
+  nameWithType: LayeredCharacterTemplateLoader
+  fullName: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader
+- uid: BlazerTech.CharacterManagement.Components
+  commentId: N:BlazerTech.CharacterManagement.Components
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Components
+  nameWithType: BlazerTech.CharacterManagement.Components
+  fullName: BlazerTech.CharacterManagement.Components
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Components
+    name: Components
+    href: BlazerTech.CharacterManagement.Components.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Components
+    name: Components
+    href: BlazerTech.CharacterManagement.Components.html

@@ -1,0 +1,392 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO
+  id: LayeredCharacterGroupTemplateSO
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterBaseName
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterType
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharactersInGroup
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CreateGroup
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupName
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupType
+  langs:
+  - csharp
+  - vb
+  name: LayeredCharacterGroupTemplateSO
+  nameWithType: LayeredCharacterGroupTemplateSO
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LayeredCharacterGroupTemplateSO
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  summary: A blueprint for a Layered Character Group (Fixed or Flexible) that will automatically be created at runtime.
+  example: []
+  syntax:
+    content: >-
+      [CreateAssetMenu(menuName = "BlazerTech Character Management System/Layered Character Group Template", fileName = "New Layered Character Group Template")]
+
+      public class LayeredCharacterGroupTemplateSO : ScriptableObject
+    content.vb: >-
+      <CreateAssetMenu(menuName:="BlazerTech Character Management System/Layered Character Group Template", fileName:="New Layered Character Group Template")>
+
+      Public Class LayeredCharacterGroupTemplateSO Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  attributes:
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: menuName
+      type: System.String
+      value: BlazerTech Character Management System/Layered Character Group Template
+    - name: fileName
+      type: System.String
+      value: New Layered Character Group Template
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupName
+  commentId: P:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupName
+  id: GroupName
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO
+  langs:
+  - csharp
+  - vb
+  name: GroupName
+  nameWithType: LayeredCharacterGroupTemplateSO.GroupName
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupName
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GroupName
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public string GroupName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GroupName As String
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupName*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterBaseName
+  commentId: P:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterBaseName
+  id: CharacterBaseName
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO
+  langs:
+  - csharp
+  - vb
+  name: CharacterBaseName
+  nameWithType: LayeredCharacterGroupTemplateSO.CharacterBaseName
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterBaseName
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterBaseName
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public string CharacterBaseName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CharacterBaseName As String
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterBaseName*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterType
+  commentId: P:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterType
+  id: CharacterType
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO
+  langs:
+  - csharp
+  - vb
+  name: CharacterType
+  nameWithType: LayeredCharacterGroupTemplateSO.CharacterType
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterType
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterType
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public LayeredCharacterTypeSO CharacterType { get; }
+    parameters: []
+    return:
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    content.vb: Public Property CharacterType As LayeredCharacterTypeSO
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterType*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupType
+  commentId: P:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupType
+  id: GroupType
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO
+  langs:
+  - csharp
+  - vb
+  name: GroupType
+  nameWithType: LayeredCharacterGroupTemplateSO.GroupType
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupType
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GroupType
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public MultiCharacterGroupType GroupType { get; }
+    parameters: []
+    return:
+      type: BlazerTech.CharacterManagement.Characters.MultiCharacterGroupType
+    content.vb: Public Property GroupType As MultiCharacterGroupType
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupType*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharactersInGroup
+  commentId: P:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharactersInGroup
+  id: CharactersInGroup
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO
+  langs:
+  - csharp
+  - vb
+  name: CharactersInGroup
+  nameWithType: LayeredCharacterGroupTemplateSO.CharactersInGroup
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharactersInGroup
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharactersInGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public GroupTemplateEntry[] CharactersInGroup { get; }
+    parameters: []
+    return:
+      type: BlazerTech.CharacterManagement.Characters.GroupTemplateEntry[]
+    content.vb: Public Property CharactersInGroup As GroupTemplateEntry()
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharactersInGroup*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CreateGroup
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CreateGroup
+  id: CreateGroup
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO
+  langs:
+  - csharp
+  - vb
+  name: CreateGroup()
+  nameWithType: LayeredCharacterGroupTemplateSO.CreateGroup()
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CreateGroup()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CreateGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/LayeredCharacterGroupTemplateSO.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public bool CreateGroup()
+    return:
+      type: System.Boolean
+    content.vb: Public Function CreateGroup() As Boolean
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CreateGroup*
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupName*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupName
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupTemplateSO_GroupName
+  name: GroupName
+  nameWithType: LayeredCharacterGroupTemplateSO.GroupName
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterBaseName*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterBaseName
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupTemplateSO_CharacterBaseName
+  name: CharacterBaseName
+  nameWithType: LayeredCharacterGroupTemplateSO.CharacterBaseName
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterBaseName
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterType*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterType
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupTemplateSO_CharacterType
+  name: CharacterType
+  nameWithType: LayeredCharacterGroupTemplateSO.CharacterType
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharacterType
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html
+  name: LayeredCharacterTypeSO
+  nameWithType: LayeredCharacterTypeSO
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupType*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupType
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupTemplateSO_GroupType
+  name: GroupType
+  nameWithType: LayeredCharacterGroupTemplateSO.GroupType
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.GroupType
+- uid: BlazerTech.CharacterManagement.Characters.MultiCharacterGroupType
+  commentId: T:BlazerTech.CharacterManagement.Characters.MultiCharacterGroupType
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.MultiCharacterGroupType.html
+  name: MultiCharacterGroupType
+  nameWithType: MultiCharacterGroupType
+  fullName: BlazerTech.CharacterManagement.Characters.MultiCharacterGroupType
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharactersInGroup*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharactersInGroup
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupTemplateSO_CharactersInGroup
+  name: CharactersInGroup
+  nameWithType: LayeredCharacterGroupTemplateSO.CharactersInGroup
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CharactersInGroup
+- uid: BlazerTech.CharacterManagement.Characters.GroupTemplateEntry[]
+  isExternal: true
+  href: BlazerTech.CharacterManagement.Characters.GroupTemplateEntry.html
+  name: GroupTemplateEntry[]
+  nameWithType: GroupTemplateEntry[]
+  fullName: BlazerTech.CharacterManagement.Characters.GroupTemplateEntry[]
+  nameWithType.vb: GroupTemplateEntry()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.GroupTemplateEntry()
+  name.vb: GroupTemplateEntry()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.GroupTemplateEntry
+    name: GroupTemplateEntry
+    href: BlazerTech.CharacterManagement.Characters.GroupTemplateEntry.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.GroupTemplateEntry
+    name: GroupTemplateEntry
+    href: BlazerTech.CharacterManagement.Characters.GroupTemplateEntry.html
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CreateGroup*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CreateGroup
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupTemplateSO_CreateGroup
+  name: CreateGroup
+  nameWithType: LayeredCharacterGroupTemplateSO.CreateGroup
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupTemplateSO.CreateGroup
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

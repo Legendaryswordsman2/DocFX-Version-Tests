@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Internal.Testing
+  commentId: N:BlazerTech.CharacterManagement.Internal.Testing
+  id: BlazerTech.CharacterManagement.Internal.Testing
+  children:
+  - BlazerTech.CharacterManagement.Internal.Testing.CCDebugChangeSceneOnEscape
+  - BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup
+  - BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFlexibleCharacter
+  - BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateSingleCharacter
+  - BlazerTech.CharacterManagement.Internal.Testing.LoadingScreenObjectRotation
+  langs:
+  - csharp
+  - vb
+  name: BlazerTech.CharacterManagement.Internal.Testing
+  nameWithType: BlazerTech.CharacterManagement.Internal.Testing
+  fullName: BlazerTech.CharacterManagement.Internal.Testing
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateSingleCharacter
+  commentId: T:BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateSingleCharacter
+  href: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateSingleCharacter.html
+  name: CCDebugCreateSingleCharacter
+  nameWithType: CCDebugCreateSingleCharacter
+  fullName: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateSingleCharacter
+- uid: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup
+  commentId: T:BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup
+  href: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup.html
+  name: CCDebugCreateFixedCharacterGroup
+  nameWithType: CCDebugCreateFixedCharacterGroup
+  fullName: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup
+- uid: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFlexibleCharacter
+  commentId: T:BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFlexibleCharacter
+  href: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFlexibleCharacter.html
+  name: CCDebugCreateFlexibleCharacter
+  nameWithType: CCDebugCreateFlexibleCharacter
+  fullName: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFlexibleCharacter
+- uid: BlazerTech.CharacterManagement.Internal.Testing.LoadingScreenObjectRotation
+  commentId: T:BlazerTech.CharacterManagement.Internal.Testing.LoadingScreenObjectRotation
+  href: BlazerTech.CharacterManagement.Internal.Testing.LoadingScreenObjectRotation.html
+  name: LoadingScreenObjectRotation
+  nameWithType: LoadingScreenObjectRotation
+  fullName: BlazerTech.CharacterManagement.Internal.Testing.LoadingScreenObjectRotation
+- uid: BlazerTech.CharacterManagement.Internal.Testing.CCDebugChangeSceneOnEscape
+  commentId: T:BlazerTech.CharacterManagement.Internal.Testing.CCDebugChangeSceneOnEscape
+  href: BlazerTech.CharacterManagement.Internal.Testing.CCDebugChangeSceneOnEscape.html
+  name: CCDebugChangeSceneOnEscape
+  nameWithType: CCDebugChangeSceneOnEscape
+  fullName: BlazerTech.CharacterManagement.Internal.Testing.CCDebugChangeSceneOnEscape

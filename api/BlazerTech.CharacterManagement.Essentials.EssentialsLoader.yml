@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Essentials.EssentialsLoader
+  commentId: T:BlazerTech.CharacterManagement.Essentials.EssentialsLoader
+  id: EssentialsLoader
+  parent: BlazerTech.CharacterManagement.Essentials
+  children:
+  - BlazerTech.CharacterManagement.Essentials.EssentialsLoader.Execute
+  langs:
+  - csharp
+  - vb
+  name: EssentialsLoader
+  nameWithType: EssentialsLoader
+  fullName: BlazerTech.CharacterManagement.Essentials.EssentialsLoader
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: EssentialsLoader
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: 'public abstract class EssentialsLoader : MonoBehaviour'
+    content.vb: Public MustInherit Class EssentialsLoader Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: BlazerTech.CharacterManagement.Essentials.EssentialsLoader.Execute
+  commentId: M:BlazerTech.CharacterManagement.Essentials.EssentialsLoader.Execute
+  id: Execute
+  parent: BlazerTech.CharacterManagement.Essentials.EssentialsLoader
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: EssentialsLoader.Execute()
+  fullName: BlazerTech.CharacterManagement.Essentials.EssentialsLoader.Execute()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Execute
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: >-
+      [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+
+      public static void Execute()
+    content.vb: >-
+      <RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)>
+
+      Public Shared Sub Execute()
+  overload: BlazerTech.CharacterManagement.Essentials.EssentialsLoader.Execute*
+  attributes:
+  - type: UnityEngine.RuntimeInitializeOnLoadMethodAttribute
+    ctor: UnityEngine.RuntimeInitializeOnLoadMethodAttribute.#ctor(UnityEngine.RuntimeInitializeLoadType)
+    arguments:
+    - type: UnityEngine.RuntimeInitializeLoadType
+      value: 1
+references:
+- uid: BlazerTech.CharacterManagement.Essentials
+  commentId: N:BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Essentials
+  nameWithType: BlazerTech.CharacterManagement.Essentials
+  fullName: BlazerTech.CharacterManagement.Essentials
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.Essentials.EssentialsLoader.Execute*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.EssentialsLoader.Execute
+  href: BlazerTech.CharacterManagement.Essentials.EssentialsLoader.html#BlazerTech_CharacterManagement_Essentials_EssentialsLoader_Execute
+  name: Execute
+  nameWithType: EssentialsLoader.Execute
+  fullName: BlazerTech.CharacterManagement.Essentials.EssentialsLoader.Execute

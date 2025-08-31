@@ -1,0 +1,214 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterPieceMapping
+  id: CharacterPieceMapping
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.#ctor(BlazerTech.CharacterManagement.Characters.CharacterLayerSO)
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.SelectedCharacterPieceName
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.characterPieceCollection
+  langs:
+  - csharp
+  - vb
+  name: CharacterPieceMapping
+  nameWithType: CharacterPieceMapping
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Templates/LayeredCharacterTemplateSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterPieceMapping
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Templates/LayeredCharacterTemplateSO.cs
+    startLine: 41
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  summary: References a <xref href="BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition" data-throw-if-not-resolved="false"></xref> within a <xref href="BlazerTech.CharacterManagement.Characters.CharacterLayerSO" data-throw-if-not-resolved="false"></xref> by spritesheet name.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class CharacterPieceMapping
+    content.vb: >-
+      <Serializable>
+
+      Public Class CharacterPieceMapping
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.characterPieceCollection
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.characterPieceCollection
+  id: characterPieceCollection
+  parent: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping
+  langs:
+  - csharp
+  - vb
+  name: characterPieceCollection
+  nameWithType: CharacterPieceMapping.characterPieceCollection
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.characterPieceCollection
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Templates/LayeredCharacterTemplateSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: characterPieceCollection
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Templates/LayeredCharacterTemplateSO.cs
+    startLine: 44
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public CharacterLayerSO characterPieceCollection
+    return:
+      type: BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+    content.vb: Public characterPieceCollection As CharacterLayerSO
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.SelectedCharacterPieceName
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.SelectedCharacterPieceName
+  id: SelectedCharacterPieceName
+  parent: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping
+  langs:
+  - csharp
+  - vb
+  name: SelectedCharacterPieceName
+  nameWithType: CharacterPieceMapping.SelectedCharacterPieceName
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.SelectedCharacterPieceName
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Templates/LayeredCharacterTemplateSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SelectedCharacterPieceName
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Templates/LayeredCharacterTemplateSO.cs
+    startLine: 46
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public string SelectedCharacterPieceName
+    return:
+      type: System.String
+    content.vb: Public SelectedCharacterPieceName As String
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.#ctor(BlazerTech.CharacterManagement.Characters.CharacterLayerSO)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.#ctor(BlazerTech.CharacterManagement.Characters.CharacterLayerSO)
+  id: '#ctor(BlazerTech.CharacterManagement.Characters.CharacterLayerSO)'
+  parent: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping
+  langs:
+  - csharp
+  - vb
+  name: CharacterPieceMapping(CharacterLayerSO)
+  nameWithType: CharacterPieceMapping.CharacterPieceMapping(CharacterLayerSO)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.CharacterPieceMapping(BlazerTech.CharacterManagement.Characters.CharacterLayerSO)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Templates/LayeredCharacterTemplateSO.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Scriptable Objects/Character Templates/LayeredCharacterTemplateSO.cs
+    startLine: 53
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public CharacterPieceMapping(CharacterLayerSO collectionSO)
+    parameters:
+    - id: collectionSO
+      type: BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+    content.vb: Public Sub New(collectionSO As CharacterLayerSO)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.#ctor*
+  nameWithType.vb: CharacterPieceMapping.New(CharacterLayerSO)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.New(BlazerTech.CharacterManagement.Characters.CharacterLayerSO)
+  name.vb: New(CharacterLayerSO)
+references:
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.html
+  name: CharacterPieceDefinition
+  nameWithType: CharacterPieceDefinition
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+- uid: BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterLayerSO.html
+  name: CharacterLayerSO
+  nameWithType: CharacterLayerSO
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.#ctor*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.#ctor
+  href: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.html#BlazerTech_CharacterManagement_Characters_CharacterPieceMapping__ctor_BlazerTech_CharacterManagement_Characters_CharacterLayerSO_
+  name: CharacterPieceMapping
+  nameWithType: CharacterPieceMapping.CharacterPieceMapping
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.CharacterPieceMapping
+  nameWithType.vb: CharacterPieceMapping.New
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterPieceMapping.New
+  name.vb: New

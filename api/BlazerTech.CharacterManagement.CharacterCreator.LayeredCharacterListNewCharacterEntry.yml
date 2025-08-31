@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry
+  commentId: T:BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry
+  id: LayeredCharacterListNewCharacterEntry
+  parent: BlazerTech.CharacterManagement.CharacterCreator
+  children:
+  - BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.CreateNewCharacter
+  - BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.Initialize(BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterSelectionList)
+  langs:
+  - csharp
+  - vb
+  name: LayeredCharacterListNewCharacterEntry
+  nameWithType: LayeredCharacterListNewCharacterEntry
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/LayeredCharacterListNewCharacterEntry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LayeredCharacterListNewCharacterEntry
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/LayeredCharacterListNewCharacterEntry.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: 'public class LayeredCharacterListNewCharacterEntry : MonoBehaviour'
+    content.vb: Public Class LayeredCharacterListNewCharacterEntry Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.Initialize(BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterSelectionList)
+  commentId: M:BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.Initialize(BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterSelectionList)
+  id: Initialize(BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterSelectionList)
+  parent: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry
+  langs:
+  - csharp
+  - vb
+  name: Initialize(LayeredCharacterSelectionList)
+  nameWithType: LayeredCharacterListNewCharacterEntry.Initialize(LayeredCharacterSelectionList)
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.Initialize(BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterSelectionList)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/LayeredCharacterListNewCharacterEntry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Initialize
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/LayeredCharacterListNewCharacterEntry.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: public void Initialize(LayeredCharacterSelectionList list)
+    parameters:
+    - id: list
+      type: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterSelectionList
+    content.vb: Public Sub Initialize(list As LayeredCharacterSelectionList)
+  overload: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.Initialize*
+- uid: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.CreateNewCharacter
+  commentId: M:BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.CreateNewCharacter
+  id: CreateNewCharacter
+  parent: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry
+  langs:
+  - csharp
+  - vb
+  name: CreateNewCharacter()
+  nameWithType: LayeredCharacterListNewCharacterEntry.CreateNewCharacter()
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.CreateNewCharacter()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/LayeredCharacterListNewCharacterEntry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CreateNewCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/LayeredCharacterListNewCharacterEntry.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: public void CreateNewCharacter()
+    content.vb: Public Sub CreateNewCharacter()
+  overload: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.CreateNewCharacter*
+references:
+- uid: BlazerTech.CharacterManagement.CharacterCreator
+  commentId: N:BlazerTech.CharacterManagement.CharacterCreator
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.CharacterCreator
+  nameWithType: BlazerTech.CharacterManagement.CharacterCreator
+  fullName: BlazerTech.CharacterManagement.CharacterCreator
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.Initialize*
+  commentId: Overload:BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.Initialize
+  href: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.html#BlazerTech_CharacterManagement_CharacterCreator_LayeredCharacterListNewCharacterEntry_Initialize_BlazerTech_CharacterManagement_CharacterCreator_LayeredCharacterSelectionList_
+  name: Initialize
+  nameWithType: LayeredCharacterListNewCharacterEntry.Initialize
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.Initialize
+- uid: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterSelectionList
+  commentId: T:BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterSelectionList
+  parent: BlazerTech.CharacterManagement.CharacterCreator
+  href: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterSelectionList.html
+  name: LayeredCharacterSelectionList
+  nameWithType: LayeredCharacterSelectionList
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterSelectionList
+- uid: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.CreateNewCharacter*
+  commentId: Overload:BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.CreateNewCharacter
+  href: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.html#BlazerTech_CharacterManagement_CharacterCreator_LayeredCharacterListNewCharacterEntry_CreateNewCharacter
+  name: CreateNewCharacter
+  nameWithType: LayeredCharacterListNewCharacterEntry.CreateNewCharacter
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.LayeredCharacterListNewCharacterEntry.CreateNewCharacter

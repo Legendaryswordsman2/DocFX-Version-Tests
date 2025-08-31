@@ -1,0 +1,273 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen
+  commentId: T:BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen
+  id: CharacterSelectionLoadingScreen
+  parent: BlazerTech.CharacterManagement.CharacterCreator
+  children:
+  - BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen.OnLoadingFinished
+  - BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen.OnLoadingProgressUpdated
+  langs:
+  - csharp
+  - vb
+  name: CharacterSelectionLoadingScreen
+  nameWithType: CharacterSelectionLoadingScreen
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/CharacterSelectionLoadingScreen.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterSelectionLoadingScreen
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/CharacterSelectionLoadingScreen.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: 'public class CharacterSelectionLoadingScreen : MonoBehaviour, ILoadingScreen'
+    content.vb: Public Class CharacterSelectionLoadingScreen Inherits MonoBehaviour Implements ILoadingScreen
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  implements:
+  - BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen
+- uid: BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen.OnLoadingProgressUpdated
+  commentId: E:BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen.OnLoadingProgressUpdated
+  id: OnLoadingProgressUpdated
+  parent: BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen
+  langs:
+  - csharp
+  - vb
+  name: OnLoadingProgressUpdated
+  nameWithType: CharacterSelectionLoadingScreen.OnLoadingProgressUpdated
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen.OnLoadingProgressUpdated
+  type: Event
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/CharacterSelectionLoadingScreen.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: OnLoadingProgressUpdated
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/CharacterSelectionLoadingScreen.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  example: []
+  syntax:
+    content: public event EventHandler<float> OnLoadingProgressUpdated
+    return:
+      type: System.EventHandler{System.Single}
+    content.vb: Public Event OnLoadingProgressUpdated As EventHandler(Of Single)
+  implements:
+  - BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen.OnLoadingProgressUpdated
+- uid: BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen.OnLoadingFinished
+  commentId: E:BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen.OnLoadingFinished
+  id: OnLoadingFinished
+  parent: BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen
+  langs:
+  - csharp
+  - vb
+  name: OnLoadingFinished
+  nameWithType: CharacterSelectionLoadingScreen.OnLoadingFinished
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.CharacterSelectionLoadingScreen.OnLoadingFinished
+  type: Event
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/CharacterSelectionLoadingScreen.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: OnLoadingFinished
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Selection/CharacterSelectionLoadingScreen.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  example: []
+  syntax:
+    content: public event EventHandler OnLoadingFinished
+    return:
+      type: System.EventHandler
+    content.vb: Public Event OnLoadingFinished As EventHandler
+  implements:
+  - BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen.OnLoadingFinished
+references:
+- uid: BlazerTech.CharacterManagement.CharacterCreator
+  commentId: N:BlazerTech.CharacterManagement.CharacterCreator
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.CharacterCreator
+  nameWithType: BlazerTech.CharacterManagement.CharacterCreator
+  fullName: BlazerTech.CharacterManagement.CharacterCreator
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen
+  commentId: T:BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen
+  parent: BlazerTech.CharacterManagement.CharacterCreator
+  href: BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen.html
+  name: ILoadingScreen
+  nameWithType: ILoadingScreen
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen.OnLoadingProgressUpdated
+  commentId: E:BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen.OnLoadingProgressUpdated
+  parent: BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen
+  href: BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen.html#BlazerTech_CharacterManagement_CharacterCreator_ILoadingScreen_OnLoadingProgressUpdated
+  name: OnLoadingProgressUpdated
+  nameWithType: ILoadingScreen.OnLoadingProgressUpdated
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen.OnLoadingProgressUpdated
+- uid: System.EventHandler{System.Single}
+  commentId: T:System.EventHandler{System.Single}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<float>
+  nameWithType: EventHandler<float>
+  fullName: System.EventHandler<float>
+  nameWithType.vb: EventHandler(Of Single)
+  fullName.vb: System.EventHandler(Of Single)
+  name.vb: EventHandler(Of Single)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen.OnLoadingFinished
+  commentId: E:BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen.OnLoadingFinished
+  parent: BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen
+  href: BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen.html#BlazerTech_CharacterManagement_CharacterCreator_ILoadingScreen_OnLoadingFinished
+  name: OnLoadingFinished
+  nameWithType: ILoadingScreen.OnLoadingFinished
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.ILoadingScreen.OnLoadingFinished
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler

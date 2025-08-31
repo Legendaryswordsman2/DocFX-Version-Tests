@@ -1,0 +1,194 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.CharacterDraft
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterDraft
+  id: CharacterDraft
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.CharacterDraft.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter)
+  - BlazerTech.CharacterManagement.Characters.CharacterDraft.Character
+  - BlazerTech.CharacterManagement.Characters.CharacterDraft.SaveCharacter
+  langs:
+  - csharp
+  - vb
+  name: CharacterDraft
+  nameWithType: CharacterDraft
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterDraft
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterDraft
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  summary: Wrapper class used when editting characters in the Character Creation Menu
+  example: []
+  syntax:
+    content: public abstract class CharacterDraft
+    content.vb: Public MustInherit Class CharacterDraft
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - BlazerTech.CharacterManagement.Characters.CharacterDraft_NewCharacter
+  - BlazerTech.CharacterManagement.Characters.CharacterDraft_PreExistingCharacter
+- uid: BlazerTech.CharacterManagement.Characters.CharacterDraft.Character
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterDraft.Character
+  id: Character
+  parent: BlazerTech.CharacterManagement.Characters.CharacterDraft
+  langs:
+  - csharp
+  - vb
+  name: Character
+  nameWithType: CharacterDraft.Character
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterDraft.Character
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Character
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public readonly LayeredCharacter Character
+    return:
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+    content.vb: Public ReadOnly Character As LayeredCharacter
+- uid: BlazerTech.CharacterManagement.Characters.CharacterDraft.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterDraft.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter)
+  id: '#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter)'
+  parent: BlazerTech.CharacterManagement.Characters.CharacterDraft
+  langs:
+  - csharp
+  - vb
+  name: CharacterDraft(LayeredCharacter)
+  nameWithType: CharacterDraft.CharacterDraft(LayeredCharacter)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterDraft.CharacterDraft(BlazerTech.CharacterManagement.Characters.LayeredCharacter)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public CharacterDraft(LayeredCharacter character)
+    parameters:
+    - id: character
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+    content.vb: Public Sub New(character As LayeredCharacter)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterDraft.#ctor*
+  nameWithType.vb: CharacterDraft.New(LayeredCharacter)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterDraft.New(BlazerTech.CharacterManagement.Characters.LayeredCharacter)
+  name.vb: New(LayeredCharacter)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterDraft.SaveCharacter
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterDraft.SaveCharacter
+  id: SaveCharacter
+  parent: BlazerTech.CharacterManagement.Characters.CharacterDraft
+  langs:
+  - csharp
+  - vb
+  name: SaveCharacter()
+  nameWithType: CharacterDraft.SaveCharacter()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterDraft.SaveCharacter()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SaveCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public abstract void SaveCharacter()
+    content.vb: Public MustOverride Sub SaveCharacter()
+  overload: BlazerTech.CharacterManagement.Characters.CharacterDraft.SaveCharacter*
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacter
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacter.html
+  name: LayeredCharacter
+  nameWithType: LayeredCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+- uid: BlazerTech.CharacterManagement.Characters.CharacterDraft.#ctor*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterDraft.#ctor
+  href: BlazerTech.CharacterManagement.Characters.CharacterDraft.html#BlazerTech_CharacterManagement_Characters_CharacterDraft__ctor_BlazerTech_CharacterManagement_Characters_LayeredCharacter_
+  name: CharacterDraft
+  nameWithType: CharacterDraft.CharacterDraft
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterDraft.CharacterDraft
+  nameWithType.vb: CharacterDraft.New
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterDraft.New
+  name.vb: New
+- uid: BlazerTech.CharacterManagement.Characters.CharacterDraft.SaveCharacter*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterDraft.SaveCharacter
+  href: BlazerTech.CharacterManagement.Characters.CharacterDraft.html#BlazerTech_CharacterManagement_Characters_CharacterDraft_SaveCharacter
+  name: SaveCharacter
+  nameWithType: CharacterDraft.SaveCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterDraft.SaveCharacter

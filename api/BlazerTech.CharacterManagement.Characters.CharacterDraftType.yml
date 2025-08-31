@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.CharacterDraftType
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterDraftType
+  id: CharacterDraftType
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.CharacterDraftType.NewCharacter
+  - BlazerTech.CharacterManagement.Characters.CharacterDraftType.PreExistingCharacter
+  langs:
+  - csharp
+  - vb
+  name: CharacterDraftType
+  nameWithType: CharacterDraftType
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterDraftType
+  type: Enum
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterDraftType
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public enum CharacterDraftType
+    content.vb: Public Enum CharacterDraftType
+- uid: BlazerTech.CharacterManagement.Characters.CharacterDraftType.NewCharacter
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterDraftType.NewCharacter
+  id: NewCharacter
+  parent: BlazerTech.CharacterManagement.Characters.CharacterDraftType
+  langs:
+  - csharp
+  - vb
+  name: NewCharacter
+  nameWithType: CharacterDraftType.NewCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterDraftType.NewCharacter
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: NewCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: NewCharacter = 0
+    return:
+      type: BlazerTech.CharacterManagement.Characters.CharacterDraftType
+- uid: BlazerTech.CharacterManagement.Characters.CharacterDraftType.PreExistingCharacter
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterDraftType.PreExistingCharacter
+  id: PreExistingCharacter
+  parent: BlazerTech.CharacterManagement.Characters.CharacterDraftType
+  langs:
+  - csharp
+  - vb
+  name: PreExistingCharacter
+  nameWithType: CharacterDraftType.PreExistingCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterDraftType.PreExistingCharacter
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: PreExistingCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/CharacterDraft.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: PreExistingCharacter = 1
+    return:
+      type: BlazerTech.CharacterManagement.Characters.CharacterDraftType
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: BlazerTech.CharacterManagement.Characters.CharacterDraftType
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterDraftType
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterDraftType.html
+  name: CharacterDraftType
+  nameWithType: CharacterDraftType
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterDraftType

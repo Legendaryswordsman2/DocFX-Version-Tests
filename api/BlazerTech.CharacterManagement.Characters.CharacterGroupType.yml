@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupType
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterGroupType
+  id: CharacterGroupType
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupType.FixedGroup
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupType.FlexibleGroup
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupType.SingleGroup
+  langs:
+  - csharp
+  - vb
+  name: CharacterGroupType
+  nameWithType: CharacterGroupType
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupType
+  type: Enum
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterGroupType
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public enum CharacterGroupType
+    content.vb: Public Enum CharacterGroupType
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupType.SingleGroup
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterGroupType.SingleGroup
+  id: SingleGroup
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupType
+  langs:
+  - csharp
+  - vb
+  name: SingleGroup
+  nameWithType: CharacterGroupType.SingleGroup
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupType.SingleGroup
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SingleGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: SingleGroup = 0
+    return:
+      type: BlazerTech.CharacterManagement.Characters.CharacterGroupType
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupType.FlexibleGroup
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterGroupType.FlexibleGroup
+  id: FlexibleGroup
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupType
+  langs:
+  - csharp
+  - vb
+  name: FlexibleGroup
+  nameWithType: CharacterGroupType.FlexibleGroup
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupType.FlexibleGroup
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: FlexibleGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: FlexibleGroup = 1
+    return:
+      type: BlazerTech.CharacterManagement.Characters.CharacterGroupType
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupType.FixedGroup
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterGroupType.FixedGroup
+  id: FixedGroup
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupType
+  langs:
+  - csharp
+  - vb
+  name: FixedGroup
+  nameWithType: CharacterGroupType.FixedGroup
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupType.FixedGroup
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: FixedGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: FixedGroup = 2
+    return:
+      type: BlazerTech.CharacterManagement.Characters.CharacterGroupType
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupType
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterGroupType
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupType.html
+  name: CharacterGroupType
+  nameWithType: CharacterGroupType
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupType

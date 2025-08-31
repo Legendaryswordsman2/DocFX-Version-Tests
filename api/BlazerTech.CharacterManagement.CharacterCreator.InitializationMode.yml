@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode
+  commentId: T:BlazerTech.CharacterManagement.CharacterCreator.InitializationMode
+  id: InitializationMode
+  parent: BlazerTech.CharacterManagement.CharacterCreator
+  children:
+  - BlazerTech.CharacterManagement.CharacterCreator.InitializationMode.Create
+  - BlazerTech.CharacterManagement.CharacterCreator.InitializationMode.InitializeExisting
+  langs:
+  - csharp
+  - vb
+  name: InitializationMode
+  nameWithType: InitializationMode
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode
+  type: Enum
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Piece Selectors/CCMCharacterPieceSelectionManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: InitializationMode
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Piece Selectors/CCMCharacterPieceSelectionManager.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: public enum InitializationMode
+    content.vb: Public Enum InitializationMode
+- uid: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode.Create
+  commentId: F:BlazerTech.CharacterManagement.CharacterCreator.InitializationMode.Create
+  id: Create
+  parent: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode
+  langs:
+  - csharp
+  - vb
+  name: Create
+  nameWithType: InitializationMode.Create
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode.Create
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Piece Selectors/CCMCharacterPieceSelectionManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Create
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Piece Selectors/CCMCharacterPieceSelectionManager.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: Create = 0
+    return:
+      type: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode
+- uid: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode.InitializeExisting
+  commentId: F:BlazerTech.CharacterManagement.CharacterCreator.InitializationMode.InitializeExisting
+  id: InitializeExisting
+  parent: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode
+  langs:
+  - csharp
+  - vb
+  name: InitializeExisting
+  nameWithType: InitializationMode.InitializeExisting
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode.InitializeExisting
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Piece Selectors/CCMCharacterPieceSelectionManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: InitializeExisting
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Character Piece Selectors/CCMCharacterPieceSelectionManager.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: InitializeExisting = 1
+    return:
+      type: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode
+references:
+- uid: BlazerTech.CharacterManagement.CharacterCreator
+  commentId: N:BlazerTech.CharacterManagement.CharacterCreator
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.CharacterCreator
+  nameWithType: BlazerTech.CharacterManagement.CharacterCreator
+  fullName: BlazerTech.CharacterManagement.CharacterCreator
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+- uid: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode
+  commentId: T:BlazerTech.CharacterManagement.CharacterCreator.InitializationMode
+  parent: BlazerTech.CharacterManagement.CharacterCreator
+  href: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode.html
+  name: InitializationMode
+  nameWithType: InitializationMode
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.InitializationMode

@@ -1,0 +1,36 @@
+### YamlMime:ManagedReference
+apiRules:
+
+  # Exclude most UnityEngine.Object + Component + MonoBehaviour inherited members
+  - exclude:
+      uidRegex: ^UnityEngine\.
+      type: Member
+
+    # Exclude all UnityEditor APIs (EditorWindow, Editor, etc.)
+  - exclude:
+      uidRegex: ^UnityEditor\.
+      type: Member
+  - exclude:
+      uidRegex: ^UnityEditor\.
+      type: Type
+
+  # Exclude .NET base class members (System.Object, System.Type, etc.)
+  - exclude:
+      uidRegex: ^System\.
+      type: Member
+
+  # --- Whitelist some useful inherited Unity members ---
+  - include:
+      uid: UnityEngine.Component.transform
+  - include:
+      uid: UnityEngine.Component.gameObject
+  - include:
+      uid: UnityEngine.Component.tag
+  - include:
+      uid: UnityEngine.Behaviour.enabled
+  - include:
+      uid: UnityEngine.Behaviour.isActiveAndEnabled
+  - include:
+      uid: UnityEngine.MonoBehaviour.useGUILayout
+  - include:
+      uid: UnityEngine.MonoBehaviour.runInEditMode

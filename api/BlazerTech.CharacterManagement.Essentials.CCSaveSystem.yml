@@ -1,0 +1,406 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Essentials.CCSaveSystem
+  commentId: T:BlazerTech.CharacterManagement.Essentials.CCSaveSystem
+  id: CCSaveSystem
+  parent: BlazerTech.CharacterManagement.Essentials
+  children:
+  - BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFileWholePath``1(System.String)
+  - BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFile``1(System.String)
+  - BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFilesInFolder``1(System.String)
+  - BlazerTech.CharacterManagement.Essentials.CCSaveSystem.SaveFile``1(System.String,System.String,``0)
+  langs:
+  - csharp
+  - vb
+  name: CCSaveSystem
+  nameWithType: CCSaveSystem
+  fullName: BlazerTech.CharacterManagement.Essentials.CCSaveSystem
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/CCSaveSystem.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CCSaveSystem
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/CCSaveSystem.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: 'public class CCSaveSystem : MonoBehaviour'
+    content.vb: Public Class CCSaveSystem Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.SaveFile``1(System.String,System.String,``0)
+  commentId: M:BlazerTech.CharacterManagement.Essentials.CCSaveSystem.SaveFile``1(System.String,System.String,``0)
+  id: SaveFile``1(System.String,System.String,``0)
+  parent: BlazerTech.CharacterManagement.Essentials.CCSaveSystem
+  langs:
+  - csharp
+  - vb
+  name: SaveFile<T>(string, string, T)
+  nameWithType: CCSaveSystem.SaveFile<T>(string, string, T)
+  fullName: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.SaveFile<T>(string, string, T)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/CCSaveSystem.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SaveFile
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/CCSaveSystem.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: public static void SaveFile<T>(string filePath, string fileName, T objectToWrite)
+    parameters:
+    - id: filePath
+      type: System.String
+    - id: fileName
+      type: System.String
+    - id: objectToWrite
+      type: '{T}'
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub SaveFile(Of T)(filePath As String, fileName As String, objectToWrite As T)
+  overload: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.SaveFile*
+  nameWithType.vb: CCSaveSystem.SaveFile(Of T)(String, String, T)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.SaveFile(Of T)(String, String, T)
+  name.vb: SaveFile(Of T)(String, String, T)
+- uid: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFile``1(System.String)
+  commentId: M:BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFile``1(System.String)
+  id: LoadFile``1(System.String)
+  parent: BlazerTech.CharacterManagement.Essentials.CCSaveSystem
+  langs:
+  - csharp
+  - vb
+  name: LoadFile<T>(string)
+  nameWithType: CCSaveSystem.LoadFile<T>(string)
+  fullName: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFile<T>(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/CCSaveSystem.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadFile
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/CCSaveSystem.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: 'public static T LoadFile<T>(string filePath) where T : class'
+    parameters:
+    - id: filePath
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function LoadFile(Of T As Class)(filePath As String) As T
+  overload: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFile*
+  nameWithType.vb: CCSaveSystem.LoadFile(Of T)(String)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFile(Of T)(String)
+  name.vb: LoadFile(Of T)(String)
+- uid: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFileWholePath``1(System.String)
+  commentId: M:BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFileWholePath``1(System.String)
+  id: LoadFileWholePath``1(System.String)
+  parent: BlazerTech.CharacterManagement.Essentials.CCSaveSystem
+  langs:
+  - csharp
+  - vb
+  name: LoadFileWholePath<T>(string)
+  nameWithType: CCSaveSystem.LoadFileWholePath<T>(string)
+  fullName: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFileWholePath<T>(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/CCSaveSystem.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadFileWholePath
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/CCSaveSystem.cs
+    startLine: 43
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: 'public static T LoadFileWholePath<T>(string filePath) where T : class'
+    parameters:
+    - id: filePath
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function LoadFileWholePath(Of T As Class)(filePath As String) As T
+  overload: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFileWholePath*
+  nameWithType.vb: CCSaveSystem.LoadFileWholePath(Of T)(String)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFileWholePath(Of T)(String)
+  name.vb: LoadFileWholePath(Of T)(String)
+- uid: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFilesInFolder``1(System.String)
+  commentId: M:BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFilesInFolder``1(System.String)
+  id: LoadFilesInFolder``1(System.String)
+  parent: BlazerTech.CharacterManagement.Essentials.CCSaveSystem
+  langs:
+  - csharp
+  - vb
+  name: LoadFilesInFolder<T>(string)
+  nameWithType: CCSaveSystem.LoadFilesInFolder<T>(string)
+  fullName: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFilesInFolder<T>(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/CCSaveSystem.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadFilesInFolder
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/CCSaveSystem.cs
+    startLine: 58
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: 'public static List<T> LoadFilesInFolder<T>(string folderPath) where T : class'
+    parameters:
+    - id: folderPath
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.List{{T}}
+    content.vb: Public Shared Function LoadFilesInFolder(Of T As Class)(folderPath As String) As List(Of T)
+  overload: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFilesInFolder*
+  nameWithType.vb: CCSaveSystem.LoadFilesInFolder(Of T)(String)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFilesInFolder(Of T)(String)
+  name.vb: LoadFilesInFolder(Of T)(String)
+references:
+- uid: BlazerTech.CharacterManagement.Essentials
+  commentId: N:BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Essentials
+  nameWithType: BlazerTech.CharacterManagement.Essentials
+  fullName: BlazerTech.CharacterManagement.Essentials
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.SaveFile*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.CCSaveSystem.SaveFile
+  href: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.html#BlazerTech_CharacterManagement_Essentials_CCSaveSystem_SaveFile__1_System_String_System_String___0_
+  name: SaveFile
+  nameWithType: CCSaveSystem.SaveFile
+  fullName: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.SaveFile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFile*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFile
+  href: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.html#BlazerTech_CharacterManagement_Essentials_CCSaveSystem_LoadFile__1_System_String_
+  name: LoadFile
+  nameWithType: CCSaveSystem.LoadFile
+  fullName: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFile
+- uid: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFileWholePath*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFileWholePath
+  href: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.html#BlazerTech_CharacterManagement_Essentials_CCSaveSystem_LoadFileWholePath__1_System_String_
+  name: LoadFileWholePath
+  nameWithType: CCSaveSystem.LoadFileWholePath
+  fullName: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFileWholePath
+- uid: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFilesInFolder*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFilesInFolder
+  href: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.html#BlazerTech_CharacterManagement_Essentials_CCSaveSystem_LoadFilesInFolder__1_System_String_
+  name: LoadFilesInFolder
+  nameWithType: CCSaveSystem.LoadFilesInFolder
+  fullName: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.LoadFilesInFolder
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

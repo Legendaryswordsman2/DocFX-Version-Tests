@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Character Templates | BlazerTech Character Management System </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Character Templates | BlazerTech Character Management System ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Legendaryswordsman2/BT-Character-Management-System-Docs/blob/main/docs/character-templates.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="BlazerTech Character Management System">
+            BlazerTech Character Management System
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="character-templates">
+<h1 id="character-templates">Character Templates</h1>
+
+<p>A <strong>Character Template</strong> is a blueprint for creating characters from a defined <strong>Character Type</strong>.<br>
+They provide an easy way to use characters anywhere in your project.</p>
+<hr>
+<h2 id="shared-fields">Shared Fields</h2>
+<p>Fields required by all <strong>Character Templates</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Character Type</strong></td>
+<td><code>UnifiedCharacterTypeSO</code> / <code>LayeredCharacterTypeSO</code></td>
+<td>Reference to the Character Type this template is based on.<br><a class="xref" href="../api/BlazerTech.CharacterManagement.Characters.CharacterTemplateBaseSO-2.html#BlazerTech_CharacterManagement_Characters_CharacterTemplateBaseSO_2_CharacterType">🔗 API</a></td>
+</tr>
+<tr>
+<td><strong>Character Name</strong></td>
+<td><code>String</code></td>
+<td>Name for characters created from this template (does <strong>not</strong> need to be unique).<br><a class="xref" href="../api/BlazerTech.CharacterManagement.Characters.CharacterTemplateBaseSO-2.html#BlazerTech_CharacterManagement_Characters_CharacterTemplateBaseSO_2_CharacterName">🔗 API</a></td>
+</tr>
+<tr>
+<td><strong>Character Display Name</strong></td>
+<td><code>String</code></td>
+<td>Optional display name shown for characters created from this template.<br><a class="xref" href="../api/BlazerTech.CharacterManagement.Characters.CharacterTemplateBaseSO-2.html#BlazerTech_CharacterManagement_Characters_CharacterTemplateBaseSO_2_CharacterDisplayName">🔗 API</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="unified-character-template">Unified Character Template</h2>
+<h3 id="setup">Setup</h3>
+<p>A blueprint used to create a <strong>Unified Character</strong> at runtime. Can be used in the <a class="xref" href="character-usage.html#unified-character-loader">Unified Character Loader</a> component.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To create a <strong>Unified Character Template</strong>:<br>
+<code>Right-click</code> in the Project window → <strong>Create &gt; BlazerTech Character Management System &gt; Unified Character Type</strong></p>
+</div>
+<h3 id="fields">Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Character Spritesheet</strong></td>
+<td><code>AssetReferenceT&lt;Texture2D&gt;</code></td>
+<td>Reference to a spritesheet the same size as the <strong>Base Spritesheet</strong> in the Character Type. When referenced, the spritesheet is marked as <strong>Addressable</strong>, allowing it to be loaded/unloaded as needed.<br><a class="xref" href="../api/BlazerTech.CharacterManagement.Characters.UnifiedCharacterTemplateSO.html#BlazerTech_CharacterManagement_Characters_UnifiedCharacterTemplateSO_CharacterSpritesheet">🔗 API</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="layered-character-template">Layered Character Template</h2>
+<h3 id="setup-1">Setup</h3>
+<p>A blueprint used to create a <strong>Layered Character</strong> at runtime. Can be used in the <a class="xref" href="character-usage.html#layered-character-template-loader">Layered Character Template Loader</a> component.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To create a <strong>Layered Character Template</strong>:<br>
+<code>Right-click</code> in the Project window → <strong>Create &gt; BlazerTech Character Management System &gt; Layered Character Type</strong></p>
+</div>
+<p>Once the <strong>Character Type</strong> reference is set, a list of all layers from the referenced type will appear.<br>
+Each layer includes:</p>
+<ul>
+<li><strong>Dropdown</strong> – Select which piece to use for the layer.</li>
+<li><strong>Search bar</strong> – Narrow results if the list is large.</li>
+</ul>
+<h3 id="buttons">Buttons</h3>
+<ul>
+<li><strong>Resync List</strong> – Rebuilds the layers list and resets all values.</li>
+<li><strong>Validate Character Template</strong> – Logs whether the template is valid (<code>true/false</code>).</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Legendaryswordsman2/BT-Character-Management-System-Docs/blob/main/docs/character-templates.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

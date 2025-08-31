@@ -1,0 +1,765 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  id: CharacterGroupRegistry
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.#ctor(BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO,BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CharacterType
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFixedGroup(System.String,System.Int32)
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFlexibleGroup(System.String)
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FixedGroups
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FlexibleGroups
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetDataTransferObject
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFixedGroup(System.String,System.Int32)
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFlexibleGroup(System.String)
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SingleGroup
+  - BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SuccessfullyInitialized
+  langs:
+  - csharp
+  - vb
+  name: CharacterGroupRegistry
+  nameWithType: CharacterGroupRegistry
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterGroupRegistry
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  summary: >-
+    Holds a collection of three different types of groups.
+
+    An instance of this class is used for each Layered Character Type.
+  example: []
+  syntax:
+    content: public sealed class CharacterGroupRegistry
+    content.vb: Public NotInheritable Class CharacterGroupRegistry
+  inheritance:
+  - System.Object
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CharacterType
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CharacterType
+  id: CharacterType
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: CharacterType
+  nameWithType: CharacterGroupRegistry.CharacterType
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CharacterType
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterType
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public LayeredCharacterTypeSO CharacterType { get; }
+    parameters: []
+    return:
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    content.vb: Public ReadOnly Property CharacterType As LayeredCharacterTypeSO
+  overload: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CharacterType*
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SingleGroup
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SingleGroup
+  id: SingleGroup
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: SingleGroup
+  nameWithType: CharacterGroupRegistry.SingleGroup
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SingleGroup
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SingleGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public SingleCharacterGroup SingleGroup { get; }
+    parameters: []
+    return:
+      type: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup
+    content.vb: Public ReadOnly Property SingleGroup As SingleCharacterGroup
+  overload: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SingleGroup*
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FlexibleGroups
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FlexibleGroups
+  id: FlexibleGroups
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: FlexibleGroups
+  nameWithType: CharacterGroupRegistry.FlexibleGroups
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FlexibleGroups
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: FlexibleGroups
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public Dictionary<string, FlexibleCharacterGroup> FlexibleGroups { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup}
+    content.vb: Public ReadOnly Property FlexibleGroups As Dictionary(Of String, FlexibleCharacterGroup)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FlexibleGroups*
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FixedGroups
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FixedGroups
+  id: FixedGroups
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: FixedGroups
+  nameWithType: CharacterGroupRegistry.FixedGroups
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FixedGroups
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: FixedGroups
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public Dictionary<string, FixedCharacterGroup> FixedGroups { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,BlazerTech.CharacterManagement.Characters.FixedCharacterGroup}
+    content.vb: Public ReadOnly Property FixedGroups As Dictionary(Of String, FixedCharacterGroup)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FixedGroups*
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SuccessfullyInitialized
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SuccessfullyInitialized
+  id: SuccessfullyInitialized
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: SuccessfullyInitialized
+  nameWithType: CharacterGroupRegistry.SuccessfullyInitialized
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SuccessfullyInitialized
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SuccessfullyInitialized
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public readonly bool SuccessfullyInitialized
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly SuccessfullyInitialized As Boolean
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  id: '#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)'
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: CharacterGroupRegistry(LayeredCharacterTypeSO)
+  nameWithType: CharacterGroupRegistry.CharacterGroupRegistry(LayeredCharacterTypeSO)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CharacterGroupRegistry(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public CharacterGroupRegistry(LayeredCharacterTypeSO type)
+    parameters:
+    - id: type
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    content.vb: Public Sub New(type As LayeredCharacterTypeSO)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.#ctor*
+  nameWithType.vb: CharacterGroupRegistry.New(LayeredCharacterTypeSO)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.New(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  name.vb: New(LayeredCharacterTypeSO)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.#ctor(BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO,BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.#ctor(BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO,BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  id: '#ctor(BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO,BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)'
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: CharacterGroupRegistry(CharacterTypeGroups_DTO, LayeredCharacterTypeSO)
+  nameWithType: CharacterGroupRegistry.CharacterGroupRegistry(CharacterTypeGroups_DTO, LayeredCharacterTypeSO)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CharacterGroupRegistry(BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO, BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 33
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public CharacterGroupRegistry(CharacterTypeGroups_DTO DTO, LayeredCharacterTypeSO characterType)
+    parameters:
+    - id: DTO
+      type: BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO
+    - id: characterType
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    content.vb: Public Sub New(DTO As CharacterTypeGroups_DTO, characterType As LayeredCharacterTypeSO)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.#ctor*
+  nameWithType.vb: CharacterGroupRegistry.New(CharacterTypeGroups_DTO, LayeredCharacterTypeSO)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.New(BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO, BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  name.vb: New(CharacterTypeGroups_DTO, LayeredCharacterTypeSO)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFlexibleGroup(System.String)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFlexibleGroup(System.String)
+  id: GetOrCreateFlexibleGroup(System.String)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: GetOrCreateFlexibleGroup(string)
+  nameWithType: CharacterGroupRegistry.GetOrCreateFlexibleGroup(string)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFlexibleGroup(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GetOrCreateFlexibleGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 62
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public FlexibleCharacterGroup GetOrCreateFlexibleGroup(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup
+    content.vb: Public Function GetOrCreateFlexibleGroup(name As String) As FlexibleCharacterGroup
+  overload: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFlexibleGroup*
+  nameWithType.vb: CharacterGroupRegistry.GetOrCreateFlexibleGroup(String)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFlexibleGroup(String)
+  name.vb: GetOrCreateFlexibleGroup(String)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFlexibleGroup(System.String)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFlexibleGroup(System.String)
+  id: CreateFlexibleGroup(System.String)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: CreateFlexibleGroup(string)
+  nameWithType: CharacterGroupRegistry.CreateFlexibleGroup(string)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFlexibleGroup(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CreateFlexibleGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 73
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public FlexibleCharacterGroup CreateFlexibleGroup(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup
+    content.vb: Public Function CreateFlexibleGroup(name As String) As FlexibleCharacterGroup
+  overload: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFlexibleGroup*
+  nameWithType.vb: CharacterGroupRegistry.CreateFlexibleGroup(String)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFlexibleGroup(String)
+  name.vb: CreateFlexibleGroup(String)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFixedGroup(System.String,System.Int32)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFixedGroup(System.String,System.Int32)
+  id: GetOrCreateFixedGroup(System.String,System.Int32)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: GetOrCreateFixedGroup(string, int)
+  nameWithType: CharacterGroupRegistry.GetOrCreateFixedGroup(string, int)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFixedGroup(string, int)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GetOrCreateFixedGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 85
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public FixedCharacterGroup GetOrCreateFixedGroup(string name, int size)
+    parameters:
+    - id: name
+      type: System.String
+    - id: size
+      type: System.Int32
+    return:
+      type: BlazerTech.CharacterManagement.Characters.FixedCharacterGroup
+    content.vb: Public Function GetOrCreateFixedGroup(name As String, size As Integer) As FixedCharacterGroup
+  overload: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFixedGroup*
+  nameWithType.vb: CharacterGroupRegistry.GetOrCreateFixedGroup(String, Integer)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFixedGroup(String, Integer)
+  name.vb: GetOrCreateFixedGroup(String, Integer)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFixedGroup(System.String,System.Int32)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFixedGroup(System.String,System.Int32)
+  id: CreateFixedGroup(System.String,System.Int32)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: CreateFixedGroup(string, int)
+  nameWithType: CharacterGroupRegistry.CreateFixedGroup(string, int)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFixedGroup(string, int)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CreateFixedGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 96
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public FixedCharacterGroup CreateFixedGroup(string name, int size)
+    parameters:
+    - id: name
+      type: System.String
+    - id: size
+      type: System.Int32
+    return:
+      type: BlazerTech.CharacterManagement.Characters.FixedCharacterGroup
+    content.vb: Public Function CreateFixedGroup(name As String, size As Integer) As FixedCharacterGroup
+  overload: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFixedGroup*
+  nameWithType.vb: CharacterGroupRegistry.CreateFixedGroup(String, Integer)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFixedGroup(String, Integer)
+  name.vb: CreateFixedGroup(String, Integer)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetDataTransferObject
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetDataTransferObject
+  id: GetDataTransferObject
+  parent: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  langs:
+  - csharp
+  - vb
+  name: GetDataTransferObject()
+  nameWithType: CharacterGroupRegistry.GetDataTransferObject()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetDataTransferObject()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GetDataTransferObject
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Groups/CharacterGroupRegistry.cs
+    startLine: 120
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public CharacterTypeGroups_DTO GetDataTransferObject()
+    return:
+      type: BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO
+    content.vb: Public Function GetDataTransferObject() As CharacterTypeGroups_DTO
+  overload: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetDataTransferObject*
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CharacterType*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CharacterType
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html#BlazerTech_CharacterManagement_Characters_CharacterGroupRegistry_CharacterType
+  name: CharacterType
+  nameWithType: CharacterGroupRegistry.CharacterType
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CharacterType
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html
+  name: LayeredCharacterTypeSO
+  nameWithType: LayeredCharacterTypeSO
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SingleGroup*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SingleGroup
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html#BlazerTech_CharacterManagement_Characters_CharacterGroupRegistry_SingleGroup
+  name: SingleGroup
+  nameWithType: CharacterGroupRegistry.SingleGroup
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.SingleGroup
+- uid: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup
+  commentId: T:BlazerTech.CharacterManagement.Characters.SingleCharacterGroup
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup.html
+  name: SingleCharacterGroup
+  nameWithType: SingleCharacterGroup
+  fullName: BlazerTech.CharacterManagement.Characters.SingleCharacterGroup
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FlexibleGroups*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FlexibleGroups
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html#BlazerTech_CharacterManagement_Characters_CharacterGroupRegistry_FlexibleGroups
+  name: FlexibleGroups
+  nameWithType: CharacterGroupRegistry.FlexibleGroups
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FlexibleGroups
+- uid: System.Collections.Generic.Dictionary{System.String,BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, FlexibleCharacterGroup>
+  nameWithType: Dictionary<string, FlexibleCharacterGroup>
+  fullName: System.Collections.Generic.Dictionary<string, BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup>
+  nameWithType.vb: Dictionary(Of String, FlexibleCharacterGroup)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup)
+  name.vb: Dictionary(Of String, FlexibleCharacterGroup)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup
+    name: FlexibleCharacterGroup
+    href: BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup
+    name: FlexibleCharacterGroup
+    href: BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FixedGroups*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FixedGroups
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html#BlazerTech_CharacterManagement_Characters_CharacterGroupRegistry_FixedGroups
+  name: FixedGroups
+  nameWithType: CharacterGroupRegistry.FixedGroups
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.FixedGroups
+- uid: System.Collections.Generic.Dictionary{System.String,BlazerTech.CharacterManagement.Characters.FixedCharacterGroup}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,BlazerTech.CharacterManagement.Characters.FixedCharacterGroup}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, FixedCharacterGroup>
+  nameWithType: Dictionary<string, FixedCharacterGroup>
+  fullName: System.Collections.Generic.Dictionary<string, BlazerTech.CharacterManagement.Characters.FixedCharacterGroup>
+  nameWithType.vb: Dictionary(Of String, FixedCharacterGroup)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, BlazerTech.CharacterManagement.Characters.FixedCharacterGroup)
+  name.vb: Dictionary(Of String, FixedCharacterGroup)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.FixedCharacterGroup
+    name: FixedCharacterGroup
+    href: BlazerTech.CharacterManagement.Characters.FixedCharacterGroup.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.FixedCharacterGroup
+    name: FixedCharacterGroup
+    href: BlazerTech.CharacterManagement.Characters.FixedCharacterGroup.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.#ctor*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.#ctor
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html#BlazerTech_CharacterManagement_Characters_CharacterGroupRegistry__ctor_BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_
+  name: CharacterGroupRegistry
+  nameWithType: CharacterGroupRegistry.CharacterGroupRegistry
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CharacterGroupRegistry
+  nameWithType.vb: CharacterGroupRegistry.New
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.New
+  name.vb: New
+- uid: BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO.html
+  name: CharacterTypeGroups_DTO
+  nameWithType: CharacterTypeGroups_DTO
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterTypeGroups_DTO
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFlexibleGroup*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFlexibleGroup
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html#BlazerTech_CharacterManagement_Characters_CharacterGroupRegistry_GetOrCreateFlexibleGroup_System_String_
+  name: GetOrCreateFlexibleGroup
+  nameWithType: CharacterGroupRegistry.GetOrCreateFlexibleGroup
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFlexibleGroup
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup
+  commentId: T:BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup.html
+  name: FlexibleCharacterGroup
+  nameWithType: FlexibleCharacterGroup
+  fullName: BlazerTech.CharacterManagement.Characters.FlexibleCharacterGroup
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFlexibleGroup*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFlexibleGroup
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html#BlazerTech_CharacterManagement_Characters_CharacterGroupRegistry_CreateFlexibleGroup_System_String_
+  name: CreateFlexibleGroup
+  nameWithType: CharacterGroupRegistry.CreateFlexibleGroup
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFlexibleGroup
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFixedGroup*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFixedGroup
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html#BlazerTech_CharacterManagement_Characters_CharacterGroupRegistry_GetOrCreateFixedGroup_System_String_System_Int32_
+  name: GetOrCreateFixedGroup
+  nameWithType: CharacterGroupRegistry.GetOrCreateFixedGroup
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetOrCreateFixedGroup
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: BlazerTech.CharacterManagement.Characters.FixedCharacterGroup
+  commentId: T:BlazerTech.CharacterManagement.Characters.FixedCharacterGroup
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.FixedCharacterGroup.html
+  name: FixedCharacterGroup
+  nameWithType: FixedCharacterGroup
+  fullName: BlazerTech.CharacterManagement.Characters.FixedCharacterGroup
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFixedGroup*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFixedGroup
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html#BlazerTech_CharacterManagement_Characters_CharacterGroupRegistry_CreateFixedGroup_System_String_System_Int32_
+  name: CreateFixedGroup
+  nameWithType: CharacterGroupRegistry.CreateFixedGroup
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.CreateFixedGroup
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetDataTransferObject*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetDataTransferObject
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html#BlazerTech_CharacterManagement_Characters_CharacterGroupRegistry_GetDataTransferObject
+  name: GetDataTransferObject
+  nameWithType: CharacterGroupRegistry.GetDataTransferObject
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.GetDataTransferObject

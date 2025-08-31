@@ -1,0 +1,579 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  id: LayeredCharacterGroupManager
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.CharacterTypeGroupsAutoSaveTriggers
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.GetGroupsForType(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.Initialize
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.LoadCharacterGroups
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SavedCharactersDirectory
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SavedCharactersFilename
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.ScheduleSaveCharacterGroups
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.groupsByType
+  langs:
+  - csharp
+  - vb
+  name: LayeredCharacterGroupManager
+  nameWithType: LayeredCharacterGroupManager
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LayeredCharacterGroupManager
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public static class LayeredCharacterGroupManager
+    content.vb: Public Module LayeredCharacterGroupManager
+  inheritance:
+  - System.Object
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SavedCharactersDirectory
+  commentId: F:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SavedCharactersDirectory
+  id: SavedCharactersDirectory
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  langs:
+  - csharp
+  - vb
+  name: SavedCharactersDirectory
+  nameWithType: LayeredCharacterGroupManager.SavedCharactersDirectory
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SavedCharactersDirectory
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SavedCharactersDirectory
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public const string SavedCharactersDirectory = "BlazerTech Character Management System"
+    return:
+      type: System.String
+    content.vb: Public Const SavedCharactersDirectory As String = "BlazerTech Character Management System"
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SavedCharactersFilename
+  commentId: F:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SavedCharactersFilename
+  id: SavedCharactersFilename
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  langs:
+  - csharp
+  - vb
+  name: SavedCharactersFilename
+  nameWithType: LayeredCharacterGroupManager.SavedCharactersFilename
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SavedCharactersFilename
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SavedCharactersFilename
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public const string SavedCharactersFilename = "Saved Characters"
+    return:
+      type: System.String
+    content.vb: Public Const SavedCharactersFilename As String = "Saved Characters"
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.CharacterTypeGroupsAutoSaveTriggers
+  commentId: F:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.CharacterTypeGroupsAutoSaveTriggers
+  id: CharacterTypeGroupsAutoSaveTriggers
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  langs:
+  - csharp
+  - vb
+  name: CharacterTypeGroupsAutoSaveTriggers
+  nameWithType: LayeredCharacterGroupManager.CharacterTypeGroupsAutoSaveTriggers
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.CharacterTypeGroupsAutoSaveTriggers
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterTypeGroupsAutoSaveTriggers
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public static CharacterGroupAutoSaveTriggers CharacterTypeGroupsAutoSaveTriggers
+    return:
+      type: BlazerTech.CharacterManagement.Characters.CharacterGroupAutoSaveTriggers
+    content.vb: Public Shared CharacterTypeGroupsAutoSaveTriggers As CharacterGroupAutoSaveTriggers
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.groupsByType
+  commentId: F:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.groupsByType
+  id: groupsByType
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  langs:
+  - csharp
+  - vb
+  name: groupsByType
+  nameWithType: LayeredCharacterGroupManager.groupsByType
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.groupsByType
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: groupsByType
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+    startLine: 29
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public static readonly Dictionary<LayeredCharacterTypeSO, CharacterGroupRegistry> groupsByType
+    return:
+      type: System.Collections.Generic.Dictionary{BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO,BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry}
+    content.vb: Public Shared ReadOnly groupsByType As Dictionary(Of LayeredCharacterTypeSO, CharacterGroupRegistry)
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.GetGroupsForType(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.GetGroupsForType(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  id: GetGroupsForType(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  langs:
+  - csharp
+  - vb
+  name: GetGroupsForType(LayeredCharacterTypeSO)
+  nameWithType: LayeredCharacterGroupManager.GetGroupsForType(LayeredCharacterTypeSO)
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.GetGroupsForType(BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GetGroupsForType
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+    startLine: 31
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public static CharacterGroupRegistry GetGroupsForType(LayeredCharacterTypeSO type)
+    parameters:
+    - id: type
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    return:
+      type: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+    content.vb: Public Shared Function GetGroupsForType(type As LayeredCharacterTypeSO) As CharacterGroupRegistry
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.GetGroupsForType*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.Initialize
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.Initialize
+  id: Initialize
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: LayeredCharacterGroupManager.Initialize()
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.Initialize()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Initialize
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+    startLine: 51
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public static void Initialize()
+    content.vb: Public Shared Sub Initialize()
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.Initialize*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.ScheduleSaveCharacterGroups
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.ScheduleSaveCharacterGroups
+  id: ScheduleSaveCharacterGroups
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  langs:
+  - csharp
+  - vb
+  name: ScheduleSaveCharacterGroups()
+  nameWithType: LayeredCharacterGroupManager.ScheduleSaveCharacterGroups()
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.ScheduleSaveCharacterGroups()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: ScheduleSaveCharacterGroups
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+    startLine: 77
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  summary: calls <xref href="BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate" data-throw-if-not-resolved="false"></xref> on the next frame.
+  example: []
+  syntax:
+    content: public static Task ScheduleSaveCharacterGroups()
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Public Shared Function ScheduleSaveCharacterGroups() As Task
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.ScheduleSaveCharacterGroups*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate
+  id: SaveCharacterGroupsImmediate
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  langs:
+  - csharp
+  - vb
+  name: SaveCharacterGroupsImmediate()
+  nameWithType: LayeredCharacterGroupManager.SaveCharacterGroupsImmediate()
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SaveCharacterGroupsImmediate
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+    startLine: 96
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  summary: Saves all character groups to json files. Separated by Character Type.
+  example: []
+  syntax:
+    content: public static void SaveCharacterGroupsImmediate()
+    content.vb: Public Shared Sub SaveCharacterGroupsImmediate()
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate*
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.LoadCharacterGroups
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.LoadCharacterGroups
+  id: LoadCharacterGroups
+  parent: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager
+  langs:
+  - csharp
+  - vb
+  name: LoadCharacterGroups()
+  nameWithType: LayeredCharacterGroupManager.LoadCharacterGroups()
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.LoadCharacterGroups()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadCharacterGroups
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/LayeredCharacterGroupManager.cs
+    startLine: 127
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  summary: Load previously saved character groups.
+  example: []
+  syntax:
+    content: public static void LoadCharacterGroups()
+    content.vb: Public Shared Sub LoadCharacterGroups()
+  overload: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.LoadCharacterGroups*
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupAutoSaveTriggers
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterGroupAutoSaveTriggers
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupAutoSaveTriggers.html
+  name: CharacterGroupAutoSaveTriggers
+  nameWithType: CharacterGroupAutoSaveTriggers
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupAutoSaveTriggers
+- uid: System.Collections.Generic.Dictionary{BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO,BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry}
+  commentId: T:System.Collections.Generic.Dictionary{BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO,BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<LayeredCharacterTypeSO, CharacterGroupRegistry>
+  nameWithType: Dictionary<LayeredCharacterTypeSO, CharacterGroupRegistry>
+  fullName: System.Collections.Generic.Dictionary<BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO, BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry>
+  nameWithType.vb: Dictionary(Of LayeredCharacterTypeSO, CharacterGroupRegistry)
+  fullName.vb: System.Collections.Generic.Dictionary(Of BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO, BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry)
+  name.vb: Dictionary(Of LayeredCharacterTypeSO, CharacterGroupRegistry)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    name: LayeredCharacterTypeSO
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html
+  - name: ','
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+    name: CharacterGroupRegistry
+    href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    name: LayeredCharacterTypeSO
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html
+  - name: ','
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+    name: CharacterGroupRegistry
+    href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.GetGroupsForType*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.GetGroupsForType
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupManager_GetGroupsForType_BlazerTech_CharacterManagement_Characters_LayeredCharacterTypeSO_
+  name: GetGroupsForType
+  nameWithType: LayeredCharacterGroupManager.GetGroupsForType
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.GetGroupsForType
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO.html
+  name: LayeredCharacterTypeSO
+  nameWithType: LayeredCharacterTypeSO
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+- uid: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry.html
+  name: CharacterGroupRegistry
+  nameWithType: CharacterGroupRegistry
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterGroupRegistry
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.Initialize*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.Initialize
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupManager_Initialize
+  name: Initialize
+  nameWithType: LayeredCharacterGroupManager.Initialize
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.Initialize
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate
+  commentId: M:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupManager_SaveCharacterGroupsImmediate
+  name: SaveCharacterGroupsImmediate()
+  nameWithType: LayeredCharacterGroupManager.SaveCharacterGroupsImmediate()
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate
+    name: SaveCharacterGroupsImmediate
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupManager_SaveCharacterGroupsImmediate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate
+    name: SaveCharacterGroupsImmediate
+    href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupManager_SaveCharacterGroupsImmediate
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.ScheduleSaveCharacterGroups*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.ScheduleSaveCharacterGroups
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupManager_ScheduleSaveCharacterGroups
+  name: ScheduleSaveCharacterGroups
+  nameWithType: LayeredCharacterGroupManager.ScheduleSaveCharacterGroups
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.ScheduleSaveCharacterGroups
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupManager_SaveCharacterGroupsImmediate
+  name: SaveCharacterGroupsImmediate
+  nameWithType: LayeredCharacterGroupManager.SaveCharacterGroupsImmediate
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.SaveCharacterGroupsImmediate
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.LoadCharacterGroups*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.LoadCharacterGroups
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.html#BlazerTech_CharacterManagement_Characters_LayeredCharacterGroupManager_LoadCharacterGroups
+  name: LoadCharacterGroups
+  nameWithType: LayeredCharacterGroupManager.LoadCharacterGroups
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacterGroupManager.LoadCharacterGroups

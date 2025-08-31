@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Utilities
+  commentId: N:BlazerTech.CharacterManagement.Utilities
+  id: BlazerTech.CharacterManagement.Utilities
+  children:
+  - BlazerTech.CharacterManagement.Utilities.SerializableInterfaceDrawer
+  - BlazerTech.CharacterManagement.Utilities.SerializableInterface`1
+  langs:
+  - csharp
+  - vb
+  name: BlazerTech.CharacterManagement.Utilities
+  nameWithType: BlazerTech.CharacterManagement.Utilities
+  fullName: BlazerTech.CharacterManagement.Utilities
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp-Editor
+references:
+- uid: BlazerTech.CharacterManagement.Utilities.SerializableInterfaceDrawer
+  commentId: T:BlazerTech.CharacterManagement.Utilities.SerializableInterfaceDrawer
+  href: BlazerTech.CharacterManagement.Utilities.SerializableInterfaceDrawer.html
+  name: SerializableInterfaceDrawer
+  nameWithType: SerializableInterfaceDrawer
+  fullName: BlazerTech.CharacterManagement.Utilities.SerializableInterfaceDrawer
+- uid: BlazerTech.CharacterManagement.Utilities.SerializableInterface`1
+  commentId: T:BlazerTech.CharacterManagement.Utilities.SerializableInterface`1
+  href: BlazerTech.CharacterManagement.Utilities.SerializableInterface-1.html
+  name: SerializableInterface<T>
+  nameWithType: SerializableInterface<T>
+  fullName: BlazerTech.CharacterManagement.Utilities.SerializableInterface<T>
+  nameWithType.vb: SerializableInterface(Of T)
+  fullName.vb: BlazerTech.CharacterManagement.Utilities.SerializableInterface(Of T)
+  name.vb: SerializableInterface(Of T)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Utilities.SerializableInterface`1
+    name: SerializableInterface
+    href: BlazerTech.CharacterManagement.Utilities.SerializableInterface-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Utilities.SerializableInterface`1
+    name: SerializableInterface
+    href: BlazerTech.CharacterManagement.Utilities.SerializableInterface-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

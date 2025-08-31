@@ -1,0 +1,220 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer
+  commentId: T:BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer
+  id: CharacterTypeGroupCollectionsViewer
+  parent: BlazerTech.CharacterManagement.Editor.Windows
+  children:
+  - BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.GetDisplayText(System.String)
+  - BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.ShowWindow
+  langs:
+  - csharp
+  - vb
+  name: CharacterTypeGroupCollectionsViewer
+  nameWithType: CharacterTypeGroupCollectionsViewer
+  fullName: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Editor/CharacterTypeGroupCollectionsViewer.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterTypeGroupCollectionsViewer
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Editor/CharacterTypeGroupCollectionsViewer.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: BlazerTech.CharacterManagement.Editor.Windows
+  syntax:
+    content: 'public class CharacterTypeGroupCollectionsViewer : EditorWindow'
+    content.vb: Public Class CharacterTypeGroupCollectionsViewer Inherits EditorWindow
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEditor.EditorWindow
+- uid: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.ShowWindow
+  commentId: M:BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.ShowWindow
+  id: ShowWindow
+  parent: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer
+  langs:
+  - csharp
+  - vb
+  name: ShowWindow()
+  nameWithType: CharacterTypeGroupCollectionsViewer.ShowWindow()
+  fullName: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.ShowWindow()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Editor/CharacterTypeGroupCollectionsViewer.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: ShowWindow
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Editor/CharacterTypeGroupCollectionsViewer.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: BlazerTech.CharacterManagement.Editor.Windows
+  syntax:
+    content: >-
+      [MenuItem("Tools/Character Group Collections Viewer")]
+
+      public static void ShowWindow()
+    content.vb: >-
+      <MenuItem("Tools/Character Group Collections Viewer")>
+
+      Public Shared Sub ShowWindow()
+  overload: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.ShowWindow*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Tools/Character Group Collections Viewer
+- uid: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.GetDisplayText(System.String)
+  commentId: M:BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.GetDisplayText(System.String)
+  id: GetDisplayText(System.String)
+  parent: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer
+  langs:
+  - csharp
+  - vb
+  name: GetDisplayText(string)
+  nameWithType: CharacterTypeGroupCollectionsViewer.GetDisplayText(string)
+  fullName: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.GetDisplayText(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Editor/CharacterTypeGroupCollectionsViewer.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GetDisplayText
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Editor/CharacterTypeGroupCollectionsViewer.cs
+    startLine: 220
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: BlazerTech.CharacterManagement.Editor.Windows
+  syntax:
+    content: public string GetDisplayText(string input)
+    parameters:
+    - id: input
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function GetDisplayText(input As String) As String
+  overload: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.GetDisplayText*
+  nameWithType.vb: CharacterTypeGroupCollectionsViewer.GetDisplayText(String)
+  fullName.vb: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.GetDisplayText(String)
+  name.vb: GetDisplayText(String)
+references:
+- uid: BlazerTech.CharacterManagement.Editor.Windows
+  commentId: N:BlazerTech.CharacterManagement.Editor.Windows
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Editor.Windows
+  nameWithType: BlazerTech.CharacterManagement.Editor.Windows
+  fullName: BlazerTech.CharacterManagement.Editor.Windows
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Editor
+    name: Editor
+    href: BlazerTech.CharacterManagement.Editor.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Editor.Windows
+    name: Windows
+    href: BlazerTech.CharacterManagement.Editor.Windows.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Editor
+    name: Editor
+    href: BlazerTech.CharacterManagement.Editor.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Editor.Windows
+    name: Windows
+    href: BlazerTech.CharacterManagement.Editor.Windows.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEditor.EditorWindow
+  commentId: T:UnityEditor.EditorWindow
+  parent: UnityEditor
+  isExternal: true
+  name: EditorWindow
+  nameWithType: EditorWindow
+  fullName: UnityEditor.EditorWindow
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.ShowWindow*
+  commentId: Overload:BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.ShowWindow
+  href: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.html#BlazerTech_CharacterManagement_Editor_Windows_CharacterTypeGroupCollectionsViewer_ShowWindow
+  name: ShowWindow
+  nameWithType: CharacterTypeGroupCollectionsViewer.ShowWindow
+  fullName: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.ShowWindow
+- uid: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.GetDisplayText*
+  commentId: Overload:BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.GetDisplayText
+  href: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.html#BlazerTech_CharacterManagement_Editor_Windows_CharacterTypeGroupCollectionsViewer_GetDisplayText_System_String_
+  name: GetDisplayText
+  nameWithType: CharacterTypeGroupCollectionsViewer.GetDisplayText
+  fullName: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.GetDisplayText
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

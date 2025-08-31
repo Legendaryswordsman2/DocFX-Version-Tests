@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Samples.SceneChangeRelay
+  commentId: T:BlazerTech.CharacterManagement.Samples.SceneChangeRelay
+  id: SceneChangeRelay
+  parent: BlazerTech.CharacterManagement.Samples
+  children:
+  - BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene(System.Int32)
+  - BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene(System.String)
+  langs:
+  - csharp
+  - vb
+  name: SceneChangeRelay
+  nameWithType: SceneChangeRelay
+  fullName: BlazerTech.CharacterManagement.Samples.SceneChangeRelay
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Samples/Sample Assets/Sample Scripts/SceneChangeRelay.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SceneChangeRelay
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Samples/Sample Assets/Sample Scripts/SceneChangeRelay.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Samples
+  syntax:
+    content: 'public class SceneChangeRelay : MonoBehaviour'
+    content.vb: Public Class SceneChangeRelay Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene(System.Int32)
+  commentId: M:BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene(System.Int32)
+  id: ChangeScene(System.Int32)
+  parent: BlazerTech.CharacterManagement.Samples.SceneChangeRelay
+  langs:
+  - csharp
+  - vb
+  name: ChangeScene(int)
+  nameWithType: SceneChangeRelay.ChangeScene(int)
+  fullName: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Samples/Sample Assets/Sample Scripts/SceneChangeRelay.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: ChangeScene
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Samples/Sample Assets/Sample Scripts/SceneChangeRelay.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Samples
+  syntax:
+    content: public void ChangeScene(int sceneIndex)
+    parameters:
+    - id: sceneIndex
+      type: System.Int32
+    content.vb: Public Sub ChangeScene(sceneIndex As Integer)
+  overload: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene*
+  nameWithType.vb: SceneChangeRelay.ChangeScene(Integer)
+  fullName.vb: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene(Integer)
+  name.vb: ChangeScene(Integer)
+- uid: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene(System.String)
+  commentId: M:BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene(System.String)
+  id: ChangeScene(System.String)
+  parent: BlazerTech.CharacterManagement.Samples.SceneChangeRelay
+  langs:
+  - csharp
+  - vb
+  name: ChangeScene(string)
+  nameWithType: SceneChangeRelay.ChangeScene(string)
+  fullName: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Samples/Sample Assets/Sample Scripts/SceneChangeRelay.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: ChangeScene
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Samples/Sample Assets/Sample Scripts/SceneChangeRelay.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Samples
+  syntax:
+    content: public void ChangeScene(string sceneName)
+    parameters:
+    - id: sceneName
+      type: System.String
+    content.vb: Public Sub ChangeScene(sceneName As String)
+  overload: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene*
+  nameWithType.vb: SceneChangeRelay.ChangeScene(String)
+  fullName.vb: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene(String)
+  name.vb: ChangeScene(String)
+references:
+- uid: BlazerTech.CharacterManagement.Samples
+  commentId: N:BlazerTech.CharacterManagement.Samples
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Samples
+  nameWithType: BlazerTech.CharacterManagement.Samples
+  fullName: BlazerTech.CharacterManagement.Samples
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Samples
+    name: Samples
+    href: BlazerTech.CharacterManagement.Samples.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Samples
+    name: Samples
+    href: BlazerTech.CharacterManagement.Samples.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene*
+  commentId: Overload:BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene
+  href: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.html#BlazerTech_CharacterManagement_Samples_SceneChangeRelay_ChangeScene_System_Int32_
+  name: ChangeScene
+  nameWithType: SceneChangeRelay.ChangeScene
+  fullName: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.ChangeScene
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

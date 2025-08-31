@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Essentials.Direction
+  commentId: T:BlazerTech.CharacterManagement.Essentials.Direction
+  id: Direction
+  parent: BlazerTech.CharacterManagement.Essentials
+  children:
+  - BlazerTech.CharacterManagement.Essentials.Direction.Down
+  - BlazerTech.CharacterManagement.Essentials.Direction.Left
+  - BlazerTech.CharacterManagement.Essentials.Direction.Right
+  - BlazerTech.CharacterManagement.Essentials.Direction.Up
+  langs:
+  - csharp
+  - vb
+  name: Direction
+  nameWithType: Direction
+  fullName: BlazerTech.CharacterManagement.Essentials.Direction
+  type: Enum
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Direction
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: public enum Direction
+    content.vb: Public Enum Direction
+- uid: BlazerTech.CharacterManagement.Essentials.Direction.Down
+  commentId: F:BlazerTech.CharacterManagement.Essentials.Direction.Down
+  id: Down
+  parent: BlazerTech.CharacterManagement.Essentials.Direction
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: Direction.Down
+  fullName: BlazerTech.CharacterManagement.Essentials.Direction.Down
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Down
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: Down = 0
+    return:
+      type: BlazerTech.CharacterManagement.Essentials.Direction
+- uid: BlazerTech.CharacterManagement.Essentials.Direction.Up
+  commentId: F:BlazerTech.CharacterManagement.Essentials.Direction.Up
+  id: Up
+  parent: BlazerTech.CharacterManagement.Essentials.Direction
+  langs:
+  - csharp
+  - vb
+  name: Up
+  nameWithType: Direction.Up
+  fullName: BlazerTech.CharacterManagement.Essentials.Direction.Up
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Up
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: Up = 1
+    return:
+      type: BlazerTech.CharacterManagement.Essentials.Direction
+- uid: BlazerTech.CharacterManagement.Essentials.Direction.Left
+  commentId: F:BlazerTech.CharacterManagement.Essentials.Direction.Left
+  id: Left
+  parent: BlazerTech.CharacterManagement.Essentials.Direction
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: Direction.Left
+  fullName: BlazerTech.CharacterManagement.Essentials.Direction.Left
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Left
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: Left = 2
+    return:
+      type: BlazerTech.CharacterManagement.Essentials.Direction
+- uid: BlazerTech.CharacterManagement.Essentials.Direction.Right
+  commentId: F:BlazerTech.CharacterManagement.Essentials.Direction.Right
+  id: Right
+  parent: BlazerTech.CharacterManagement.Essentials.Direction
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: Direction.Right
+  fullName: BlazerTech.CharacterManagement.Essentials.Direction.Right
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Right
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/EssentialsLoader.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: Right = 3
+    return:
+      type: BlazerTech.CharacterManagement.Essentials.Direction
+references:
+- uid: BlazerTech.CharacterManagement.Essentials
+  commentId: N:BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Essentials
+  nameWithType: BlazerTech.CharacterManagement.Essentials
+  fullName: BlazerTech.CharacterManagement.Essentials
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+- uid: BlazerTech.CharacterManagement.Essentials.Direction
+  commentId: T:BlazerTech.CharacterManagement.Essentials.Direction
+  parent: BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.CharacterManagement.Essentials.Direction.html
+  name: Direction
+  nameWithType: Direction
+  fullName: BlazerTech.CharacterManagement.Essentials.Direction

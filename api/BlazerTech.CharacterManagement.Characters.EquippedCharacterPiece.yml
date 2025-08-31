@@ -1,0 +1,389 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+  commentId: T:BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+  id: EquippedCharacterPiece
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.#ctor(BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece)
+  - BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter,BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition,BlazerTech.CharacterManagement.Characters.CharacterLayerSO)
+  - BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.AttachedCharacter
+  - BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceCollection
+  - BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceInfo
+  - BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.OnCharacterPieceUpdated
+  langs:
+  - csharp
+  - vb
+  name: EquippedCharacterPiece
+  nameWithType: EquippedCharacterPiece
+  fullName: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: EquippedCharacterPiece
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  summary: A wrapper for <xref href="BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition" data-throw-if-not-resolved="false"></xref>. used as a list in <xref href="BlazerTech.CharacterManagement.Characters.LayeredCharacter" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class EquippedCharacterPiece
+    content.vb: >-
+      <Serializable>
+
+      Public Class EquippedCharacterPiece
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.AttachedCharacter
+  commentId: F:BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.AttachedCharacter
+  id: AttachedCharacter
+  parent: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+  langs:
+  - csharp
+  - vb
+  name: AttachedCharacter
+  nameWithType: EquippedCharacterPiece.AttachedCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.AttachedCharacter
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: AttachedCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: >-
+      [NonSerialized]
+
+      public LayeredCharacter AttachedCharacter
+    return:
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+    content.vb: >-
+      <NonSerialized>
+
+      Public AttachedCharacter As LayeredCharacter
+  attributes:
+  - type: System.NonSerializedAttribute
+    ctor: System.NonSerializedAttribute.#ctor
+    arguments: []
+- uid: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceCollection
+  commentId: F:BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceCollection
+  id: CharacterPieceCollection
+  parent: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+  langs:
+  - csharp
+  - vb
+  name: CharacterPieceCollection
+  nameWithType: EquippedCharacterPiece.CharacterPieceCollection
+  fullName: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceCollection
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterPieceCollection
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public CharacterLayerSO CharacterPieceCollection
+    return:
+      type: BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+    content.vb: Public CharacterPieceCollection As CharacterLayerSO
+- uid: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceInfo
+  commentId: P:BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceInfo
+  id: CharacterPieceInfo
+  parent: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+  langs:
+  - csharp
+  - vb
+  name: CharacterPieceInfo
+  nameWithType: EquippedCharacterPiece.CharacterPieceInfo
+  fullName: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceInfo
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterPieceInfo
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public CharacterPieceDefinition CharacterPieceInfo { get; set; }
+    parameters: []
+    return:
+      type: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+    content.vb: Public Property CharacterPieceInfo As CharacterPieceDefinition
+  overload: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceInfo*
+- uid: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.OnCharacterPieceUpdated
+  commentId: E:BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.OnCharacterPieceUpdated
+  id: OnCharacterPieceUpdated
+  parent: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+  langs:
+  - csharp
+  - vb
+  name: OnCharacterPieceUpdated
+  nameWithType: EquippedCharacterPiece.OnCharacterPieceUpdated
+  fullName: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.OnCharacterPieceUpdated
+  type: Event
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: OnCharacterPieceUpdated
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+    startLine: 28
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public event EventHandler<CharacterPieceDefinition> OnCharacterPieceUpdated
+    return:
+      type: System.EventHandler{BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition}
+    content.vb: Public Event OnCharacterPieceUpdated As EventHandler(Of CharacterPieceDefinition)
+- uid: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter,BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition,BlazerTech.CharacterManagement.Characters.CharacterLayerSO)
+  commentId: M:BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter,BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition,BlazerTech.CharacterManagement.Characters.CharacterLayerSO)
+  id: '#ctor(BlazerTech.CharacterManagement.Characters.LayeredCharacter,BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition,BlazerTech.CharacterManagement.Characters.CharacterLayerSO)'
+  parent: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+  langs:
+  - csharp
+  - vb
+  name: EquippedCharacterPiece(LayeredCharacter, CharacterPieceDefinition, CharacterLayerSO)
+  nameWithType: EquippedCharacterPiece.EquippedCharacterPiece(LayeredCharacter, CharacterPieceDefinition, CharacterLayerSO)
+  fullName: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.EquippedCharacterPiece(BlazerTech.CharacterManagement.Characters.LayeredCharacter, BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition, BlazerTech.CharacterManagement.Characters.CharacterLayerSO)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+    startLine: 49
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public EquippedCharacterPiece(LayeredCharacter attachedCharacter, CharacterPieceDefinition characterPieceInfo, CharacterLayerSO characterPieceCollection)
+    parameters:
+    - id: attachedCharacter
+      type: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+    - id: characterPieceInfo
+      type: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+    - id: characterPieceCollection
+      type: BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+    content.vb: Public Sub New(attachedCharacter As LayeredCharacter, characterPieceInfo As CharacterPieceDefinition, characterPieceCollection As CharacterLayerSO)
+  overload: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.#ctor*
+  nameWithType.vb: EquippedCharacterPiece.New(LayeredCharacter, CharacterPieceDefinition, CharacterLayerSO)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.New(BlazerTech.CharacterManagement.Characters.LayeredCharacter, BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition, BlazerTech.CharacterManagement.Characters.CharacterLayerSO)
+  name.vb: New(LayeredCharacter, CharacterPieceDefinition, CharacterLayerSO)
+- uid: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.#ctor(BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece)
+  commentId: M:BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.#ctor(BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece)
+  id: '#ctor(BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece)'
+  parent: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+  langs:
+  - csharp
+  - vb
+  name: EquippedCharacterPiece(EquippedCharacterPiece)
+  nameWithType: EquippedCharacterPiece.EquippedCharacterPiece(EquippedCharacterPiece)
+  fullName: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.EquippedCharacterPiece(BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/Layered Characters/Character Pieces/EquippedCharacterPiece.cs
+    startLine: 58
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public EquippedCharacterPiece(EquippedCharacterPiece characterPiece)
+    parameters:
+    - id: characterPiece
+      type: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+    content.vb: Public Sub New(characterPiece As EquippedCharacterPiece)
+  overload: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.#ctor*
+  nameWithType.vb: EquippedCharacterPiece.New(EquippedCharacterPiece)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.New(BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece)
+  name.vb: New(EquippedCharacterPiece)
+references:
+- uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.html
+  name: CharacterPieceDefinition
+  nameWithType: CharacterPieceDefinition
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+- uid: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+  commentId: T:BlazerTech.CharacterManagement.Characters.LayeredCharacter
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.LayeredCharacter.html
+  name: LayeredCharacter
+  nameWithType: LayeredCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.LayeredCharacter
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.CharacterLayerSO.html
+  name: CharacterLayerSO
+  nameWithType: CharacterLayerSO
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterLayerSO
+- uid: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceInfo*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceInfo
+  href: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.html#BlazerTech_CharacterManagement_Characters_EquippedCharacterPiece_CharacterPieceInfo
+  name: CharacterPieceInfo
+  nameWithType: EquippedCharacterPiece.CharacterPieceInfo
+  fullName: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.CharacterPieceInfo
+- uid: System.EventHandler{BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition}
+  commentId: T:System.EventHandler{BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<CharacterPieceDefinition>
+  nameWithType: EventHandler<CharacterPieceDefinition>
+  fullName: System.EventHandler<BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition>
+  nameWithType.vb: EventHandler(Of CharacterPieceDefinition)
+  fullName.vb: System.EventHandler(Of BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition)
+  name.vb: EventHandler(Of CharacterPieceDefinition)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+    name: CharacterPieceDefinition
+    href: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+    name: CharacterPieceDefinition
+    href: BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.#ctor*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.#ctor
+  href: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.html#BlazerTech_CharacterManagement_Characters_EquippedCharacterPiece__ctor_BlazerTech_CharacterManagement_Characters_LayeredCharacter_BlazerTech_CharacterManagement_Characters_CharacterPieceDefinition_BlazerTech_CharacterManagement_Characters_CharacterLayerSO_
+  name: EquippedCharacterPiece
+  nameWithType: EquippedCharacterPiece.EquippedCharacterPiece
+  fullName: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.EquippedCharacterPiece
+  nameWithType.vb: EquippedCharacterPiece.New
+  fullName.vb: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.New
+  name.vb: New
+- uid: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+  commentId: T:BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece
+  parent: BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece.html
+  name: EquippedCharacterPiece
+  nameWithType: EquippedCharacterPiece
+  fullName: BlazerTech.CharacterManagement.Characters.EquippedCharacterPiece

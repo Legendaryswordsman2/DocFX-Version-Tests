@@ -1,0 +1,196 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Essentials
+  commentId: N:BlazerTech.CharacterManagement.Essentials
+  id: BlazerTech.CharacterManagement.Essentials
+  children:
+  - BlazerTech.CharacterManagement.Essentials.CCMAnimationPreviewButtonHandler
+  - BlazerTech.CharacterManagement.Essentials.CCReferenceHandler
+  - BlazerTech.CharacterManagement.Essentials.CCSaveSystem
+  - BlazerTech.CharacterManagement.Essentials.CMSInitializationHandler
+  - BlazerTech.CharacterManagement.Essentials.Direction
+  - BlazerTech.CharacterManagement.Essentials.EssentialsLoader
+  - BlazerTech.CharacterManagement.Essentials.IValidatable
+  - BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  - BlazerTech.CharacterManagement.Essentials.SerializableDictionary`2
+  - BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2
+  - BlazerTech.CharacterManagement.Essentials.SessionGUIDHandler
+  langs:
+  - csharp
+  - vb
+  name: BlazerTech.CharacterManagement.Essentials
+  nameWithType: BlazerTech.CharacterManagement.Essentials
+  fullName: BlazerTech.CharacterManagement.Essentials
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: BlazerTech.CharacterManagement.Essentials.CCMAnimationPreviewButtonHandler
+  commentId: T:BlazerTech.CharacterManagement.Essentials.CCMAnimationPreviewButtonHandler
+  href: BlazerTech.CharacterManagement.Essentials.CCMAnimationPreviewButtonHandler.html
+  name: CCMAnimationPreviewButtonHandler
+  nameWithType: CCMAnimationPreviewButtonHandler
+  fullName: BlazerTech.CharacterManagement.Essentials.CCMAnimationPreviewButtonHandler
+- uid: BlazerTech.CharacterManagement.Essentials.CCReferenceHandler
+  commentId: T:BlazerTech.CharacterManagement.Essentials.CCReferenceHandler
+  parent: BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.CharacterManagement.Essentials.CCReferenceHandler.html
+  name: CCReferenceHandler
+  nameWithType: CCReferenceHandler
+  fullName: BlazerTech.CharacterManagement.Essentials.CCReferenceHandler
+- uid: BlazerTech.CharacterManagement.Essentials.CCSaveSystem
+  commentId: T:BlazerTech.CharacterManagement.Essentials.CCSaveSystem
+  href: BlazerTech.CharacterManagement.Essentials.CCSaveSystem.html
+  name: CCSaveSystem
+  nameWithType: CCSaveSystem
+  fullName: BlazerTech.CharacterManagement.Essentials.CCSaveSystem
+- uid: BlazerTech.CharacterManagement.Essentials.IValidatable
+  commentId: T:BlazerTech.CharacterManagement.Essentials.IValidatable
+  parent: BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.CharacterManagement.Essentials.IValidatable.html
+  name: IValidatable
+  nameWithType: IValidatable
+  fullName: BlazerTech.CharacterManagement.Essentials.IValidatable
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  commentId: T:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  href: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker-1.html
+  name: OwnedResourceTracker<TResource>
+  nameWithType: OwnedResourceTracker<TResource>
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>
+  nameWithType.vb: OwnedResourceTracker(Of TResource)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource)
+  name.vb: OwnedResourceTracker(Of TResource)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+    name: OwnedResourceTracker
+    href: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker-1.html
+  - name: <
+  - name: TResource
+  - name: '>'
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+    name: OwnedResourceTracker
+    href: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResource
+  - name: )
+- uid: BlazerTech.CharacterManagement.Essentials.SerializableDictionary`2
+  commentId: T:BlazerTech.CharacterManagement.Essentials.SerializableDictionary`2
+  href: BlazerTech.CharacterManagement.Essentials.SerializableDictionary-2.html
+  name: SerializableDictionary<TKey, TValue>
+  nameWithType: SerializableDictionary<TKey, TValue>
+  fullName: BlazerTech.CharacterManagement.Essentials.SerializableDictionary<TKey, TValue>
+  nameWithType.vb: SerializableDictionary(Of TKey, TValue)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.SerializableDictionary(Of TKey, TValue)
+  name.vb: SerializableDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Essentials.SerializableDictionary`2
+    name: SerializableDictionary
+    href: BlazerTech.CharacterManagement.Essentials.SerializableDictionary-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Essentials.SerializableDictionary`2
+    name: SerializableDictionary
+    href: BlazerTech.CharacterManagement.Essentials.SerializableDictionary-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2
+  commentId: T:BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2
+  href: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair-2.html
+  name: SerializableKeyValuePair<TKey, TValue>
+  nameWithType: SerializableKeyValuePair<TKey, TValue>
+  fullName: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair<TKey, TValue>
+  nameWithType.vb: SerializableKeyValuePair(Of TKey, TValue)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair(Of TKey, TValue)
+  name.vb: SerializableKeyValuePair(Of TKey, TValue)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2
+    name: SerializableKeyValuePair
+    href: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair`2
+    name: SerializableKeyValuePair
+    href: BlazerTech.CharacterManagement.Essentials.SerializableKeyValuePair-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: BlazerTech.CharacterManagement.Essentials.Direction
+  commentId: T:BlazerTech.CharacterManagement.Essentials.Direction
+  parent: BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.CharacterManagement.Essentials.Direction.html
+  name: Direction
+  nameWithType: Direction
+  fullName: BlazerTech.CharacterManagement.Essentials.Direction
+- uid: BlazerTech.CharacterManagement.Essentials.EssentialsLoader
+  commentId: T:BlazerTech.CharacterManagement.Essentials.EssentialsLoader
+  href: BlazerTech.CharacterManagement.Essentials.EssentialsLoader.html
+  name: EssentialsLoader
+  nameWithType: EssentialsLoader
+  fullName: BlazerTech.CharacterManagement.Essentials.EssentialsLoader
+- uid: BlazerTech.CharacterManagement.Essentials.SessionGUIDHandler
+  commentId: T:BlazerTech.CharacterManagement.Essentials.SessionGUIDHandler
+  href: BlazerTech.CharacterManagement.Essentials.SessionGUIDHandler.html
+  name: SessionGUIDHandler
+  nameWithType: SessionGUIDHandler
+  fullName: BlazerTech.CharacterManagement.Essentials.SessionGUIDHandler
+- uid: BlazerTech.CharacterManagement.Essentials.CMSInitializationHandler
+  commentId: T:BlazerTech.CharacterManagement.Essentials.CMSInitializationHandler
+  parent: BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.CharacterManagement.Essentials.CMSInitializationHandler.html
+  name: CMSInitializationHandler
+  nameWithType: CMSInitializationHandler
+  fullName: BlazerTech.CharacterManagement.Essentials.CMSInitializationHandler
+- uid: BlazerTech.CharacterManagement.Essentials
+  commentId: N:BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Essentials
+  nameWithType: BlazerTech.CharacterManagement.Essentials
+  fullName: BlazerTech.CharacterManagement.Essentials
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html

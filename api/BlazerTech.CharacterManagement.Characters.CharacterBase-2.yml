@@ -1,0 +1,790 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  commentId: T:BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  id: CharacterBase`2
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.#ctor(System.String,`0)
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandler(System.Object)
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandlerAsync(System.Object)
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterDisplayName
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterGUID
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterName
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterType
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.IsValidCharacter
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandler
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandlerAsync
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadedCharacterHandler
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.ReleaseCharacterHandler(System.Object)
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.SetCharacterInvalid
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.UnloadCharacterHandler
+  - BlazerTech.CharacterManagement.Characters.CharacterBase`2.ValidationCheck
+  langs:
+  - csharp
+  - vb
+  name: CharacterBase<TCharacterType, TCharacterHandler>
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterBase
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: 'public abstract class CharacterBase<TCharacterType, TCharacterHandler> where TCharacterType : CharacterTypeBaseSO where TCharacterHandler : LoadedCharacterHandlerBase'
+    typeParameters:
+    - id: TCharacterType
+    - id: TCharacterHandler
+    content.vb: Public MustInherit Class CharacterBase(Of TCharacterType As CharacterTypeBaseSO, TCharacterHandler As LoadedCharacterHandlerBase)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacter
+  - BlazerTech.CharacterManagement.Characters.UnifiedCharacter
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler)
+  name.vb: CharacterBase(Of TCharacterType, TCharacterHandler)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterType
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterType
+  id: CharacterType
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: CharacterType
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.CharacterType
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.CharacterType
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterType
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public readonly TCharacterType CharacterType
+    return:
+      type: '{TCharacterType}'
+    content.vb: Public ReadOnly CharacterType As TCharacterType
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).CharacterType
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).CharacterType
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadedCharacterHandler
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadedCharacterHandler
+  id: LoadedCharacterHandler
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: LoadedCharacterHandler
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.LoadedCharacterHandler
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.LoadedCharacterHandler
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadedCharacterHandler
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public TCharacterHandler LoadedCharacterHandler
+    return:
+      type: '{TCharacterHandler}'
+    content.vb: Public LoadedCharacterHandler As TCharacterHandler
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).LoadedCharacterHandler
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).LoadedCharacterHandler
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterGUID
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterGUID
+  id: CharacterGUID
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: CharacterGUID
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.CharacterGUID
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.CharacterGUID
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterGUID
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public readonly Guid CharacterGUID
+    return:
+      type: System.Guid
+    content.vb: Public ReadOnly CharacterGUID As Guid
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).CharacterGUID
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).CharacterGUID
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterName
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterName
+  id: CharacterName
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: CharacterName
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.CharacterName
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.CharacterName
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterName
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public readonly string CharacterName
+    return:
+      type: System.String
+    content.vb: Public ReadOnly CharacterName As String
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).CharacterName
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).CharacterName
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterDisplayName
+  commentId: F:BlazerTech.CharacterManagement.Characters.CharacterBase`2.CharacterDisplayName
+  id: CharacterDisplayName
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: CharacterDisplayName
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.CharacterDisplayName
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.CharacterDisplayName
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterDisplayName
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public string CharacterDisplayName
+    return:
+      type: System.String
+    content.vb: Public CharacterDisplayName As String
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).CharacterDisplayName
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).CharacterDisplayName
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.IsValidCharacter
+  commentId: P:BlazerTech.CharacterManagement.Characters.CharacterBase`2.IsValidCharacter
+  id: IsValidCharacter
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: IsValidCharacter
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.IsValidCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.IsValidCharacter
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: IsValidCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public bool IsValidCharacter { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsValidCharacter As Boolean
+  overload: BlazerTech.CharacterManagement.Characters.CharacterBase`2.IsValidCharacter*
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).IsValidCharacter
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).IsValidCharacter
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.#ctor(System.String,`0)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.#ctor(System.String,`0)
+  id: '#ctor(System.String,`0)'
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: CharacterBase(string, TCharacterType)
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.CharacterBase(string, TCharacterType)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.CharacterBase(string, TCharacterType)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public CharacterBase(string characterName, TCharacterType characterType)
+    parameters:
+    - id: characterName
+      type: System.String
+    - id: characterType
+      type: '{TCharacterType}'
+    content.vb: Public Sub New(characterName As String, characterType As TCharacterType)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterBase`2.#ctor*
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).New(String, TCharacterType)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).New(String, TCharacterType)
+  name.vb: New(String, TCharacterType)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ValidationCheck
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.ValidationCheck
+  id: ValidationCheck
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: ValidationCheck()
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.ValidationCheck()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.ValidationCheck()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: ValidationCheck
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 32
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public virtual bool ValidationCheck()
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function ValidationCheck() As Boolean
+  overload: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ValidationCheck*
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).ValidationCheck()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).ValidationCheck()
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.SetCharacterInvalid
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.SetCharacterInvalid
+  id: SetCharacterInvalid
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: SetCharacterInvalid()
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.SetCharacterInvalid()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.SetCharacterInvalid()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: SetCharacterInvalid
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 49
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public void SetCharacterInvalid()
+    content.vb: Public Sub SetCharacterInvalid()
+  overload: BlazerTech.CharacterManagement.Characters.CharacterBase`2.SetCharacterInvalid*
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).SetCharacterInvalid()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).SetCharacterInvalid()
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandler(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandler(System.Object)
+  id: AcquireCharacterHandler(System.Object)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: AcquireCharacterHandler(object)
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandler(object)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandler(object)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: AcquireCharacterHandler
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 55
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public TCharacterHandler AcquireCharacterHandler(object owner)
+    parameters:
+    - id: owner
+      type: System.Object
+    return:
+      type: '{TCharacterHandler}'
+    content.vb: Public Function AcquireCharacterHandler(owner As Object) As TCharacterHandler
+  overload: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandler*
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandler(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandler(Object)
+  name.vb: AcquireCharacterHandler(Object)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandlerAsync(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandlerAsync(System.Object)
+  id: AcquireCharacterHandlerAsync(System.Object)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: AcquireCharacterHandlerAsync(object)
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandlerAsync(object)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandlerAsync(object)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: AcquireCharacterHandlerAsync
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 70
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public Task<TCharacterHandler> AcquireCharacterHandlerAsync(object owner)
+    parameters:
+    - id: owner
+      type: System.Object
+    return:
+      type: System.Threading.Tasks.Task{{TCharacterHandler}}
+    content.vb: Public Function AcquireCharacterHandlerAsync(owner As Object) As Task(Of TCharacterHandler)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandlerAsync*
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandlerAsync(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandlerAsync(Object)
+  name.vb: AcquireCharacterHandlerAsync(Object)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ReleaseCharacterHandler(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.ReleaseCharacterHandler(System.Object)
+  id: ReleaseCharacterHandler(System.Object)
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: ReleaseCharacterHandler(object)
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.ReleaseCharacterHandler(object)
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.ReleaseCharacterHandler(object)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: ReleaseCharacterHandler
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 81
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public void ReleaseCharacterHandler(object owner)
+    parameters:
+    - id: owner
+      type: System.Object
+    content.vb: Public Sub ReleaseCharacterHandler(owner As Object)
+  overload: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ReleaseCharacterHandler*
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).ReleaseCharacterHandler(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).ReleaseCharacterHandler(Object)
+  name.vb: ReleaseCharacterHandler(Object)
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandler
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandler
+  id: LoadCharacterHandler
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: LoadCharacterHandler()
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandler()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandler()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadCharacterHandler
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 93
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: protected abstract void LoadCharacterHandler()
+    content.vb: Protected MustOverride Sub LoadCharacterHandler()
+  overload: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandler*
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandler()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandler()
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandlerAsync
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandlerAsync
+  id: LoadCharacterHandlerAsync
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: LoadCharacterHandlerAsync()
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandlerAsync()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandlerAsync()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadCharacterHandlerAsync
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 95
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: protected abstract Task LoadCharacterHandlerAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Protected MustOverride Function LoadCharacterHandlerAsync() As Task
+  overload: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandlerAsync*
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandlerAsync()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandlerAsync()
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.UnloadCharacterHandler
+  commentId: M:BlazerTech.CharacterManagement.Characters.CharacterBase`2.UnloadCharacterHandler
+  id: UnloadCharacterHandler
+  parent: BlazerTech.CharacterManagement.Characters.CharacterBase`2
+  langs:
+  - csharp
+  - vb
+  name: UnloadCharacterHandler()
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.UnloadCharacterHandler()
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.UnloadCharacterHandler()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: UnloadCharacterHandler
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 97
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: protected virtual void UnloadCharacterHandler()
+    content.vb: Protected Overridable Sub UnloadCharacterHandler()
+  overload: BlazerTech.CharacterManagement.Characters.CharacterBase`2.UnloadCharacterHandler*
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).UnloadCharacterHandler()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).UnloadCharacterHandler()
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: '{TCharacterType}'
+  commentId: '!:TCharacterType'
+  definition: TCharacterType
+  name: TCharacterType
+  nameWithType: TCharacterType
+  fullName: TCharacterType
+- uid: TCharacterType
+  name: TCharacterType
+  nameWithType: TCharacterType
+  fullName: TCharacterType
+- uid: '{TCharacterHandler}'
+  commentId: '!:TCharacterHandler'
+  definition: TCharacterHandler
+  name: TCharacterHandler
+  nameWithType: TCharacterHandler
+  fullName: TCharacterHandler
+- uid: TCharacterHandler
+  name: TCharacterHandler
+  nameWithType: TCharacterHandler
+  fullName: TCharacterHandler
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.IsValidCharacter*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterBase`2.IsValidCharacter
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_IsValidCharacter
+  name: IsValidCharacter
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.IsValidCharacter
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.IsValidCharacter
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).IsValidCharacter
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).IsValidCharacter
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.#ctor*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterBase`2.#ctor
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2__ctor_System_String__0_
+  name: CharacterBase
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.CharacterBase
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.CharacterBase
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).New
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).New
+  name.vb: New
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ValidationCheck*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterBase`2.ValidationCheck
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ValidationCheck
+  name: ValidationCheck
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.ValidationCheck
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.ValidationCheck
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).ValidationCheck
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).ValidationCheck
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.SetCharacterInvalid*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterBase`2.SetCharacterInvalid
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_SetCharacterInvalid
+  name: SetCharacterInvalid
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.SetCharacterInvalid
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.SetCharacterInvalid
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).SetCharacterInvalid
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).SetCharacterInvalid
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandler*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandler
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandler_System_Object_
+  name: AcquireCharacterHandler
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandler
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandler
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandler
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandler
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandlerAsync*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterBase`2.AcquireCharacterHandlerAsync
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_AcquireCharacterHandlerAsync_System_Object_
+  name: AcquireCharacterHandlerAsync
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandlerAsync
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.AcquireCharacterHandlerAsync
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandlerAsync
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).AcquireCharacterHandlerAsync
+- uid: System.Threading.Tasks.Task{{TCharacterHandler}}
+  commentId: T:System.Threading.Tasks.Task{`1}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TCharacterHandler>
+  nameWithType: Task<TCharacterHandler>
+  fullName: System.Threading.Tasks.Task<TCharacterHandler>
+  nameWithType.vb: Task(Of TCharacterHandler)
+  fullName.vb: System.Threading.Tasks.Task(Of TCharacterHandler)
+  name.vb: Task(Of TCharacterHandler)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TCharacterHandler
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCharacterHandler
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.ReleaseCharacterHandler*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterBase`2.ReleaseCharacterHandler
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_ReleaseCharacterHandler_System_Object_
+  name: ReleaseCharacterHandler
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.ReleaseCharacterHandler
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.ReleaseCharacterHandler
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).ReleaseCharacterHandler
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).ReleaseCharacterHandler
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandler*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandler
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandler
+  name: LoadCharacterHandler
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandler
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandler
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandler
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandler
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandlerAsync*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterBase`2.LoadCharacterHandlerAsync
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_LoadCharacterHandlerAsync
+  name: LoadCharacterHandlerAsync
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandlerAsync
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.LoadCharacterHandlerAsync
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandlerAsync
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).LoadCharacterHandlerAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: BlazerTech.CharacterManagement.Characters.CharacterBase`2.UnloadCharacterHandler*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.CharacterBase`2.UnloadCharacterHandler
+  href: BlazerTech.CharacterManagement.Characters.CharacterBase-2.html#BlazerTech_CharacterManagement_Characters_CharacterBase_2_UnloadCharacterHandler
+  name: UnloadCharacterHandler
+  nameWithType: CharacterBase<TCharacterType, TCharacterHandler>.UnloadCharacterHandler
+  fullName: BlazerTech.CharacterManagement.Characters.CharacterBase<TCharacterType, TCharacterHandler>.UnloadCharacterHandler
+  nameWithType.vb: CharacterBase(Of TCharacterType, TCharacterHandler).UnloadCharacterHandler
+  fullName.vb: BlazerTech.CharacterManagement.Characters.CharacterBase(Of TCharacterType, TCharacterHandler).UnloadCharacterHandler

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "C:/Users/Legen/OneDrive/Desktop/All My Files/Unity/Unity Projects/BlazerTech Character Management System",
+          "files": [
+            "Assembly-CSharp.csproj",
+            "Assembly-CSharp-Editor.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+      "filter": "filter.yml"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "BlazerTech Character Management System",
+      "_appTitle": "BlazerTech Character Management System",
+      "_enableSearch": true,
+      "pdf": false
+    }
+  }
+}

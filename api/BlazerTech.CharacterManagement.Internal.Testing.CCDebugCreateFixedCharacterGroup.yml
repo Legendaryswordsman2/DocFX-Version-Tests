@@ -1,0 +1,171 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup
+  commentId: T:BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup
+  id: CCDebugCreateFixedCharacterGroup
+  parent: BlazerTech.CharacterManagement.Internal.Testing
+  children:
+  - BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup.CreateFixedCharacterGroup
+  langs:
+  - csharp
+  - vb
+  name: CCDebugCreateFixedCharacterGroup
+  nameWithType: CCDebugCreateFixedCharacterGroup
+  fullName: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Debug/CCDebugCreateFixedCharacterGroup.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CCDebugCreateFixedCharacterGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Debug/CCDebugCreateFixedCharacterGroup.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Internal.Testing
+  syntax:
+    content: 'public class CCDebugCreateFixedCharacterGroup : MonoBehaviour'
+    content.vb: Public Class CCDebugCreateFixedCharacterGroup Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup.CreateFixedCharacterGroup
+  commentId: M:BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup.CreateFixedCharacterGroup
+  id: CreateFixedCharacterGroup
+  parent: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup
+  langs:
+  - csharp
+  - vb
+  name: CreateFixedCharacterGroup()
+  nameWithType: CCDebugCreateFixedCharacterGroup.CreateFixedCharacterGroup()
+  fullName: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup.CreateFixedCharacterGroup()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Debug/CCDebugCreateFixedCharacterGroup.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CreateFixedCharacterGroup
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Debug/CCDebugCreateFixedCharacterGroup.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Internal.Testing
+  syntax:
+    content: >-
+      [Button(null, EButtonEnableMode.Always)]
+
+      public void CreateFixedCharacterGroup()
+    content.vb: >-
+      <Button(Nothing, EButtonEnableMode.Always)>
+
+      Public Sub CreateFixedCharacterGroup()
+  overload: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup.CreateFixedCharacterGroup*
+  attributes:
+  - type: NaughtyAttributes.ButtonAttribute
+    ctor: NaughtyAttributes.ButtonAttribute.#ctor(System.String,NaughtyAttributes.EButtonEnableMode)
+    arguments:
+    - type: System.String
+    - type: NaughtyAttributes.EButtonEnableMode
+      value: 0
+references:
+- uid: BlazerTech.CharacterManagement.Internal.Testing
+  commentId: N:BlazerTech.CharacterManagement.Internal.Testing
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Internal.Testing
+  nameWithType: BlazerTech.CharacterManagement.Internal.Testing
+  fullName: BlazerTech.CharacterManagement.Internal.Testing
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Internal
+    name: Internal
+    href: BlazerTech.CharacterManagement.Internal.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Internal.Testing
+    name: Testing
+    href: BlazerTech.CharacterManagement.Internal.Testing.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Internal
+    name: Internal
+    href: BlazerTech.CharacterManagement.Internal.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Internal.Testing
+    name: Testing
+    href: BlazerTech.CharacterManagement.Internal.Testing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup.CreateFixedCharacterGroup*
+  commentId: Overload:BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup.CreateFixedCharacterGroup
+  href: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup.html#BlazerTech_CharacterManagement_Internal_Testing_CCDebugCreateFixedCharacterGroup_CreateFixedCharacterGroup
+  name: CreateFixedCharacterGroup
+  nameWithType: CCDebugCreateFixedCharacterGroup.CreateFixedCharacterGroup
+  fullName: BlazerTech.CharacterManagement.Internal.Testing.CCDebugCreateFixedCharacterGroup.CreateFixedCharacterGroup

@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+  commentId: T:BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+  id: CharacterLoaderLoadingMode
+  parent: BlazerTech.CharacterManagement.Components
+  children:
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode.Asynchronous
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode.Synchronous
+  langs:
+  - csharp
+  - vb
+  name: CharacterLoaderLoadingMode
+  nameWithType: CharacterLoaderLoadingMode
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+  type: Enum
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterLoaderLoadingMode
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: public enum CharacterLoaderLoadingMode
+    content.vb: Public Enum CharacterLoaderLoadingMode
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode.Asynchronous
+  commentId: F:BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode.Asynchronous
+  id: Asynchronous
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+  langs:
+  - csharp
+  - vb
+  name: Asynchronous
+  nameWithType: CharacterLoaderLoadingMode.Asynchronous
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode.Asynchronous
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Asynchronous
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: Asynchronous = 0
+    return:
+      type: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode.Synchronous
+  commentId: F:BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode.Synchronous
+  id: Synchronous
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+  langs:
+  - csharp
+  - vb
+  name: Synchronous
+  nameWithType: CharacterLoaderLoadingMode.Synchronous
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode.Synchronous
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Synchronous
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: Synchronous = 1
+    return:
+      type: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+references:
+- uid: BlazerTech.CharacterManagement.Components
+  commentId: N:BlazerTech.CharacterManagement.Components
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Components
+  nameWithType: BlazerTech.CharacterManagement.Components
+  fullName: BlazerTech.CharacterManagement.Components
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Components
+    name: Components
+    href: BlazerTech.CharacterManagement.Components.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Components
+    name: Components
+    href: BlazerTech.CharacterManagement.Components.html
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+  commentId: T:BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode
+  parent: BlazerTech.CharacterManagement.Components
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode.html
+  name: CharacterLoaderLoadingMode
+  nameWithType: CharacterLoaderLoadingMode
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderLoadingMode

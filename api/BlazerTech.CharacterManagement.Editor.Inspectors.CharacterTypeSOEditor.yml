@@ -1,0 +1,399 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor
+  commentId: T:BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor
+  id: CharacterTypeSOEditor
+  parent: BlazerTech.CharacterManagement.Editor.Inspectors
+  children:
+  - BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor.OnInspectorGUI
+  langs:
+  - csharp
+  - vb
+  name: CharacterTypeSOEditor
+  nameWithType: CharacterTypeSOEditor
+  fullName: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Editor/CharacterTypeSOEditor.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterTypeSOEditor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Editor/CharacterTypeSOEditor.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: BlazerTech.CharacterManagement.Editor.Inspectors
+  syntax:
+    content: >-
+      [CustomEditor(typeof(LayeredCharacterTypeSO), true)]
+
+      public class CharacterTypeSOEditor : NaughtyInspector
+    content.vb: >-
+      <CustomEditor(GetType(LayeredCharacterTypeSO), True)>
+
+      Public Class CharacterTypeSOEditor Inherits NaughtyInspector
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEditor.Editor
+  - NaughtyAttributes.Editor.NaughtyInspector
+  inheritedMembers:
+  - NaughtyAttributes.Editor.NaughtyInspector.OnEnable
+  - NaughtyAttributes.Editor.NaughtyInspector.OnDisable
+  - NaughtyAttributes.Editor.NaughtyInspector.GetSerializedProperties(System.Collections.Generic.List{UnityEditor.SerializedProperty}@)
+  - NaughtyAttributes.Editor.NaughtyInspector.DrawSerializedProperties
+  - NaughtyAttributes.Editor.NaughtyInspector.DrawNonSerializedFields(System.Boolean)
+  - NaughtyAttributes.Editor.NaughtyInspector.DrawNativeProperties(System.Boolean)
+  - NaughtyAttributes.Editor.NaughtyInspector.DrawButtons(System.Boolean)
+  attributes:
+  - type: UnityEditor.CustomEditor
+    ctor: UnityEditor.CustomEditor.#ctor(System.Type,System.Boolean)
+    arguments:
+    - type: System.Type
+      value: BlazerTech.CharacterManagement.Characters.LayeredCharacterTypeSO
+    - type: System.Boolean
+      value: true
+- uid: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor.OnInspectorGUI
+  commentId: M:BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor.OnInspectorGUI
+  id: OnInspectorGUI
+  parent: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor
+  langs:
+  - csharp
+  - vb
+  name: OnInspectorGUI()
+  nameWithType: CharacterTypeSOEditor.OnInspectorGUI()
+  fullName: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor.OnInspectorGUI()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Editor/CharacterTypeSOEditor.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: OnInspectorGUI
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Editor/CharacterTypeSOEditor.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: BlazerTech.CharacterManagement.Editor.Inspectors
+  summary: <p>Implement this function to make a custom inspector.</p>
+  example: []
+  syntax:
+    content: public override void OnInspectorGUI()
+    content.vb: Public Overrides Sub OnInspectorGUI()
+  overridden: NaughtyAttributes.Editor.NaughtyInspector.OnInspectorGUI
+  overload: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor.OnInspectorGUI*
+references:
+- uid: BlazerTech.CharacterManagement.Editor.Inspectors
+  commentId: N:BlazerTech.CharacterManagement.Editor.Inspectors
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Editor.Inspectors
+  nameWithType: BlazerTech.CharacterManagement.Editor.Inspectors
+  fullName: BlazerTech.CharacterManagement.Editor.Inspectors
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Editor
+    name: Editor
+    href: BlazerTech.CharacterManagement.Editor.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Editor.Inspectors
+    name: Inspectors
+    href: BlazerTech.CharacterManagement.Editor.Inspectors.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Editor
+    name: Editor
+    href: BlazerTech.CharacterManagement.Editor.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Editor.Inspectors
+    name: Inspectors
+    href: BlazerTech.CharacterManagement.Editor.Inspectors.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEditor.Editor
+  commentId: T:UnityEditor.Editor
+  parent: UnityEditor
+  isExternal: true
+  name: Editor
+  nameWithType: Editor
+  fullName: UnityEditor.Editor
+- uid: NaughtyAttributes.Editor.NaughtyInspector
+  commentId: T:NaughtyAttributes.Editor.NaughtyInspector
+  parent: NaughtyAttributes.Editor
+  name: NaughtyInspector
+  nameWithType: NaughtyInspector
+  fullName: NaughtyAttributes.Editor.NaughtyInspector
+- uid: NaughtyAttributes.Editor.NaughtyInspector.OnEnable
+  commentId: M:NaughtyAttributes.Editor.NaughtyInspector.OnEnable
+  parent: NaughtyAttributes.Editor.NaughtyInspector
+  name: OnEnable()
+  nameWithType: NaughtyInspector.OnEnable()
+  fullName: NaughtyAttributes.Editor.NaughtyInspector.OnEnable()
+  spec.csharp:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.OnEnable
+    name: OnEnable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.OnEnable
+    name: OnEnable
+  - name: (
+  - name: )
+- uid: NaughtyAttributes.Editor.NaughtyInspector.OnDisable
+  commentId: M:NaughtyAttributes.Editor.NaughtyInspector.OnDisable
+  parent: NaughtyAttributes.Editor.NaughtyInspector
+  name: OnDisable()
+  nameWithType: NaughtyInspector.OnDisable()
+  fullName: NaughtyAttributes.Editor.NaughtyInspector.OnDisable()
+  spec.csharp:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.OnDisable
+    name: OnDisable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.OnDisable
+    name: OnDisable
+  - name: (
+  - name: )
+- uid: NaughtyAttributes.Editor.NaughtyInspector.GetSerializedProperties(System.Collections.Generic.List{UnityEditor.SerializedProperty}@)
+  commentId: M:NaughtyAttributes.Editor.NaughtyInspector.GetSerializedProperties(System.Collections.Generic.List{UnityEditor.SerializedProperty}@)
+  parent: NaughtyAttributes.Editor.NaughtyInspector
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: GetSerializedProperties(ref List<SerializedProperty>)
+  nameWithType: NaughtyInspector.GetSerializedProperties(ref List<SerializedProperty>)
+  fullName: NaughtyAttributes.Editor.NaughtyInspector.GetSerializedProperties(ref System.Collections.Generic.List<UnityEditor.SerializedProperty>)
+  nameWithType.vb: NaughtyInspector.GetSerializedProperties(List(Of SerializedProperty))
+  fullName.vb: NaughtyAttributes.Editor.NaughtyInspector.GetSerializedProperties(System.Collections.Generic.List(Of UnityEditor.SerializedProperty))
+  name.vb: GetSerializedProperties(List(Of SerializedProperty))
+  spec.csharp:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.GetSerializedProperties(System.Collections.Generic.List{UnityEditor.SerializedProperty}@)
+    name: GetSerializedProperties
+  - name: (
+  - name: ref
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEditor.SerializedProperty
+    name: SerializedProperty
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.GetSerializedProperties(System.Collections.Generic.List{UnityEditor.SerializedProperty}@)
+    name: GetSerializedProperties
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEditor.SerializedProperty
+    name: SerializedProperty
+    isExternal: true
+  - name: )
+  - name: )
+- uid: NaughtyAttributes.Editor.NaughtyInspector.DrawSerializedProperties
+  commentId: M:NaughtyAttributes.Editor.NaughtyInspector.DrawSerializedProperties
+  parent: NaughtyAttributes.Editor.NaughtyInspector
+  name: DrawSerializedProperties()
+  nameWithType: NaughtyInspector.DrawSerializedProperties()
+  fullName: NaughtyAttributes.Editor.NaughtyInspector.DrawSerializedProperties()
+  spec.csharp:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.DrawSerializedProperties
+    name: DrawSerializedProperties
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.DrawSerializedProperties
+    name: DrawSerializedProperties
+  - name: (
+  - name: )
+- uid: NaughtyAttributes.Editor.NaughtyInspector.DrawNonSerializedFields(System.Boolean)
+  commentId: M:NaughtyAttributes.Editor.NaughtyInspector.DrawNonSerializedFields(System.Boolean)
+  parent: NaughtyAttributes.Editor.NaughtyInspector
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: DrawNonSerializedFields(bool)
+  nameWithType: NaughtyInspector.DrawNonSerializedFields(bool)
+  fullName: NaughtyAttributes.Editor.NaughtyInspector.DrawNonSerializedFields(bool)
+  nameWithType.vb: NaughtyInspector.DrawNonSerializedFields(Boolean)
+  fullName.vb: NaughtyAttributes.Editor.NaughtyInspector.DrawNonSerializedFields(Boolean)
+  name.vb: DrawNonSerializedFields(Boolean)
+  spec.csharp:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.DrawNonSerializedFields(System.Boolean)
+    name: DrawNonSerializedFields
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.DrawNonSerializedFields(System.Boolean)
+    name: DrawNonSerializedFields
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: NaughtyAttributes.Editor.NaughtyInspector.DrawNativeProperties(System.Boolean)
+  commentId: M:NaughtyAttributes.Editor.NaughtyInspector.DrawNativeProperties(System.Boolean)
+  parent: NaughtyAttributes.Editor.NaughtyInspector
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: DrawNativeProperties(bool)
+  nameWithType: NaughtyInspector.DrawNativeProperties(bool)
+  fullName: NaughtyAttributes.Editor.NaughtyInspector.DrawNativeProperties(bool)
+  nameWithType.vb: NaughtyInspector.DrawNativeProperties(Boolean)
+  fullName.vb: NaughtyAttributes.Editor.NaughtyInspector.DrawNativeProperties(Boolean)
+  name.vb: DrawNativeProperties(Boolean)
+  spec.csharp:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.DrawNativeProperties(System.Boolean)
+    name: DrawNativeProperties
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.DrawNativeProperties(System.Boolean)
+    name: DrawNativeProperties
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: NaughtyAttributes.Editor.NaughtyInspector.DrawButtons(System.Boolean)
+  commentId: M:NaughtyAttributes.Editor.NaughtyInspector.DrawButtons(System.Boolean)
+  parent: NaughtyAttributes.Editor.NaughtyInspector
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: DrawButtons(bool)
+  nameWithType: NaughtyInspector.DrawButtons(bool)
+  fullName: NaughtyAttributes.Editor.NaughtyInspector.DrawButtons(bool)
+  nameWithType.vb: NaughtyInspector.DrawButtons(Boolean)
+  fullName.vb: NaughtyAttributes.Editor.NaughtyInspector.DrawButtons(Boolean)
+  name.vb: DrawButtons(Boolean)
+  spec.csharp:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.DrawButtons(System.Boolean)
+    name: DrawButtons
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.DrawButtons(System.Boolean)
+    name: DrawButtons
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: NaughtyAttributes.Editor
+  commentId: N:NaughtyAttributes.Editor
+  name: NaughtyAttributes.Editor
+  nameWithType: NaughtyAttributes.Editor
+  fullName: NaughtyAttributes.Editor
+  spec.csharp:
+  - uid: NaughtyAttributes
+    name: NaughtyAttributes
+  - name: .
+  - uid: NaughtyAttributes.Editor
+    name: Editor
+  spec.vb:
+  - uid: NaughtyAttributes
+    name: NaughtyAttributes
+  - name: .
+  - uid: NaughtyAttributes.Editor
+    name: Editor
+- uid: NaughtyAttributes.Editor.NaughtyInspector.OnInspectorGUI
+  commentId: M:NaughtyAttributes.Editor.NaughtyInspector.OnInspectorGUI
+  parent: NaughtyAttributes.Editor.NaughtyInspector
+  name: OnInspectorGUI()
+  nameWithType: NaughtyInspector.OnInspectorGUI()
+  fullName: NaughtyAttributes.Editor.NaughtyInspector.OnInspectorGUI()
+  spec.csharp:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.OnInspectorGUI
+    name: OnInspectorGUI
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: NaughtyAttributes.Editor.NaughtyInspector.OnInspectorGUI
+    name: OnInspectorGUI
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor.OnInspectorGUI*
+  commentId: Overload:BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor.OnInspectorGUI
+  href: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor.html#BlazerTech_CharacterManagement_Editor_Inspectors_CharacterTypeSOEditor_OnInspectorGUI
+  name: OnInspectorGUI
+  nameWithType: CharacterTypeSOEditor.OnInspectorGUI
+  fullName: BlazerTech.CharacterManagement.Editor.Inspectors.CharacterTypeSOEditor.OnInspectorGUI

@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+  commentId: T:BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+  id: CharacterMultiGroupLoadMethod
+  parent: BlazerTech.CharacterManagement.Components
+  children:
+  - BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.CharacterIndex
+  - BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.CharacterName
+  - BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.Randomized
+  langs:
+  - csharp
+  - vb
+  name: CharacterMultiGroupLoadMethod
+  nameWithType: CharacterMultiGroupLoadMethod
+  fullName: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+  type: Enum
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterMultiGroupLoadMethod
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: public enum CharacterMultiGroupLoadMethod
+    content.vb: Public Enum CharacterMultiGroupLoadMethod
+- uid: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.CharacterName
+  commentId: F:BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.CharacterName
+  id: CharacterName
+  parent: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+  langs:
+  - csharp
+  - vb
+  name: CharacterName
+  nameWithType: CharacterMultiGroupLoadMethod.CharacterName
+  fullName: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.CharacterName
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterName
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: CharacterName = 0
+    return:
+      type: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+- uid: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.CharacterIndex
+  commentId: F:BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.CharacterIndex
+  id: CharacterIndex
+  parent: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+  langs:
+  - csharp
+  - vb
+  name: CharacterIndex
+  nameWithType: CharacterMultiGroupLoadMethod.CharacterIndex
+  fullName: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.CharacterIndex
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterIndex
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: CharacterIndex = 1
+    return:
+      type: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+- uid: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.Randomized
+  commentId: F:BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.Randomized
+  id: Randomized
+  parent: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+  langs:
+  - csharp
+  - vb
+  name: Randomized
+  nameWithType: CharacterMultiGroupLoadMethod.Randomized
+  fullName: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.Randomized
+  type: Field
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Randomized
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterLoader.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: Randomized = 2
+    return:
+      type: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+references:
+- uid: BlazerTech.CharacterManagement.Components
+  commentId: N:BlazerTech.CharacterManagement.Components
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Components
+  nameWithType: BlazerTech.CharacterManagement.Components
+  fullName: BlazerTech.CharacterManagement.Components
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Components
+    name: Components
+    href: BlazerTech.CharacterManagement.Components.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Components
+    name: Components
+    href: BlazerTech.CharacterManagement.Components.html
+- uid: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+  commentId: T:BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod
+  parent: BlazerTech.CharacterManagement.Components
+  href: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod.html
+  name: CharacterMultiGroupLoadMethod
+  nameWithType: CharacterMultiGroupLoadMethod
+  fullName: BlazerTech.CharacterManagement.Components.CharacterMultiGroupLoadMethod

@@ -1,0 +1,203 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase
+  commentId: T:BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase
+  id: LoadedCharacterHandlerBase
+  parent: BlazerTech.CharacterManagement.Characters
+  children:
+  - BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.#ctor
+  - BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.CharacterMPB
+  - BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.Release
+  langs:
+  - csharp
+  - vb
+  name: LoadedCharacterHandlerBase
+  nameWithType: LoadedCharacterHandlerBase
+  fullName: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadedCharacterHandlerBase
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 106
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public abstract class LoadedCharacterHandlerBase
+    content.vb: Public MustInherit Class LoadedCharacterHandlerBase
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - BlazerTech.CharacterManagement.Characters.LayeredCharacter.LoadedLayeredCharacterHandler
+  - BlazerTech.CharacterManagement.Characters.UnifiedCharacter.LoadedUnifiedCharacterHandler
+- uid: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.CharacterMPB
+  commentId: P:BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.CharacterMPB
+  id: CharacterMPB
+  parent: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase
+  langs:
+  - csharp
+  - vb
+  name: CharacterMPB
+  nameWithType: LoadedCharacterHandlerBase.CharacterMPB
+  fullName: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.CharacterMPB
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: CharacterMPB
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 108
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public MaterialPropertyBlock CharacterMPB { get; }
+    parameters: []
+    return:
+      type: UnityEngine.MaterialPropertyBlock
+    content.vb: Public Property CharacterMPB As MaterialPropertyBlock
+  overload: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.CharacterMPB*
+- uid: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.#ctor
+  commentId: M:BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.#ctor
+  id: '#ctor'
+  parent: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase
+  langs:
+  - csharp
+  - vb
+  name: LoadedCharacterHandlerBase()
+  nameWithType: LoadedCharacterHandlerBase.LoadedCharacterHandlerBase()
+  fullName: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.LoadedCharacterHandlerBase()
+  type: Constructor
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: .ctor
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 110
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public LoadedCharacterHandlerBase()
+    content.vb: Public Sub New()
+  overload: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.#ctor*
+  nameWithType.vb: LoadedCharacterHandlerBase.New()
+  fullName.vb: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.New()
+  name.vb: New()
+- uid: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.Release
+  commentId: M:BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.Release
+  id: Release
+  parent: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase
+  langs:
+  - csharp
+  - vb
+  name: Release()
+  nameWithType: LoadedCharacterHandlerBase.Release()
+  fullName: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.Release()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Release
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/Characters/CharacterBase.cs
+    startLine: 115
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Characters
+  syntax:
+    content: public abstract void Release()
+    content.vb: Public MustOverride Sub Release()
+  overload: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.Release*
+references:
+- uid: BlazerTech.CharacterManagement.Characters
+  commentId: N:BlazerTech.CharacterManagement.Characters
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Characters
+  nameWithType: BlazerTech.CharacterManagement.Characters
+  fullName: BlazerTech.CharacterManagement.Characters
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Characters
+    name: Characters
+    href: BlazerTech.CharacterManagement.Characters.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.CharacterMPB*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.CharacterMPB
+  href: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.html#BlazerTech_CharacterManagement_Characters_LoadedCharacterHandlerBase_CharacterMPB
+  name: CharacterMPB
+  nameWithType: LoadedCharacterHandlerBase.CharacterMPB
+  fullName: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.CharacterMPB
+- uid: UnityEngine.MaterialPropertyBlock
+  commentId: T:UnityEngine.MaterialPropertyBlock
+  parent: UnityEngine
+  isExternal: true
+  name: MaterialPropertyBlock
+  nameWithType: MaterialPropertyBlock
+  fullName: UnityEngine.MaterialPropertyBlock
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.#ctor*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.#ctor
+  href: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.html#BlazerTech_CharacterManagement_Characters_LoadedCharacterHandlerBase__ctor
+  name: LoadedCharacterHandlerBase
+  nameWithType: LoadedCharacterHandlerBase.LoadedCharacterHandlerBase
+  fullName: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.LoadedCharacterHandlerBase
+  nameWithType.vb: LoadedCharacterHandlerBase.New
+  fullName.vb: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.New
+  name.vb: New
+- uid: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.Release*
+  commentId: Overload:BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.Release
+  href: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.html#BlazerTech_CharacterManagement_Characters_LoadedCharacterHandlerBase_Release
+  name: Release
+  nameWithType: LoadedCharacterHandlerBase.Release
+  fullName: BlazerTech.CharacterManagement.Characters.LoadedCharacterHandlerBase.Release

@@ -1,0 +1,441 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader
+  commentId: T:BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader
+  id: LayeredCharacterTemplateLoader
+  parent: BlazerTech.CharacterManagement.Components
+  children:
+  - BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.GetAndShowCharacter
+  - BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ReleaseCharacter
+  - BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ShowCharacter
+  langs:
+  - csharp
+  - vb
+  name: LayeredCharacterTemplateLoader
+  nameWithType: LayeredCharacterTemplateLoader
+  fullName: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterTemplateLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LayeredCharacterTemplateLoader
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterTemplateLoader.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  syntax:
+    content: 'public class LayeredCharacterTemplateLoader : CharacterLoaderBase'
+    content.vb: Public Class LayeredCharacterTemplateLoader Inherits CharacterLoaderBase
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  inheritedMembers:
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderBase._renderer
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderBase.setAnimatorController
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderBase._animator
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderBase.loadingMode
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderBase.loadCharacterOnStart
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ValidationCheck
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderBase.TrySetCharacterAnimator(BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO)
+  - BlazerTech.CharacterManagement.Components.CharacterLoaderBase.OnDestroy
+- uid: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.GetAndShowCharacter
+  commentId: M:BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.GetAndShowCharacter
+  id: GetAndShowCharacter
+  parent: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader
+  langs:
+  - csharp
+  - vb
+  name: GetAndShowCharacter()
+  nameWithType: LayeredCharacterTemplateLoader.GetAndShowCharacter()
+  fullName: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.GetAndShowCharacter()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterTemplateLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GetAndShowCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterTemplateLoader.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  example: []
+  syntax:
+    content: public override Task GetAndShowCharacter()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overrides Function GetAndShowCharacter() As Task
+  overridden: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.GetAndShowCharacter
+  overload: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.GetAndShowCharacter*
+- uid: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ReleaseCharacter
+  commentId: M:BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ReleaseCharacter
+  id: ReleaseCharacter
+  parent: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader
+  langs:
+  - csharp
+  - vb
+  name: ReleaseCharacter()
+  nameWithType: LayeredCharacterTemplateLoader.ReleaseCharacter()
+  fullName: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ReleaseCharacter()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterTemplateLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: ReleaseCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterTemplateLoader.cs
+    startLine: 56
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  example: []
+  syntax:
+    content: protected override void ReleaseCharacter()
+    content.vb: Protected Overrides Sub ReleaseCharacter()
+  overridden: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ReleaseCharacter
+  overload: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ReleaseCharacter*
+- uid: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ShowCharacter
+  commentId: M:BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ShowCharacter
+  id: ShowCharacter
+  parent: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader
+  langs:
+  - csharp
+  - vb
+  name: ShowCharacter()
+  nameWithType: LayeredCharacterTemplateLoader.ShowCharacter()
+  fullName: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ShowCharacter()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterTemplateLoader.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: ShowCharacter
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Usage Scripts/Character Loaders/Layered Character Loaders/LayeredCharacterTemplateLoader.cs
+    startLine: 61
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Components
+  example: []
+  syntax:
+    content: protected override void ShowCharacter()
+    content.vb: Protected Overrides Sub ShowCharacter()
+  overridden: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ShowCharacter
+  overload: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ShowCharacter*
+references:
+- uid: BlazerTech.CharacterManagement.Components
+  commentId: N:BlazerTech.CharacterManagement.Components
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Components
+  nameWithType: BlazerTech.CharacterManagement.Components
+  fullName: BlazerTech.CharacterManagement.Components
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Components
+    name: Components
+    href: BlazerTech.CharacterManagement.Components.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Components
+    name: Components
+    href: BlazerTech.CharacterManagement.Components.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  commentId: T:BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  parent: BlazerTech.CharacterManagement.Components
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html
+  name: CharacterLoaderBase
+  nameWithType: CharacterLoaderBase
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase._renderer
+  commentId: F:BlazerTech.CharacterManagement.Components.CharacterLoaderBase._renderer
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase__renderer
+  name: _renderer
+  nameWithType: CharacterLoaderBase._renderer
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase._renderer
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.setAnimatorController
+  commentId: F:BlazerTech.CharacterManagement.Components.CharacterLoaderBase.setAnimatorController
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_setAnimatorController
+  name: setAnimatorController
+  nameWithType: CharacterLoaderBase.setAnimatorController
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.setAnimatorController
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase._animator
+  commentId: F:BlazerTech.CharacterManagement.Components.CharacterLoaderBase._animator
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase__animator
+  name: _animator
+  nameWithType: CharacterLoaderBase._animator
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase._animator
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.loadingMode
+  commentId: F:BlazerTech.CharacterManagement.Components.CharacterLoaderBase.loadingMode
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_loadingMode
+  name: loadingMode
+  nameWithType: CharacterLoaderBase.loadingMode
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.loadingMode
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.loadCharacterOnStart
+  commentId: F:BlazerTech.CharacterManagement.Components.CharacterLoaderBase.loadCharacterOnStart
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_loadCharacterOnStart
+  name: loadCharacterOnStart
+  nameWithType: CharacterLoaderBase.loadCharacterOnStart
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.loadCharacterOnStart
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ValidationCheck
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ValidationCheck
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_ValidationCheck
+  name: ValidationCheck()
+  nameWithType: CharacterLoaderBase.ValidationCheck()
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ValidationCheck()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ValidationCheck
+    name: ValidationCheck
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_ValidationCheck
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ValidationCheck
+    name: ValidationCheck
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_ValidationCheck
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.TrySetCharacterAnimator(BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO)
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterLoaderBase.TrySetCharacterAnimator(BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO)
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_TrySetCharacterAnimator_BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_
+  name: TrySetCharacterAnimator(CharacterTypeBaseSO)
+  nameWithType: CharacterLoaderBase.TrySetCharacterAnimator(CharacterTypeBaseSO)
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.TrySetCharacterAnimator(BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO)
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.TrySetCharacterAnimator(BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO)
+    name: TrySetCharacterAnimator
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_TrySetCharacterAnimator_BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_
+  - name: (
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+    name: CharacterTypeBaseSO
+    href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.TrySetCharacterAnimator(BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO)
+    name: TrySetCharacterAnimator
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_TrySetCharacterAnimator_BlazerTech_CharacterManagement_Characters_CharacterTypeBaseSO_
+  - name: (
+  - uid: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO
+    name: CharacterTypeBaseSO
+    href: BlazerTech.CharacterManagement.Characters.CharacterTypeBaseSO.html
+  - name: )
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.OnDestroy
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterLoaderBase.OnDestroy
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_OnDestroy
+  name: OnDestroy()
+  nameWithType: CharacterLoaderBase.OnDestroy()
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.OnDestroy()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.OnDestroy
+    name: OnDestroy
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_OnDestroy
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.OnDestroy
+    name: OnDestroy
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_OnDestroy
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.GetAndShowCharacter
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterLoaderBase.GetAndShowCharacter
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_GetAndShowCharacter
+  name: GetAndShowCharacter()
+  nameWithType: CharacterLoaderBase.GetAndShowCharacter()
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.GetAndShowCharacter()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.GetAndShowCharacter
+    name: GetAndShowCharacter
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_GetAndShowCharacter
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.GetAndShowCharacter
+    name: GetAndShowCharacter
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_GetAndShowCharacter
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.GetAndShowCharacter*
+  commentId: Overload:BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.GetAndShowCharacter
+  href: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.html#BlazerTech_CharacterManagement_Components_LayeredCharacterTemplateLoader_GetAndShowCharacter
+  name: GetAndShowCharacter
+  nameWithType: LayeredCharacterTemplateLoader.GetAndShowCharacter
+  fullName: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.GetAndShowCharacter
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ReleaseCharacter
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ReleaseCharacter
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_ReleaseCharacter
+  name: ReleaseCharacter()
+  nameWithType: CharacterLoaderBase.ReleaseCharacter()
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ReleaseCharacter()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ReleaseCharacter
+    name: ReleaseCharacter
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_ReleaseCharacter
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ReleaseCharacter
+    name: ReleaseCharacter
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_ReleaseCharacter
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ReleaseCharacter*
+  commentId: Overload:BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ReleaseCharacter
+  href: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.html#BlazerTech_CharacterManagement_Components_LayeredCharacterTemplateLoader_ReleaseCharacter
+  name: ReleaseCharacter
+  nameWithType: LayeredCharacterTemplateLoader.ReleaseCharacter
+  fullName: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ReleaseCharacter
+- uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ShowCharacter
+  commentId: M:BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ShowCharacter
+  parent: BlazerTech.CharacterManagement.Components.CharacterLoaderBase
+  href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_ShowCharacter
+  name: ShowCharacter()
+  nameWithType: CharacterLoaderBase.ShowCharacter()
+  fullName: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ShowCharacter()
+  spec.csharp:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ShowCharacter
+    name: ShowCharacter
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_ShowCharacter
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.ShowCharacter
+    name: ShowCharacter
+    href: BlazerTech.CharacterManagement.Components.CharacterLoaderBase.html#BlazerTech_CharacterManagement_Components_CharacterLoaderBase_ShowCharacter
+  - name: (
+  - name: )
+- uid: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ShowCharacter*
+  commentId: Overload:BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ShowCharacter
+  href: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.html#BlazerTech_CharacterManagement_Components_LayeredCharacterTemplateLoader_ShowCharacter
+  name: ShowCharacter
+  nameWithType: LayeredCharacterTemplateLoader.ShowCharacter
+  fullName: BlazerTech.CharacterManagement.Components.LayeredCharacterTemplateLoader.ShowCharacter

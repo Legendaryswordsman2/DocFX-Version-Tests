@@ -1,0 +1,205 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress
+  commentId: T:BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress
+  id: LoadingScreenProgress
+  parent: BlazerTech.CharacterManagement.CharacterCreator
+  children:
+  - BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingProgressUpdated(System.Object,System.Single)
+  - BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingStarting
+  langs:
+  - csharp
+  - vb
+  name: LoadingScreenProgress
+  nameWithType: LoadingScreenProgress
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Loading Screen/LoadingScreenProgress.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: LoadingScreenProgress
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Loading Screen/LoadingScreenProgress.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: 'public abstract class LoadingScreenProgress : MonoBehaviour'
+    content.vb: Public MustInherit Class LoadingScreenProgress Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  derivedClasses:
+  - BlazerTech.CharacterManagement.CharacterCreator.CCMLoadingBufferSpriteFillProgress
+  - BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgressText
+- uid: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingStarting
+  commentId: M:BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingStarting
+  id: OnLoadingStarting
+  parent: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress
+  langs:
+  - csharp
+  - vb
+  name: OnLoadingStarting()
+  nameWithType: LoadingScreenProgress.OnLoadingStarting()
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingStarting()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Loading Screen/LoadingScreenProgress.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: OnLoadingStarting
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Loading Screen/LoadingScreenProgress.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: protected abstract void OnLoadingStarting()
+    content.vb: Protected MustOverride Sub OnLoadingStarting()
+  overload: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingStarting*
+- uid: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingProgressUpdated(System.Object,System.Single)
+  commentId: M:BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingProgressUpdated(System.Object,System.Single)
+  id: OnLoadingProgressUpdated(System.Object,System.Single)
+  parent: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress
+  langs:
+  - csharp
+  - vb
+  name: OnLoadingProgressUpdated(object, float)
+  nameWithType: LoadingScreenProgress.OnLoadingProgressUpdated(object, float)
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingProgressUpdated(object, float)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Character Creator/Loading Screen/LoadingScreenProgress.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: OnLoadingProgressUpdated
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Character Creator/Loading Screen/LoadingScreenProgress.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.CharacterCreator
+  syntax:
+    content: protected abstract void OnLoadingProgressUpdated(object sender, float progress)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: progress
+      type: System.Single
+    content.vb: Protected MustOverride Sub OnLoadingProgressUpdated(sender As Object, progress As Single)
+  overload: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingProgressUpdated*
+  nameWithType.vb: LoadingScreenProgress.OnLoadingProgressUpdated(Object, Single)
+  fullName.vb: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingProgressUpdated(Object, Single)
+  name.vb: OnLoadingProgressUpdated(Object, Single)
+references:
+- uid: BlazerTech.CharacterManagement.CharacterCreator
+  commentId: N:BlazerTech.CharacterManagement.CharacterCreator
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.CharacterCreator
+  nameWithType: BlazerTech.CharacterManagement.CharacterCreator
+  fullName: BlazerTech.CharacterManagement.CharacterCreator
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.CharacterCreator
+    name: CharacterCreator
+    href: BlazerTech.CharacterManagement.CharacterCreator.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingStarting*
+  commentId: Overload:BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingStarting
+  href: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.html#BlazerTech_CharacterManagement_CharacterCreator_LoadingScreenProgress_OnLoadingStarting
+  name: OnLoadingStarting
+  nameWithType: LoadingScreenProgress.OnLoadingStarting
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingStarting
+- uid: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingProgressUpdated*
+  commentId: Overload:BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingProgressUpdated
+  href: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.html#BlazerTech_CharacterManagement_CharacterCreator_LoadingScreenProgress_OnLoadingProgressUpdated_System_Object_System_Single_
+  name: OnLoadingProgressUpdated
+  nameWithType: LoadingScreenProgress.OnLoadingProgressUpdated
+  fullName: BlazerTech.CharacterManagement.CharacterCreator.LoadingScreenProgress.OnLoadingProgressUpdated
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

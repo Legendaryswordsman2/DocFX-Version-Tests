@@ -1,0 +1,580 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  commentId: T:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  id: OwnedResourceTracker`1
+  parent: BlazerTech.CharacterManagement.Essentials
+  children:
+  - BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResource(System.Object)
+  - BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResourceAsync(System.Object)
+  - BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResource
+  - BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResourceAsync
+  - BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.Owners
+  - BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.ReleaseResource(System.Object)
+  - BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.UnloadResource
+  langs:
+  - csharp
+  - vb
+  name: OwnedResourceTracker<TResource>
+  nameWithType: OwnedResourceTracker<TResource>
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>
+  type: Class
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: OwnedResourceTracker
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: public abstract class OwnedResourceTracker<TResource>
+    typeParameters:
+    - id: TResource
+    content.vb: Public MustInherit Class OwnedResourceTracker(Of TResource)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - BlazerTech.CharacterManagement.Characters.CharacterPieceDefinition
+  nameWithType.vb: OwnedResourceTracker(Of TResource)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource)
+  name.vb: OwnedResourceTracker(Of TResource)
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.Owners
+  commentId: P:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.Owners
+  id: Owners
+  parent: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  langs:
+  - csharp
+  - vb
+  name: Owners
+  nameWithType: OwnedResourceTracker<TResource>.Owners
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.Owners
+  type: Property
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: Owners
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: public HashSet<object> Owners { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.HashSet{System.Object}
+    content.vb: Public Property Owners As HashSet(Of Object)
+  overload: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.Owners*
+  nameWithType.vb: OwnedResourceTracker(Of TResource).Owners
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).Owners
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResourceAsync(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResourceAsync(System.Object)
+  id: AcquireResourceAsync(System.Object)
+  parent: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  langs:
+  - csharp
+  - vb
+  name: AcquireResourceAsync(object)
+  nameWithType: OwnedResourceTracker<TResource>.AcquireResourceAsync(object)
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.AcquireResourceAsync(object)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: AcquireResourceAsync
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  summary: Acquires the resource for an owner asynchronously
+  example: []
+  syntax:
+    content: public virtual Task<TResource> AcquireResourceAsync(object owner)
+    parameters:
+    - id: owner
+      type: System.Object
+      description: Object claiming ownership
+    return:
+      type: System.Threading.Tasks.Task{{TResource}}
+      description: Managed resource
+    content.vb: Public Overridable Function AcquireResourceAsync(owner As Object) As Task(Of TResource)
+  overload: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResourceAsync*
+  nameWithType.vb: OwnedResourceTracker(Of TResource).AcquireResourceAsync(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).AcquireResourceAsync(Object)
+  name.vb: AcquireResourceAsync(Object)
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResource(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResource(System.Object)
+  id: AcquireResource(System.Object)
+  parent: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  langs:
+  - csharp
+  - vb
+  name: AcquireResource(object)
+  nameWithType: OwnedResourceTracker<TResource>.AcquireResource(object)
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.AcquireResource(object)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: AcquireResource
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+    startLine: 31
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  summary: Acquires the resource for an owner
+  example: []
+  syntax:
+    content: public virtual TResource AcquireResource(object owner)
+    parameters:
+    - id: owner
+      type: System.Object
+      description: Object claiming ownership
+    return:
+      type: '{TResource}'
+      description: Managed resource
+    content.vb: Public Overridable Function AcquireResource(owner As Object) As TResource
+  overload: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResource*
+  nameWithType.vb: OwnedResourceTracker(Of TResource).AcquireResource(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).AcquireResource(Object)
+  name.vb: AcquireResource(Object)
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.ReleaseResource(System.Object)
+  commentId: M:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.ReleaseResource(System.Object)
+  id: ReleaseResource(System.Object)
+  parent: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  langs:
+  - csharp
+  - vb
+  name: ReleaseResource(object)
+  nameWithType: OwnedResourceTracker<TResource>.ReleaseResource(object)
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.ReleaseResource(object)
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: ReleaseResource
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+    startLine: 41
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: public virtual void ReleaseResource(object owner)
+    parameters:
+    - id: owner
+      type: System.Object
+    content.vb: Public Overridable Sub ReleaseResource(owner As Object)
+  overload: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.ReleaseResource*
+  nameWithType.vb: OwnedResourceTracker(Of TResource).ReleaseResource(Object)
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).ReleaseResource(Object)
+  name.vb: ReleaseResource(Object)
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResourceAsync
+  commentId: M:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResourceAsync
+  id: GetAndLoadResourceAsync
+  parent: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  langs:
+  - csharp
+  - vb
+  name: GetAndLoadResourceAsync()
+  nameWithType: OwnedResourceTracker<TResource>.GetAndLoadResourceAsync()
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.GetAndLoadResourceAsync()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GetAndLoadResourceAsync
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+    startLine: 49
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: protected abstract Task<TResource> GetAndLoadResourceAsync()
+    return:
+      type: System.Threading.Tasks.Task{{TResource}}
+    content.vb: Protected MustOverride Function GetAndLoadResourceAsync() As Task(Of TResource)
+  overload: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResourceAsync*
+  nameWithType.vb: OwnedResourceTracker(Of TResource).GetAndLoadResourceAsync()
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).GetAndLoadResourceAsync()
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResource
+  commentId: M:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResource
+  id: GetAndLoadResource
+  parent: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  langs:
+  - csharp
+  - vb
+  name: GetAndLoadResource()
+  nameWithType: OwnedResourceTracker<TResource>.GetAndLoadResource()
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.GetAndLoadResource()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: GetAndLoadResource
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+    startLine: 50
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: protected abstract TResource GetAndLoadResource()
+    return:
+      type: '{TResource}'
+    content.vb: Protected MustOverride Function GetAndLoadResource() As TResource
+  overload: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResource*
+  nameWithType.vb: OwnedResourceTracker(Of TResource).GetAndLoadResource()
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).GetAndLoadResource()
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.UnloadResource
+  commentId: M:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.UnloadResource
+  id: UnloadResource
+  parent: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1
+  langs:
+  - csharp
+  - vb
+  name: UnloadResource()
+  nameWithType: OwnedResourceTracker<TResource>.UnloadResource()
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.UnloadResource()
+  type: Method
+  source:
+    remote:
+      path: Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+      branch: main
+      repo: https://github.com/Legendaryswordsman2/BlazerTech-Character-Management-System.git
+    id: UnloadResource
+    path: ../../../Unity/Unity Projects/BlazerTech Character Management System/Assets/BlazerTech Character Management System/Scripts/Core/OwnedResourceTracker.cs
+    startLine: 52
+  assemblies:
+  - Assembly-CSharp
+  namespace: BlazerTech.CharacterManagement.Essentials
+  syntax:
+    content: protected abstract void UnloadResource()
+    content.vb: Protected MustOverride Sub UnloadResource()
+  overload: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.UnloadResource*
+  nameWithType.vb: OwnedResourceTracker(Of TResource).UnloadResource()
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).UnloadResource()
+references:
+- uid: BlazerTech.CharacterManagement.Essentials
+  commentId: N:BlazerTech.CharacterManagement.Essentials
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Essentials
+  nameWithType: BlazerTech.CharacterManagement.Essentials
+  fullName: BlazerTech.CharacterManagement.Essentials
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Essentials
+    name: Essentials
+    href: BlazerTech.CharacterManagement.Essentials.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.Owners*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.Owners
+  href: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker-1.html#BlazerTech_CharacterManagement_Essentials_OwnedResourceTracker_1_Owners
+  name: Owners
+  nameWithType: OwnedResourceTracker<TResource>.Owners
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.Owners
+  nameWithType.vb: OwnedResourceTracker(Of TResource).Owners
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).Owners
+- uid: System.Collections.Generic.HashSet{System.Object}
+  commentId: T:System.Collections.Generic.HashSet{System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<object>
+  nameWithType: HashSet<object>
+  fullName: System.Collections.Generic.HashSet<object>
+  nameWithType.vb: HashSet(Of Object)
+  fullName.vb: System.Collections.Generic.HashSet(Of Object)
+  name.vb: HashSet(Of Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResourceAsync*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResourceAsync
+  href: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker-1.html#BlazerTech_CharacterManagement_Essentials_OwnedResourceTracker_1_AcquireResourceAsync_System_Object_
+  name: AcquireResourceAsync
+  nameWithType: OwnedResourceTracker<TResource>.AcquireResourceAsync
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.AcquireResourceAsync
+  nameWithType.vb: OwnedResourceTracker(Of TResource).AcquireResourceAsync
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).AcquireResourceAsync
+- uid: System.Threading.Tasks.Task{{TResource}}
+  commentId: T:System.Threading.Tasks.Task{`0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResource>
+  nameWithType: Task<TResource>
+  fullName: System.Threading.Tasks.Task<TResource>
+  nameWithType.vb: Task(Of TResource)
+  fullName.vb: System.Threading.Tasks.Task(Of TResource)
+  name.vb: Task(Of TResource)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResource
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResource
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResource*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.AcquireResource
+  href: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker-1.html#BlazerTech_CharacterManagement_Essentials_OwnedResourceTracker_1_AcquireResource_System_Object_
+  name: AcquireResource
+  nameWithType: OwnedResourceTracker<TResource>.AcquireResource
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.AcquireResource
+  nameWithType.vb: OwnedResourceTracker(Of TResource).AcquireResource
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).AcquireResource
+- uid: '{TResource}'
+  commentId: '!:TResource'
+  definition: TResource
+  name: TResource
+  nameWithType: TResource
+  fullName: TResource
+- uid: TResource
+  name: TResource
+  nameWithType: TResource
+  fullName: TResource
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.ReleaseResource*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.ReleaseResource
+  href: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker-1.html#BlazerTech_CharacterManagement_Essentials_OwnedResourceTracker_1_ReleaseResource_System_Object_
+  name: ReleaseResource
+  nameWithType: OwnedResourceTracker<TResource>.ReleaseResource
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.ReleaseResource
+  nameWithType.vb: OwnedResourceTracker(Of TResource).ReleaseResource
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).ReleaseResource
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResourceAsync*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResourceAsync
+  href: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker-1.html#BlazerTech_CharacterManagement_Essentials_OwnedResourceTracker_1_GetAndLoadResourceAsync
+  name: GetAndLoadResourceAsync
+  nameWithType: OwnedResourceTracker<TResource>.GetAndLoadResourceAsync
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.GetAndLoadResourceAsync
+  nameWithType.vb: OwnedResourceTracker(Of TResource).GetAndLoadResourceAsync
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).GetAndLoadResourceAsync
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResource*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.GetAndLoadResource
+  href: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker-1.html#BlazerTech_CharacterManagement_Essentials_OwnedResourceTracker_1_GetAndLoadResource
+  name: GetAndLoadResource
+  nameWithType: OwnedResourceTracker<TResource>.GetAndLoadResource
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.GetAndLoadResource
+  nameWithType.vb: OwnedResourceTracker(Of TResource).GetAndLoadResource
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).GetAndLoadResource
+- uid: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.UnloadResource*
+  commentId: Overload:BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker`1.UnloadResource
+  href: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker-1.html#BlazerTech_CharacterManagement_Essentials_OwnedResourceTracker_1_UnloadResource
+  name: UnloadResource
+  nameWithType: OwnedResourceTracker<TResource>.UnloadResource
+  fullName: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker<TResource>.UnloadResource
+  nameWithType.vb: OwnedResourceTracker(Of TResource).UnloadResource
+  fullName.vb: BlazerTech.CharacterManagement.Essentials.OwnedResourceTracker(Of TResource).UnloadResource

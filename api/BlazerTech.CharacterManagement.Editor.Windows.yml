@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Editor.Windows
+  commentId: N:BlazerTech.CharacterManagement.Editor.Windows
+  id: BlazerTech.CharacterManagement.Editor.Windows
+  children:
+  - BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer
+  langs:
+  - csharp
+  - vb
+  name: BlazerTech.CharacterManagement.Editor.Windows
+  nameWithType: BlazerTech.CharacterManagement.Editor.Windows
+  fullName: BlazerTech.CharacterManagement.Editor.Windows
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp-Editor
+references:
+- uid: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer
+  commentId: T:BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer
+  href: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer.html
+  name: CharacterTypeGroupCollectionsViewer
+  nameWithType: CharacterTypeGroupCollectionsViewer
+  fullName: BlazerTech.CharacterManagement.Editor.Windows.CharacterTypeGroupCollectionsViewer

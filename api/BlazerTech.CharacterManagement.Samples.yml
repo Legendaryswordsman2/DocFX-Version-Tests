@@ -1,0 +1,82 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlazerTech.CharacterManagement.Samples
+  commentId: N:BlazerTech.CharacterManagement.Samples
+  id: BlazerTech.CharacterManagement.Samples
+  children:
+  - BlazerTech.CharacterManagement.Samples.ActiveMenuHandler
+  - BlazerTech.CharacterManagement.Samples.Menu
+  - BlazerTech.CharacterManagement.Samples.MenuBackRelay
+  - BlazerTech.CharacterManagement.Samples.SceneChangeRelay
+  - BlazerTech.CharacterManagement.Samples.ToggleMenuOnInput
+  langs:
+  - csharp
+  - vb
+  name: BlazerTech.CharacterManagement.Samples
+  nameWithType: BlazerTech.CharacterManagement.Samples
+  fullName: BlazerTech.CharacterManagement.Samples
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: BlazerTech.CharacterManagement.Samples.Menu
+  commentId: T:BlazerTech.CharacterManagement.Samples.Menu
+  href: BlazerTech.CharacterManagement.Samples.Menu.html
+  name: Menu
+  nameWithType: Menu
+  fullName: BlazerTech.CharacterManagement.Samples.Menu
+- uid: BlazerTech.CharacterManagement.Samples.ActiveMenuHandler
+  commentId: T:BlazerTech.CharacterManagement.Samples.ActiveMenuHandler
+  parent: BlazerTech.CharacterManagement.Samples
+  href: BlazerTech.CharacterManagement.Samples.ActiveMenuHandler.html
+  name: ActiveMenuHandler
+  nameWithType: ActiveMenuHandler
+  fullName: BlazerTech.CharacterManagement.Samples.ActiveMenuHandler
+- uid: BlazerTech.CharacterManagement.Samples.MenuBackRelay
+  commentId: T:BlazerTech.CharacterManagement.Samples.MenuBackRelay
+  href: BlazerTech.CharacterManagement.Samples.MenuBackRelay.html
+  name: MenuBackRelay
+  nameWithType: MenuBackRelay
+  fullName: BlazerTech.CharacterManagement.Samples.MenuBackRelay
+- uid: BlazerTech.CharacterManagement.Samples.ToggleMenuOnInput
+  commentId: T:BlazerTech.CharacterManagement.Samples.ToggleMenuOnInput
+  href: BlazerTech.CharacterManagement.Samples.ToggleMenuOnInput.html
+  name: ToggleMenuOnInput
+  nameWithType: ToggleMenuOnInput
+  fullName: BlazerTech.CharacterManagement.Samples.ToggleMenuOnInput
+- uid: BlazerTech.CharacterManagement.Samples.SceneChangeRelay
+  commentId: T:BlazerTech.CharacterManagement.Samples.SceneChangeRelay
+  href: BlazerTech.CharacterManagement.Samples.SceneChangeRelay.html
+  name: SceneChangeRelay
+  nameWithType: SceneChangeRelay
+  fullName: BlazerTech.CharacterManagement.Samples.SceneChangeRelay
+- uid: BlazerTech.CharacterManagement.Samples
+  commentId: N:BlazerTech.CharacterManagement.Samples
+  href: BlazerTech.html
+  name: BlazerTech.CharacterManagement.Samples
+  nameWithType: BlazerTech.CharacterManagement.Samples
+  fullName: BlazerTech.CharacterManagement.Samples
+  spec.csharp:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Samples
+    name: Samples
+    href: BlazerTech.CharacterManagement.Samples.html
+  spec.vb:
+  - uid: BlazerTech
+    name: BlazerTech
+    href: BlazerTech.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement
+    name: CharacterManagement
+    href: BlazerTech.CharacterManagement.html
+  - name: .
+  - uid: BlazerTech.CharacterManagement.Samples
+    name: Samples
+    href: BlazerTech.CharacterManagement.Samples.html
