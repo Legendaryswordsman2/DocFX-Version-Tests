@@ -1,40 +1,102 @@
-name: Deploy versioned docs to GitHub Pages
+name: Deploy Docs (multi-version)
 
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
-    # ✅ This is the bit you're missing
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
+    env:
+      # If this is a project site (username.github.io/REPO), set the base path to /REPO
+      # If it's a user/organization site (username.github.io or custom domain), set to /
+      BASE_PATH: /DocFX-Version-Tests
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Prepare publish directory
+      - name: Ensure Versions exists
         run: |
-          mkdir -p public
-          rsync -av --delete "Versions/" "public/"
+          if [ ! -d "Versions" ]; then
+            echo "Versions folder not found. Nothing to deploy." >&2
+            exit 1
+          fi
+
+      - name: Determine latest version folder
+        id: latest
+        shell: bash
+        run: |
+          shopt -s nullglob
+          # Collect folder names like V1.0.0, V1.1.0, etc
+          mapfile -t DIRS < <(find Versions -maxdepth 1 -mindepth 1 -type d -printf "%f\n")
+          if [ ${#DIRS[@]} -eq 0 ]; then
+            echo "No version folders found in Versions/" >&2
+            exit 1
+          fi
+
+          # For safety, sort by the numeric part using sort -V
+          # (strip leading 'V' for sorting, then restore)
+          mapfile -t SORTED < <(printf "%s\n" "${DIRS[@]}" | sed 's/^V//' | sort -V)
+          LATEST="V${SORTED[-1]}"
+          echo "Latest detected: $LATEST"
+          echo "latest=$LATEST" >> "$GITHUB_OUTPUT"
+
+      - name: Build publish tree
+        run: |
+          # Publish root in _site
+          mkdir -p _site
+          # Copy all versions to the site
+          rsync -a Versions/ _site/Versions/
+
+          # Add .nojekyll at root to keep DocFX assets intact
+          touch _site/.nojekyll
+
+          # Write a root index.html that redirects to the latest docs
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <meta charset="utf-8">
+          <title>Redirecting…</title>
+          <meta http-equiv="refresh" content="0; url=__BASE__/Versions/__LATEST__/">
+          <script>location.replace("__BASE__/Versions/__LATEST__/");</script>
+          Redirecting to the latest documentation…
+          HTML
+          sed -i "s|__BASE__|${BASE_PATH}|g" _site/index.html
+          sed -i "s|__LATEST__|${{ steps.latest.outputs.latest }}|g" _site/index.html
+
+          # Write a 404.html that also forwards to the latest docs (nice SPA-ish fallback)
+          cat > _site/404.html <<'HTML'
+          <!doctype html>
+          <meta charset="utf-8">
+          <title>Not found — Redirecting…</title>
+          <meta http-equiv="refresh" content="0; url=__BASE__/Versions/__LATEST__/">
+          <script>location.replace("__BASE__/Versions/__LATEST__/");</script>
+          The page you requested wasn’t found. Redirecting to the latest docs…
+          HTML
+          sed -i "s|__BASE__|${BASE_PATH}|g" _site/404.html
+          sed -i "s|__LATEST__|${{ steps.latest.outputs.latest }}|g" _site/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: _site
 
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
