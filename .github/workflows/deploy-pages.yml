@@ -18,7 +18,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # For project sites, set to /<repo>. For user/org or custom domain, set to /
       BASE_PATH: /DocFX-Version-Tests
     steps:
       - name: Checkout
@@ -37,7 +36,6 @@ jobs:
         run: |
           set -euo pipefail
           shopt -s nullglob
-          # Collect folder names like V1.0.0, V1.1.0, etc (strip leading V to sort -V)
           mapfile -t DIRS < <(find Versions -maxdepth 1 -mindepth 1 -type d -printf "%f\n" | sed 's/^V//' | sort -V)
           if [ ${#DIRS[@]} -eq 0 ]; then
             echo "No version folders found in Versions/" >&2
@@ -46,7 +44,6 @@ jobs:
 
           LATEST="V${DIRS[-1]}"
 
-          # JSON array like ["V1.0.0","V1.1.0",...]
           JSON_VERSIONS=$(printf '%s\n' "${DIRS[@]}" | sed 's/^/V/' | jq -R . | jq -sc .)
 
           {
@@ -56,16 +53,12 @@ jobs:
             echo "JSON"
           } >> "$GITHUB_OUTPUT"
 
-          echo "Detected versions: $JSON_VERSIONS"
-          echo "Latest: $LATEST"
-
       - name: Build publish tree
         run: |
           mkdir -p _site
           rsync -a Versions/ _site/Versions/
           touch _site/.nojekyll
 
-          # Root index and 404 that redirect to latest
           cat > _site/index.html <<'HTML'
           <!doctype html><meta charset="utf-8">
           <meta http-equiv="refresh" content="0; url=__BASE__/Versions/__LATEST__/">
@@ -74,16 +67,7 @@ jobs:
           sed -i "s|__BASE__|${BASE_PATH}|g" _site/index.html
           sed -i "s|__LATEST__|${{ steps.versions.outputs.latest }}|g" _site/index.html
 
-          cat > _site/404.html <<'HTML'
-          <!doctype html><meta charset="utf-8">
-          <meta http-equiv="refresh" content="0; url=__BASE__/Versions/__LATEST__/">
-          <script>location.replace("__BASE__/Versions/__LATEST__/");</script>
-          HTML
-          sed -i "s|__BASE__|${BASE_PATH}|g" _site/404.html
-          sed -i "s|__LATEST__|${{ steps.versions.outputs.latest }}|g" _site/404.html
-
-          # Optional: expose /latest/ alias (uncomment to enable)
-          # rsync -a "_site/Versions/${{ steps.versions.outputs.latest }}/" "_site/latest/"
+          cp _site/index.html _site/404.html
 
       - name: Write versions.json
         run: |
@@ -95,18 +79,16 @@ jobs:
           }
           JSON
 
-      - name: Add version switcher JS (navbar integration)
+      - name: Add version switcher JS
         run: |
           mkdir -p _site/assets/version-switcher
           cat > _site/assets/version-switcher/version-switcher.js <<'JS'
           (async function(){
             try {
-              // Detect base and current version from /Versions/Vx.y.z/
               const m = location.pathname.match(/^(.*)\/Versions\/(V[^/]+)\//);
               const basePathFromUrl = m ? m[1] : '';
               const currentVersion = m ? m[2] : null;
 
-              // Load site metadata
               const metaUrl = (basePathFromUrl || '') + '/versions.json';
               const meta = await fetch(metaUrl, { cache: 'no-store' }).then(r => r.json()).catch(()=>null);
               if (!meta) return;
@@ -115,7 +97,6 @@ jobs:
               const versions = Array.isArray(meta.versions) ? meta.versions.slice() : [];
               const latest = meta.latest || (versions[versions.length-1] || null);
 
-              // Sort semver descending
               versions.sort((a,b)=>{
                 const av = a.replace(/^V/,'').split('.').map(Number);
                 const bv = b.replace(/^V/,'').split('.').map(Number);
@@ -126,24 +107,9 @@ jobs:
                 return 0;
               });
 
-              // Create style element to handle light/dark (including the dropdown menu)
-              const styleTag = document.createElement('style');
-              styleTag.id = 'bt-version-switcher-style';
-              document.head.appendChild(styleTag);
-
-              // Build the <select>
               const select = document.createElement('select');
-              select.id = 'bt-version-switcher';
               select.setAttribute('aria-label','Select documentation version');
-              select.style.marginLeft = '12px';
-              select.style.padding = '4px 8px';
-              select.style.borderRadius = '6px';
-              select.style.font = 'inherit';
-              select.style.cursor = 'pointer';
-              select.style.outline = 'none';
-              // Let UA draw the dropdown in the current color scheme
-              // We'll set select.style.colorScheme = 'dark'|'light' dynamically.
-              select.style.background = 'transparent';
+              select.className = 'version-switcher';
 
               versions.forEach(v=>{
                 const opt = document.createElement('option');
@@ -154,7 +120,6 @@ jobs:
               if (currentVersion && versions.includes(currentVersion)) select.value = currentVersion;
               else if (latest) select.value = latest;
 
-              // Navigate to same relative path in target version; fallback to that version's root
               async function go(v){
                 const rest = m ? location.pathname.replace(/^(.*)\/Versions\/(V[^/]+)\//, '') : '';
                 const targetSame = `${basePath}/Versions/${v}/${rest}`;
@@ -168,20 +133,6 @@ jobs:
               }
               select.addEventListener('change', e => go(e.target.value));
 
-              // Mount into Modern theme navbar (right side) if possible
-              function mountRight(item){
-                if (!item) return false;
-                if (item.tagName === 'UL') {
-                  const li = document.createElement('li');
-                  li.style.display = 'flex';
-                  li.style.alignItems = 'center';
-                  li.appendChild(select);
-                  item.appendChild(li);
-                  return true;
-                }
-                item.appendChild(select);
-                return true;
-              }
               const trySelectors = [
                 '.navbar .navbar-collapse .nav.navbar-nav.navbar-right',
                 '.navbar .navbar-collapse .navbar-right',
@@ -190,102 +141,46 @@ jobs:
                 '.navbar .container',
                 '.navbar'
               ];
+
               let mounted = false;
+              function mountRight(item){
+                if (!item) return false;
+                if (item.tagName === 'UL') {
+                  const li = document.createElement('li');
+                  li.appendChild(select);
+                  item.appendChild(li);
+                } else {
+                  item.appendChild(select);
+                }
+                return true;
+              }
               for (const sel of trySelectors) {
                 const target = document.querySelector(sel);
                 if (target && mountRight(target)) { mounted = true; break; }
               }
-              if (!mounted) {
-                const wrap = document.createElement('div');
-                wrap.style.position='fixed';
-                wrap.style.top='0'; wrap.style.right='0';
-                wrap.style.padding='8px';
-                wrap.style.zIndex='99999';
-                wrap.style.borderBottomLeftRadius='8px';
-                wrap.appendChild(select);
-                document.body.appendChild(wrap);
-              }
 
-              // --- THEME HANDLING ----------------------------------------------------
-              function parseRGB(str){
-                const m = str.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/i);
-                if (!m) return [255,255,255];
-                return [parseInt(m[1],10), parseInt(m[2],10), parseInt(m[3],10)];
-              }
-              function luminance([r,g,b]){
-                const srgb = [r,g,b].map(v=>{
-                  v/=255;
-                  return v<=0.03928 ? v/12.92 : Math.pow((v+0.055)/1.055,2.4);
-                });
-                return 0.2126*srgb[0] + 0.7152*srgb[1] + 0.0722*srgb[2];
-              }
-              function isDarkTheme(){
-                const nav = document.querySelector('.navbar') || document.body;
-                const bg = getComputedStyle(nav).backgroundColor;
-                const lum = luminance(parseRGB(bg));
-                // fallback: also consider html[data-theme] or prefers-color-scheme
-                const html = document.documentElement;
-                const attrDark = (html.getAttribute('data-theme')||'').toLowerCase().includes('dark')
-                                 || html.classList.contains('dark')
-                                 || document.body.classList.contains('dark');
-                const mediaDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                return (lum < 0.4) || attrDark || mediaDark;
-              }
+              if (!mounted) document.body.appendChild(select);
 
-              function applyTheme(){
-                const dark = isDarkTheme();
+              // Add theme-aware styles
+              const style = document.createElement('style');
+              style.textContent = `
+                .version-switcher {
+                  border: 1px solid var(--color-border);
+                  border-radius: 4px;
+                  padding: 4px 6px;
+                  margin-left: 12px;
+                }
+                [data-theme="light"] .version-switcher {
+                  background: #fff;
+                  color: #000;
+                }
+                [data-theme="dark"] .version-switcher {
+                  background: #222;
+                  color: #fff;
+                }
+              `;
+              document.head.appendChild(style);
 
-                // Provide high-contrast tokens for both modes
-                const vars = dark ? {
-                  fg:        '#ffffff',
-                  bg:        'rgba(255,255,255,0.08)',
-                  border:    'rgba(255,255,255,0.35)',
-                  focusRing: 'rgba(255,255,255,0.6)',
-                  menuBg:    '#2a2a2a',
-                  menuFg:    '#ffffff'
-                } : {
-                  fg:        '#111111',
-                  bg:        'rgba(0,0,0,0.04)',
-                  border:    'rgba(0,0,0,0.25)',
-                  focusRing: 'rgba(0,0,0,0.55)',
-                  menuBg:    '#ffffff',
-                  menuFg:    '#111111'
-                };
-
-                // Color-scheme makes the native dropdown match the theme
-                select.style.color = vars.fg;
-                select.style.border = `1px solid ${vars.border}`;
-                select.style.backgroundColor = vars.bg;
-                select.style.colorScheme = dark ? 'dark' : 'light';
-
-                // Inject CSS so options menu uses matching colors (supported in most modern browsers)
-                styleTag.textContent = `
-                  #bt-version-switcher {
-                    transition: background-color .15s ease, border-color .15s ease, box-shadow .15s ease;
-                  }
-                  #bt-version-switcher:focus {
-                    box-shadow: 0 0 0 3px ${vars.focusRing};
-                  }
-                  #bt-version-switcher option {
-                    background: ${vars.menuBg};
-                    color: ${vars.menuFg};
-                  }
-                `;
-              }
-
-              applyTheme();
-
-              // React to theme changes: observe html attribute/class and media query
-              const mo = new MutationObserver(applyTheme);
-              mo.observe(document.documentElement, { attributes: true, attributeFilter: ['class','data-theme'] });
-              if (window.matchMedia) {
-                const mq = window.matchMedia('(prefers-color-scheme: dark)');
-                if (mq.addEventListener) mq.addEventListener('change', applyTheme);
-                else if (mq.addListener) mq.addListener(applyTheme); // older Safari
-              }
-              // Also recheck after a brief delay (covers late navbar theming)
-              setTimeout(applyTheme, 150);
-              setTimeout(applyTheme, 500);
             } catch (e) {
               console.warn('Version switcher failed:', e);
             }
@@ -295,24 +190,12 @@ jobs:
       - name: Inject switcher into all version pages
         shell: bash
         run: |
-          # Inject the script tag into every HTML file under Versions/**
           find _site/Versions -type f -name '*.html' | while read -r file; do
-            # Skip already-injected files
-            if grep -q 'assets/version-switcher/version-switcher.js' "$file"; then
-              continue
-            fi
-
+            if grep -q 'assets/version-switcher/version-switcher.js' "$file"; then continue; fi
             if grep -q '</body>' "$file"; then
-              awk -v base="${BASE_PATH}" '
-                BEGIN{injected=0}
-                /<\/body>/ && injected==0 {
-                  print "  <script src=\"" base "/assets/version-switcher/version-switcher.js\" defer></script>"
-                  injected=1
-                }
-                {print}
-              ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+              sed -i "/<\/body>/i <script src=\"${BASE_PATH}/assets/version-switcher/version-switcher.js\" defer></script>" "$file"
             else
-              printf '\n<script src="%s/assets/version-switcher/version-switcher.js" defer></script>\n' "${BASE_PATH}" >> "$file"
+              printf '\n<script src="%s/assets/version-switcher/version-switcher.js\" defer></script>\n' "${BASE_PATH}" >> "$file"
             fi
           done
 
