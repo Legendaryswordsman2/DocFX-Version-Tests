@@ -20,7 +20,7 @@ jobs:
     env:
       # If this is a project site (username.github.io/REPO), set BASE_PATH to /REPO
       # If it's a user/org site or custom domain, set to /
-      BASE_PATH: /BT-Character-Management-System-Docs
+      BASE_PATH: /DocFX-Version-Tests
     steps:
       - name: Checkout
         uses: actions/checkout@v4
