@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # IMPORTANT: project site base path (repo name) for GitHub Pages
-      # The user requested this path specifically for their test repo.
+      # You asked for this path while testing on another repo.
       BASE_PATH: "/DocFX-Version-Tests"
     steps:
       - name: Checkout
@@ -62,10 +62,17 @@ jobs:
           echo "Found versions: ${SORTED[*]}"
           echo "Latest version folder: $LATEST"
 
-          # Emit JSON array for later steps
+          # Create JSON array (no trailing commas)
+          # jq -R . wraps each line in JSON string; jq -s . makes an array
           VJSON=$(printf '%s\n' "${SORTED[@]}" | jq -R . | jq -s .)
-          echo "versions_json=$VJSON" >> "$GITHUB_OUTPUT"
-          echo "latest=$LATEST"       >> "$GITHUB_OUTPUT"
+
+          # Write versions JSON to a file to avoid multiline $GITHUB_OUTPUT issues
+          echo "${VJSON}" > versions.json
+
+          {
+            echo "latest=$LATEST"
+            echo "versions_json_file=versions.json"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Prepare output folder
         run: |
@@ -76,12 +83,10 @@ jobs:
           # Copy the Versions folder verbatim
           cp -a Versions "_publish/Versions"
 
-      - name: Create versions.json (for switcher)
-        env:
-          VERSIONS_JSON: ${{ steps.versions.outputs.versions_json }}
+      - name: Add versions.json (for switcher)
         run: |
           set -euo pipefail
-          echo "${VERSIONS_JSON}" > _publish/versions.json
+          cp versions.json _publish/versions.json
           jq . _publish/versions.json
 
       - name: Add root index.html and 404.html to redirect to latest
@@ -175,20 +180,16 @@ jobs:
           cat > _publish/assets/version-switcher.js <<'JS'
           (function () {
             const BASE_PATH = (window.__DOCFX_BASE_PATH || (document.currentScript && document.currentScript.dataset.basePath)) || "";
-            const versionsUrl = BASE_PATH + "/versions.json";
-
             function getCurrentVersionFromPath() {
               const parts = location.pathname.split("/").filter(Boolean);
               const i = parts.indexOf("Versions");
               if (i >= 0 && parts[i + 1]) return parts[i + 1];
               return null;
             }
-
             function buildSwitcher(versions, currentVersion) {
               const label = document.createElement("span");
               label.className = "vs-label";
               label.textContent = "Version";
-
               const select = document.createElement("select");
               select.className = "vs-select";
               versions.forEach(v => {
@@ -198,21 +199,16 @@ jobs:
                 if (v === currentVersion) opt.selected = true;
                 select.appendChild(opt);
               });
-
               select.addEventListener("change", () => {
                 const v = select.value;
-                // Keep relative page if staying inside the same doc structure; otherwise go to version root.
-                // Simplest + safest: jump to version root.
                 location.href = BASE_PATH + "/Versions/" + v + "/";
               });
-
               const wrap = document.createElement("div");
               wrap.className = "vs-wrapper";
               wrap.appendChild(label);
               wrap.appendChild(select);
               return wrap;
             }
-
             function insertIntoHeader(el) {
               // DocFX Modern header targets
               const spots = [
@@ -223,17 +219,13 @@ jobs:
               ];
               const host = spots.find(Boolean);
               if (host) {
-                // Try aligning to right side if there's a right-side container
                 const rightSlot = host.querySelector('.links, .navbar-end, .nav-right');
                 (rightSlot || host).appendChild(el);
               }
             }
-
             function ensureBasePath() {
-              // Infer BASE_PATH from current path if not provided (project pages)
               if (BASE_PATH) return BASE_PATH;
               const parts = location.pathname.split("/").filter(Boolean);
-              // Usually: /<repo>/...
               if (parts.length) {
                 const root = "/" + parts[0];
                 window.__DOCFX_BASE_PATH = root;
@@ -242,7 +234,6 @@ jobs:
               window.__DOCFX_BASE_PATH = "";
               return "";
             }
-
             document.addEventListener("DOMContentLoaded", function () {
               const base = ensureBasePath();
               fetch((base || "") + "/versions.json")
@@ -259,17 +250,14 @@ jobs:
           JS
 
       - name: Inject switcher into every version's HTML
-        env:
-          LATEST: ${{ steps.versions.outputs.latest }}
         run: |
           set -euo pipefail
 
           # For each version, add <link> + <script> to the <head> (idempotent).
           find "_publish/Versions" -type f -name "*.html" | while read -r file; do
-            # Compute depth to root to build proper BASE_PATH reference (/DocFX-Version-Tests)
-            # Since we use an absolute BASE_PATH, we can safely link to /DocFX-Version-Tests/assets/*
-            if ! grep -q 'version-switcher.css' "$file"; then
-              sed -i '0,/<\/head>/s//  <link rel="stylesheet" href="'"${BASE_PATH}"'\/assets\/version-switcher.css">\n  <script defer src="'"${BASE_PATH}"'\/assets\/version-switcher.js" data-base-path="'"${BASE_PATH}"'"><\/script>\n<\/head>/' "$file"
+            # Add assets just before the closing </head>. Use case-insensitive match and only first occurrence.
+            if ! grep -qi 'version-switcher\.css' "$file"; then
+              perl -0777 -pe 's#</head>#  <link rel="stylesheet" href="'$BASE_PATH'/assets/version-switcher.css">\n  <script defer src="'$BASE_PATH'/assets/version-switcher.js" data-base-path="'$BASE_PATH'"></script>\n</head>#i unless $done++' -i "$file"
             fi
           done
 
