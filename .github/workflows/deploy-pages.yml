@@ -1,4 +1,4 @@
-name: Deploy Docs (multi-version + switcher)
+name: Deploy Docs (multi-version + header switcher)
 
 on:
   push:
@@ -18,8 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # If this is a project site (username.github.io/REPO), set BASE_PATH to /REPO
-      # If it's a user/org site or custom domain, set to /
+      # For project sites, set to /<repo>. For user/org or custom domain, set to /
       BASE_PATH: /DocFX-Version-Tests
     steps:
       - name: Checkout
@@ -38,7 +37,7 @@ jobs:
         run: |
           set -euo pipefail
           shopt -s nullglob
-          # Collect folder names like V1.0.0, V1.1.0, etc (strip V to sort -V)
+          # Collect folder names like V1.0.0, V1.1.0, etc (strip leading V to sort -V)
           mapfile -t DIRS < <(find Versions -maxdepth 1 -mindepth 1 -type d -printf "%f\n" | sed 's/^V//' | sort -V)
           if [ ${#DIRS[@]} -eq 0 ]; then
             echo "No version folders found in Versions/" >&2
@@ -96,63 +95,28 @@ jobs:
           }
           JSON
 
-      - name: Add version switcher assets
+      - name: Add version switcher JS (navbar integration)
         run: |
           mkdir -p _site/assets/version-switcher
-
-          # CSS
-          cat > _site/assets/version-switcher/version-switcher.css <<'CSS'
-          .btvs {
-            position: fixed; top: 16px; right: 16px; z-index: 99999;
-            display: flex; gap: 8px; align-items: center;
-            padding: 8px 12px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,.15);
-            backdrop-filter: blur(6px);
-            background: rgba(32, 35, 42, 0.85); color: #fff; font: 14px/1.2 system-ui, Segoe UI, Roboto, Arial, sans-serif;
-          }
-          .btvs select {
-            border: 1px solid rgba(255,255,255,.2);
-            background: transparent; color: inherit; padding: 6px 8px; border-radius: 8px;
-          }
-          .btvs .tag {
-            font-size: 12px; padding: 2px 6px; border-radius: 6px; background: rgba(255,255,255,.15);
-          }
-          .btvs .sep { opacity: .5 }
-          @media (max-width: 520px) {
-            .btvs { top: auto; bottom: 16px; right: 16px; }
-          }
-          CSS
-
-          # JS
           cat > _site/assets/version-switcher/version-switcher.js <<'JS'
           (async function(){
             try {
-              // Detect current base path and version from /Versions/Vx.y.z/
+              // Detect base and current version from /Versions/Vx.y.z/
               const m = location.pathname.match(/^(.*)\/Versions\/(V[^/]+)\//);
               const basePathFromUrl = m ? m[1] : '';
               const currentVersion = m ? m[2] : null;
 
-              // Fetch shared metadata
-              const versionsUrl = (basePathFromUrl || '') + '/versions.json';
-              const meta = await fetch(versionsUrl, { cache: 'no-store' }).then(r => r.json());
+              // Load site metadata
+              const metaUrl = (basePathFromUrl || '') + '/versions.json';
+              const meta = await fetch(metaUrl, { cache: 'no-store' }).then(r => r.json()).catch(()=>null);
+              if (!meta) return;
 
               const basePath = meta.basePath || basePathFromUrl || '';
-              const versions = meta.versions || [];
+              const versions = Array.isArray(meta.versions) ? meta.versions.slice() : [];
               const latest = meta.latest || (versions[versions.length-1] || null);
 
-              // Build UI
-              const wrap = document.createElement('div');
-              wrap.className = 'btvs';
-              wrap.innerHTML = `
-                <span class="sep">Docs</span>
-                <span class="tag">v</span>
-                <select aria-label="Select documentation version"></select>
-                <span class="tag" title="Latest stable">Latest</span>
-                <span>${latest || ''}</span>
-              `;
-              const select = wrap.querySelector('select');
-
-              // Populate versions (descending semver)
-              const vs = [...versions].sort((a,b)=>{
+              // Sort semver descending
+              versions.sort((a,b)=>{
                 const av = a.replace(/^V/,'').split('.').map(Number);
                 const bv = b.replace(/^V/,'').split('.').map(Number);
                 for (let i=0;i<Math.max(av.length,bv.length);i++){
@@ -161,17 +125,28 @@ jobs:
                 }
                 return 0;
               });
-              vs.forEach(v=>{
+
+              // Build the <select>
+              const select = document.createElement('select');
+              select.setAttribute('aria-label','Select documentation version');
+              select.style.background = 'transparent';
+              select.style.color = 'inherit';
+              select.style.border = '1px solid rgba(255,255,255,.25)';
+              select.style.borderRadius = '4px';
+              select.style.padding = '4px 6px';
+              select.style.marginLeft = '12px';
+
+              versions.forEach(v=>{
                 const opt = document.createElement('option');
                 opt.value = v;
-                opt.textContent = v + (v===latest ? '  •' : '');
+                opt.textContent = v + (v===latest ? ' •' : '');
                 select.appendChild(opt);
               });
-              if (currentVersion && vs.includes(currentVersion)) select.value = currentVersion;
+              if (currentVersion && versions.includes(currentVersion)) select.value = currentVersion;
               else if (latest) select.value = latest;
 
-              // Navigate helper: try same relative path in target version; fallback to version root
-              async function navigateToVersion(v){
+              // Navigate to same relative path in target version; fallback to that version's root
+              async function go(v){
                 const rest = m ? location.pathname.replace(/^(.*)\/Versions\/(V[^/]+)\//, '') : '';
                 const targetSame = `${basePath}/Versions/${v}/${rest}`;
                 if (!rest) { location.href = targetSame; return; }
@@ -182,15 +157,55 @@ jobs:
                   location.href = `${basePath}/Versions/${v}/`;
                 }
               }
+              select.addEventListener('change', e => go(e.target.value));
 
-              select.addEventListener('change', e=> navigateToVersion(e.target.value));
+              // Find a good spot in the Modern theme navbar (try a few patterns)
+              // Typical Modern theme structure:
+              // <div class="navbar ..."><div class="container"><div id="navbar" class="navbar-collapse collapse"> ... <ul class="nav navbar-nav navbar-right">...</ul></div></div></div>
+              let mounted = false;
 
-              // Mount
-              const style = document.createElement('link');
-              style.rel = 'stylesheet';
-              style.href = (basePath || '') + '/assets/version-switcher/version-switcher.css';
-              document.documentElement.appendChild(style);
-              document.documentElement.appendChild(wrap);
+              function mountRight(item){
+                if (!item) return false;
+                // Wrap in <li> if targeting a <ul>
+                if (item.tagName === 'UL') {
+                  const li = document.createElement('li');
+                  li.appendChild(select);
+                  item.appendChild(li);
+                  return true;
+                }
+                // Otherwise append directly (e.g., a toolbar container)
+                item.appendChild(select);
+                return true;
+              }
+
+              const trySelectors = [
+                '.navbar .navbar-collapse .nav.navbar-nav.navbar-right', // preferred
+                '.navbar .navbar-collapse .navbar-right',
+                '#navbar .nav.navbar-nav.navbar-right',
+                '.navbar .navbar-collapse', // broader
+                '.navbar .container',       // fallback
+                '.navbar'                   // last resort
+              ];
+
+              for (const sel of trySelectors) {
+                const target = document.querySelector(sel);
+                if (target && mountRight(target)) { mounted = true; break; }
+              }
+
+              // As a final fallback, add it to the document end (shouldn't happen on Modern)
+              if (!mounted) {
+                const wrap = document.createElement('div');
+                wrap.style.position='fixed';
+                wrap.style.top='0'; wrap.style.right='0';
+                wrap.style.padding='8px';
+                wrap.style.zIndex='99999';
+                wrap.style.background='rgba(0,0,0,.6)';
+                wrap.style.backdropFilter='blur(6px)';
+                wrap.style.color='#fff';
+                wrap.style.borderBottomLeftRadius='8px';
+                wrap.appendChild(select);
+                document.body.appendChild(wrap);
+              }
             } catch (e) {
               console.warn('Version switcher failed:', e);
             }
