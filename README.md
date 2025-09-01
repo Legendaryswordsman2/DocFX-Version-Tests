@@ -1,0 +1,1 @@
+A working versioning system for DocFX. All builds are put into a folder titled "Versions' and named V{Version} (Ex: V1.0.0). When a new commit is added it will re-deploy the site with all versions in the Versons folder. A dropdown is included to the right of the serach bar to switch between the versions
