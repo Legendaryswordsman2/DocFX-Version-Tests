@@ -18,11 +18,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # For project sites, set to /<repo>. For user/org or custom domain, set to /
-      BASE_PATH: /DocFX-Version-Tests
+      # IMPORTANT: project site base path (repo name) for GitHub Pages
+      # You asked for this path while testing on another repo.
+      BASE_PATH: "/DocFX-Version-Tests"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Ensure Versions exists
         run: |
@@ -37,253 +41,246 @@ jobs:
         run: |
           set -euo pipefail
           shopt -s nullglob
-          # Collect folder names like V1.0.0, V1.1.0, etc (strip leading V to sort -V)
-          mapfile -t DIRS < <(find Versions -maxdepth 1 -mindepth 1 -type d -printf "%f\n" | sed 's/^V//' | sort -V)
+
+          # Collect folder names under Versions (e.g., V1.0, V1.1.0, etc.)
+          mapfile -t DIRS < <(find Versions -maxdepth 1 -mindepth 1 -type d -printf "%f\n")
+
           if [ ${#DIRS[@]} -eq 0 ]; then
-            echo "No version folders found in Versions/" >&2
+            echo "No version folders found in Versions/." >&2
             exit 1
           fi
 
-          LATEST="V${DIRS[-1]}"
+          # Normalize for sort: strip leading 'V'/'v', sort by version (-V handles version sort)
+          mapfile -t SORTED < <(printf "%s\n" "${DIRS[@]}" \
+            | awk '{print $0 "|" tolower($0)}' \
+            | sed -E 's/^([^|]*)\|v?([0-9].*)$/\1|\2/' \
+            | sort -t'|' -k2,2V \
+            | cut -d'|' -f1)
 
-          # JSON array like ["V1.0.0","V1.1.0",...]
-          JSON_VERSIONS=$(printf '%s\n' "${DIRS[@]}" | sed 's/^/V/' | jq -R . | jq -sc .)
+          LATEST="${SORTED[-1]}"
+
+          echo "Found versions: ${SORTED[*]}"
+          echo "Latest version folder: $LATEST"
+
+          # Create JSON array (no trailing commas)
+          # jq -R . wraps each line in JSON string; jq -s . makes an array
+          VJSON=$(printf '%s\n' "${SORTED[@]}" | jq -R . | jq -s .)
+
+          # Write versions JSON to a file to avoid multiline $GITHUB_OUTPUT issues
+          echo "${VJSON}" > versions.json
 
           {
             echo "latest=$LATEST"
-            echo "versions<<JSON"
-            printf '%s\n' "$JSON_VERSIONS"
-            echo "JSON"
+            echo "versions_json_file=versions.json"
           } >> "$GITHUB_OUTPUT"
 
-          echo "Detected versions: $JSON_VERSIONS"
-          echo "Latest: $LATEST"
-
-      - name: Build publish tree
+      - name: Prepare output folder
         run: |
-          mkdir -p _site
-          rsync -a Versions/ _site/Versions/
-          touch _site/.nojekyll
+          set -euo pipefail
+          rm -rf _publish
+          mkdir -p _publish/assets
 
-          # Root index and 404 that redirect to latest
-          cat > _site/index.html <<'HTML'
-          <!doctype html><meta charset="utf-8">
-          <meta http-equiv="refresh" content="0; url=__BASE__/Versions/__LATEST__/">
-          <script>location.replace("__BASE__/Versions/__LATEST__/");</script>
-          HTML
-          sed -i "s|__BASE__|${BASE_PATH}|g" _site/index.html
-          sed -i "s|__LATEST__|${{ steps.versions.outputs.latest }}|g" _site/index.html
+          # Copy the Versions folder verbatim
+          cp -a Versions "_publish/Versions"
 
-          cat > _site/404.html <<'HTML'
-          <!doctype html><meta charset="utf-8">
-          <meta http-equiv="refresh" content="0; url=__BASE__/Versions/__LATEST__/">
-          <script>location.replace("__BASE__/Versions/__LATEST__/");</script>
-          HTML
-          sed -i "s|__BASE__|${BASE_PATH}|g" _site/404.html
-          sed -i "s|__LATEST__|${{ steps.versions.outputs.latest }}|g" _site/404.html
-
-          # Optional: expose /latest/ alias (uncomment to enable)
-          # rsync -a "_site/Versions/${{ steps.versions.outputs.latest }}/" "_site/latest/"
-
-      - name: Write versions.json
+      - name: Add versions.json (for switcher)
         run: |
-          cat > _site/versions.json <<JSON
-          {
-            "basePath": "${BASE_PATH}",
-            "latest": "${{ steps.versions.outputs.latest }}",
-            "versions": ${{ steps.versions.outputs.versions }}
+          set -euo pipefail
+          cp versions.json _publish/versions.json
+          jq . _publish/versions.json
+
+      - name: Add root index.html and 404.html to redirect to latest
+        env:
+          LATEST: ${{ steps.versions.outputs.latest }}
+        run: |
+          set -euo pipefail
+          cat > _publish/index.html <<EOF
+          <!doctype html>
+          <html>
+            <head>
+              <meta charset="utf-8"/>
+              <meta http-equiv="refresh" content="0; url=${BASE_PATH}/Versions/${LATEST}/">
+              <script>location.replace("${BASE_PATH}/Versions/${LATEST}/");</script>
+              <title>Redirecting…</title>
+            </head>
+            <body>Redirecting to latest version…</body>
+          </html>
+          EOF
+
+          # 404: send users to latest home to avoid GitHub Pages 404 when path misses version
+          cat > _publish/404.html <<EOF
+          <!doctype html>
+          <html>
+            <head>
+              <meta charset="utf-8"/>
+              <meta http-equiv="refresh" content="0; url=${BASE_PATH}/Versions/${LATEST}/">
+              <script>location.replace("${BASE_PATH}/Versions/${LATEST}/");</script>
+              <title>Not found — redirecting…</title>
+            </head>
+            <body>Not found — redirecting to latest version…</body>
+          </html>
+          EOF
+
+      - name: Write version-switcher assets
+        run: |
+          set -euo pipefail
+
+          # CSS uses DocFX Modern theme/Primer variables and inherits header text color.
+          # Fix: make the "Version" label fully opaque and use currentColor so it stays readable in light mode.
+          cat > _publish/assets/version-switcher.css <<'CSS'
+          :root {
+            /* Prefer header/text tokens when available; fall back to standard fg. */
+            --vs-fg: var(--color-header-text, var(--color-fg-default, #1f2328));
+            --vs-bg: var(--color-canvas-subtle, #f6f8fa);
+            --vs-border: var(--color-border-default, #d0d7de);
+            --vs-hover: var(--color-neutral-muted, rgba(175,184,193,0.2));
+            --vs-radius: 8px;
+            --vs-pad: 6px 10px;
+            --vs-font: inherit;
           }
-          JSON
 
-            - name: Add version switcher JS (navbar integration)
-          run: |
-          mkdir -p _site/assets/version-switcher
-          cat > _site/assets/version-switcher/version-switcher.js <<'JS'
-          (async function(){
-            try {
-              // Detect base and current version from /Versions/Vx.y.z/
-              const m = location.pathname.match(/^(.*)\/Versions\/(V[^/]+)\//);
-              const basePathFromUrl = m ? m[1] : '';
-              const currentVersion = m ? m[2] : null;
+          .vs-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: 0.75rem;
+            color: var(--vs-fg); /* ensure descendants inherit correct contrast */
+          }
 
-              // Load site metadata
-              const metaUrl = (basePathFromUrl || '') + '/versions.json';
-              const meta = await fetch(metaUrl, { cache: 'no-store' }).then(r => r.json()).catch(()=>null);
-              if (!meta) return;
+          .vs-label {
+            font: var(--vs-font);
+            color: currentColor !important; /* inherit from header for perfect contrast */
+            font-size: 0.9rem;
+            opacity: 1; /* was 0.8 — caused low contrast in light mode */
+            font-weight: 600; /* slight boost for readability */
+          }
 
-              const basePath = meta.basePath || basePathFromUrl || '';
-              const versions = Array.isArray(meta.versions) ? meta.versions.slice() : [];
-              const latest = meta.latest || (versions[versions.length-1] || null);
+          .vs-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: var(--vs-bg);
+            color: var(--vs-fg);
+            border: 1px solid var(--vs-border);
+            border-radius: var(--vs-radius);
+            padding: var(--vs-pad);
+            font: var(--vs-font);
+            line-height: 1.2;
+            cursor: pointer;
+          }
+          .vs-select:hover, .vs-select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--vs-hover);
+          }
 
-              // Sort semver descending
-              versions.sort((a,b)=>{
-                const av = a.replace(/^V/,'').split('.').map(Number);
-                const bv = b.replace(/^V/,'').split('.').map(Number);
-                for (let i=0;i<Math.max(av.length,bv.length);i++){
-                  const d = (bv[i]||0)-(av[i]||0);
-                  if (d) return d;
-                }
-                return 0;
-              });
+          /* Robust fallback if theme vars are missing */
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --vs-fg: #e6edf3;
+              --vs-bg: #0d1117;
+              --vs-border: #30363d;
+              --vs-hover: rgba(110,118,129,0.3);
+            }
+          }
+          @media (prefers-color-scheme: light) {
+            :root {
+              --vs-fg: #1f2328;
+              --vs-bg: #f6f8fa;
+              --vs-border: #d0d7de;
+              --vs-hover: rgba(175,184,193,0.2);
+            }
+          }
+          CSS
 
-              // Build the <select>
-              const select = document.createElement('select');
-              select.className = 'btvs-select';
-              select.setAttribute('aria-label','Select documentation version');
-
-              versions.forEach(v=>{
-                const opt = document.createElement('option');
+          # JS inserts a <select> into the DocFX Modern header and wires up navigation.
+          cat > _publish/assets/version-switcher.js <<'JS'
+          (function () {
+            const BASE_PATH = (window.__DOCFX_BASE_PATH || (document.currentScript && document.currentScript.dataset.basePath)) || "";
+            function getCurrentVersionFromPath() {
+              const parts = location.pathname.split("/").filter(Boolean);
+              const i = parts.indexOf("Versions");
+              if (i >= 0 && parts[i + 1]) return parts[i + 1];
+              return null;
+            }
+            function buildSwitcher(versions, currentVersion) {
+              const label = document.createElement("span");
+              label.className = "vs-label";
+              label.textContent = "Version";
+              const select = document.createElement("select");
+              select.className = "vs-select";
+              versions.forEach(v => {
+                const opt = document.createElement("option");
                 opt.value = v;
-                opt.textContent = v + (v===latest ? ' •' : '');
+                opt.textContent = v;
+                if (v === currentVersion) opt.selected = true;
                 select.appendChild(opt);
               });
-              if (currentVersion && versions.includes(currentVersion)) select.value = currentVersion;
-              else if (latest) select.value = latest;
-
-              // Navigate to same relative path in target version; fallback to that version's root
-              async function go(v){
-                const rest = m ? location.pathname.replace(/^(.*)\/Versions\/(V[^/]+)\//, '') : '';
-                const targetSame = `${basePath}/Versions/${v}/${rest}`;
-                if (!rest) { location.href = targetSame; return; }
-                try {
-                  const ok = await fetch(targetSame, { method: 'HEAD', cache: 'no-store' }).then(r => r.ok);
-                  location.href = ok ? targetSame : `${basePath}/Versions/${v}/`;
-                } catch {
-                  location.href = `${basePath}/Versions/${v}/`;
-                }
-              }
-              select.addEventListener('change', e => go(e.target.value));
-
-              // Find a good spot in the Modern theme navbar (try a few patterns)
-              let mounted = false;
-              function mountRight(item){
-                if (!item) return false;
-                // If it's a <ul>, wrap select in <li> to match navbar structure
-                if (item.tagName === 'UL') {
-                  const li = document.createElement('li');
-                  li.appendChild(select);
-                  item.appendChild(li);
-                  return true;
-                }
-                item.appendChild(select);
-                return true;
-              }
-              const trySelectors = [
-                '.navbar .navbar-collapse .nav.navbar-nav.navbar-right',
-                '.navbar .navbar-collapse .navbar-right',
-                '#navbar .nav.navbar-nav.navbar-right',
-                '.navbar .navbar-collapse',
-                '.navbar .container',
-                '.navbar'
-              ];
-              let mountTarget = null;
-              for (const sel of trySelectors) {
-                const t = document.querySelector(sel);
-                if (t && mountRight(t)) { mounted = true; mountTarget = t; break; }
-              }
-              if (!mounted) {
-                // Last-resort fallback (shouldn’t happen on Modern)
-                const wrap = document.createElement('div');
-                wrap.style.position='fixed';
-                wrap.style.top='0'; wrap.style.right='0';
-                wrap.style.padding='8px'; wrap.style.zIndex='99999';
-                wrap.style.background='rgba(0,0,0,.6)';
-                wrap.style.backdropFilter='blur(6px)';
-                wrap.style.color='#fff';
-                wrap.style.borderBottomLeftRadius='8px';
-                wrap.appendChild(select);
-                document.body.appendChild(wrap);
-              }
-
-              // Inject style that adapts to light/dark and to navbar text color
-              const style = document.createElement('style');
-              style.textContent = `
-                .btvs-select {
-                  font: 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-                  padding: 4px 8px;
-                  border-radius: 6px;
-                  border: 1px solid;
-                  background: transparent;
-                  /* color set below via computed style */
-                }
-                .btvs-select:focus {
-                  outline: 2px solid currentColor;
-                  outline-offset: 2px;
-                }
-                /* Light scheme defaults */
-                @media (prefers-color-scheme: light) {
-                  .btvs-select {
-                    background: rgba(0,0,0,.03);
-                    border-color: rgba(0,0,0,.2);
-                } }
-                /* Dark scheme defaults */
-                @media (prefers-color-scheme: dark) {
-                  .btvs-select {
-                    background: rgba(255,255,255,.07);
-                    border-color: rgba(255,255,255,.45);
-                } }
-              `;
-              document.head.appendChild(style);
-
-              // Match navbar's text color for perfect contrast
-              try {
-                const refEl =
-                  mountTarget && mountTarget.nodeType === 1
-                    ? mountTarget
-                    : document.querySelector('.navbar') || document.body;
-                const navColor = getComputedStyle(refEl).color;
-                select.style.color = navColor;
-              } catch {}
-
-              // If the site toggles themes dynamically, re-apply computed color on changes
-              const mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-              if (mq && mq.addEventListener) {
-                mq.addEventListener('change', () => {
-                  const refEl = document.querySelector('.navbar') || document.body;
-                  select.style.color = getComputedStyle(refEl).color;
-                });
-              }
-              // Watch for body/theme attribute flips (DocFX themes sometimes do this)
-              const obs = new MutationObserver(() => {
-                const refEl = document.querySelector('.navbar') || document.body;
-                select.style.color = getComputedStyle(refEl).color;
+              select.addEventListener("change", () => {
+                const v = select.value;
+                location.href = BASE_PATH + "/Versions/" + v + "/";
               });
-              obs.observe(document.documentElement, { attributes: true, attributeFilter: ['class','data-theme'] });
-            } catch (e) {
-              console.warn('Version switcher failed:', e);
+              const wrap = document.createElement("div");
+              wrap.className = "vs-wrapper";
+              wrap.appendChild(label);
+              wrap.appendChild(select);
+              return wrap;
             }
+            function insertIntoHeader(el) {
+              // DocFX Modern header targets
+              const spots = [
+                document.querySelector("header .navbar"),
+                document.querySelector("header .nav"),
+                document.querySelector("header"),
+                document.body
+              ];
+              const host = spots.find(Boolean);
+              if (host) {
+                const rightSlot = host.querySelector('.links, .navbar-end, .nav-right');
+                (rightSlot || host).appendChild(el);
+              }
+            }
+            function ensureBasePath() {
+              if (BASE_PATH) return BASE_PATH;
+              const parts = location.pathname.split("/").filter(Boolean);
+              if (parts.length) {
+                const root = "/" + parts[0];
+                window.__DOCFX_BASE_PATH = root;
+                return root;
+              }
+              window.__DOCFX_BASE_PATH = "";
+              return "";
+            }
+            document.addEventListener("DOMContentLoaded", function () {
+              const base = ensureBasePath();
+              fetch((base || "") + "/versions.json")
+                .then(r => r.json())
+                .then(list => {
+                  if (!Array.isArray(list) || list.length === 0) return;
+                  const current = getCurrentVersionFromPath() || list[list.length - 1];
+                  const sw = buildSwitcher(list, current);
+                  insertIntoHeader(sw);
+                })
+                .catch(() => { /* silently ignore */ });
+            });
           })();
           JS
 
-
-      - name: Inject switcher into all version pages
-        shell: bash
+      - name: Inject switcher into every version's HTML
         run: |
-          # Inject the script tag into every HTML file under Versions/**
-          find _site/Versions -type f -name '*.html' | while read -r file; do
-            # Skip already-injected files
-            if grep -q 'assets/version-switcher/version-switcher.js' "$file"; then
-              continue
-            fi
+          set -euo pipefail
 
-            if grep -q '</body>' "$file"; then
-              awk -v base="${BASE_PATH}" '
-                BEGIN{injected=0}
-                /<\/body>/ && injected==0 {
-                  print "  <script src=\"" base "/assets/version-switcher/version-switcher.js\" defer></script>"
-                  injected=1
-                }
-                {print}
-              ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
-            else
-              printf '\n<script src="%s/assets/version-switcher/version-switcher.js" defer></script>\n' "${BASE_PATH}" >> "$file"
+          # For each version, add <link> + <script> to the <head> (idempotent).
+          find "_publish/Versions" -type f -name "*.html" | while read -r file; do
+            # Add assets just before the closing </head>. Use case-insensitive match and only first occurrence.
+            if ! grep -qi 'version-switcher\.css' "$file"; then
+              perl -0777 -pe 's#</head>#  <link rel="stylesheet" href="'$BASE_PATH'/assets/version-switcher.css">\n  <script defer src="'$BASE_PATH'/assets/version-switcher.js" data-base-path="'$BASE_PATH'"></script>\n</head>#i unless $done++' -i "$file"
             fi
           done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: _publish
 
   deploy:
     environment:
