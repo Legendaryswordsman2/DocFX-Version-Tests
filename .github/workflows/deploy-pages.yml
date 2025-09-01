@@ -125,36 +125,29 @@ jobs:
         run: |
           set -euo pipefail
 
-          # CSS uses DocFX Modern theme/Primer variables and inherits header text color.
-          # Fix: make the "Version" label fully opaque and use currentColor so it stays readable in light mode.
+          # CSS uses DocFX Modern theme CSS variables so it auto-adapts to light/dark.
           cat > _publish/assets/version-switcher.css <<'CSS'
           :root {
-            /* Prefer header/text tokens when available; fall back to standard fg. */
-            --vs-fg: var(--color-header-text, var(--color-fg-default, #1f2328));
             --vs-bg: var(--color-canvas-subtle, #f6f8fa);
+            --vs-fg: var(--color-fg-default, #1f2328);
             --vs-border: var(--color-border-default, #d0d7de);
             --vs-hover: var(--color-neutral-muted, rgba(175,184,193,0.2));
             --vs-radius: 8px;
             --vs-pad: 6px 10px;
             --vs-font: inherit;
           }
-
           .vs-wrapper {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             margin-left: 0.75rem;
-            color: var(--vs-fg); /* ensure descendants inherit correct contrast */
           }
-
           .vs-label {
             font: var(--vs-font);
-            color: currentColor !important; /* inherit from header for perfect contrast */
+            color: var(--vs-fg);
+            opacity: 0.8;
             font-size: 0.9rem;
-            opacity: 1; /* was 0.8 — caused low contrast in light mode */
-            font-weight: 600; /* slight boost for readability */
           }
-
           .vs-select {
             appearance: none;
             -webkit-appearance: none;
@@ -172,22 +165,13 @@ jobs:
             outline: none;
             box-shadow: 0 0 0 3px var(--vs-hover);
           }
-
-          /* Robust fallback if theme vars are missing */
+          /* Fallback for environments without DocFX variables */
           @media (prefers-color-scheme: dark) {
             :root {
-              --vs-fg: #e6edf3;
               --vs-bg: #0d1117;
+              --vs-fg: #e6edf3;
               --vs-border: #30363d;
               --vs-hover: rgba(110,118,129,0.3);
-            }
-          }
-          @media (prefers-color-scheme: light) {
-            :root {
-              --vs-fg: #1f2328;
-              --vs-bg: #f6f8fa;
-              --vs-border: #d0d7de;
-              --vs-hover: rgba(175,184,193,0.2);
             }
           }
           CSS
