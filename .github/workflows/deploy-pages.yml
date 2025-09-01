@@ -36,18 +36,27 @@ jobs:
         id: versions
         shell: bash
         run: |
+          set -euo pipefail
           shopt -s nullglob
+          # Collect folder names like V1.0.0, V1.1.0, etc (strip V to sort -V)
           mapfile -t DIRS < <(find Versions -maxdepth 1 -mindepth 1 -type d -printf "%f\n" | sed 's/^V//' | sort -V)
           if [ ${#DIRS[@]} -eq 0 ]; then
             echo "No version folders found in Versions/" >&2
             exit 1
           fi
+
           LATEST="V${DIRS[-1]}"
 
-          # Build JSON array like ["V1.0.0","V1.1.0",...]
-          JSON_VERSIONS=$(printf '%s\n' "${DIRS[@]}" | sed 's/^/V/' | jq -R . | jq -s .)
-          echo "latest=$LATEST" >> "$GITHUB_OUTPUT"
-          echo "versions=$JSON_VERSIONS" >> "$GITHUB_OUTPUT"
+          # JSON array like ["V1.0.0","V1.1.0",...]
+          JSON_VERSIONS=$(printf '%s\n' "${DIRS[@]}" | sed 's/^/V/' | jq -R . | jq -sc .)
+
+          {
+            echo "latest=$LATEST"
+            echo "versions<<JSON"
+            printf '%s\n' "$JSON_VERSIONS"
+            echo "JSON"
+          } >> "$GITHUB_OUTPUT"
+
           echo "Detected versions: $JSON_VERSIONS"
           echo "Latest: $LATEST"
 
@@ -57,7 +66,7 @@ jobs:
           rsync -a Versions/ _site/Versions/
           touch _site/.nojekyll
 
-          # Root index and 404 that point to latest
+          # Root index and 404 that redirect to latest
           cat > _site/index.html <<'HTML'
           <!doctype html><meta charset="utf-8">
           <meta http-equiv="refresh" content="0; url=__BASE__/Versions/__LATEST__/">
@@ -74,7 +83,10 @@ jobs:
           sed -i "s|__BASE__|${BASE_PATH}|g" _site/404.html
           sed -i "s|__LATEST__|${{ steps.versions.outputs.latest }}|g" _site/404.html
 
-      - name: Write versions.json (NEW)
+          # Optional: expose /latest/ alias (uncomment to enable)
+          # rsync -a "_site/Versions/${{ steps.versions.outputs.latest }}/" "_site/latest/"
+
+      - name: Write versions.json
         run: |
           cat > _site/versions.json <<JSON
           {
@@ -84,7 +96,7 @@ jobs:
           }
           JSON
 
-      - name: Add version switcher assets (NEW)
+      - name: Add version switcher assets
         run: |
           mkdir -p _site/assets/version-switcher
 
@@ -114,12 +126,12 @@ jobs:
           cat > _site/assets/version-switcher/version-switcher.js <<'JS'
           (async function(){
             try {
-              // Find basePath from the current URL by locating "/Versions/Vx.y.z/"
+              // Detect current base path and version from /Versions/Vx.y.z/
               const m = location.pathname.match(/^(.*)\/Versions\/(V[^/]+)\//);
               const basePathFromUrl = m ? m[1] : '';
               const currentVersion = m ? m[2] : null;
 
-              // Fetch versions.json from site root
+              // Fetch shared metadata
               const versionsUrl = (basePathFromUrl || '') + '/versions.json';
               const meta = await fetch(versionsUrl, { cache: 'no-store' }).then(r => r.json());
 
@@ -139,7 +151,7 @@ jobs:
               `;
               const select = wrap.querySelector('select');
 
-              // Populate versions (descending)
+              // Populate versions (descending semver)
               const vs = [...versions].sort((a,b)=>{
                 const av = a.replace(/^V/,'').split('.').map(Number);
                 const bv = b.replace(/^V/,'').split('.').map(Number);
@@ -158,11 +170,10 @@ jobs:
               if (currentVersion && vs.includes(currentVersion)) select.value = currentVersion;
               else if (latest) select.value = latest;
 
-              // Navigate helper: try same path in target version, else fallback to target's root
+              // Navigate helper: try same relative path in target version; fallback to version root
               async function navigateToVersion(v){
                 const rest = m ? location.pathname.replace(/^(.*)\/Versions\/(V[^/]+)\//, '') : '';
                 const targetSame = `${basePath}/Versions/${v}/${rest}`;
-                // If rest is empty, or same path likely exists, go there; otherwise probe with HEAD
                 if (!rest) { location.href = targetSame; return; }
                 try {
                   const ok = await fetch(targetSame, { method: 'HEAD', cache: 'no-store' }).then(r => r.ok);
@@ -186,18 +197,16 @@ jobs:
           })();
           JS
 
-      - name: Inject switcher into all version pages (NEW)
+      - name: Inject switcher into all version pages
         shell: bash
         run: |
-          # For each HTML file under Versions/**, inject <script> before </body>
-          # and a small guard to avoid double-inject if rerun.
+          # Inject the script tag into every HTML file under Versions/**
           find _site/Versions -type f -name '*.html' | while read -r file; do
             # Skip already-injected files
             if grep -q 'assets/version-switcher/version-switcher.js' "$file"; then
               continue
             fi
 
-            # Insert script tag before </body> (if present), else append
             if grep -q '</body>' "$file"; then
               awk -v base="${BASE_PATH}" '
                 BEGIN{injected=0}
