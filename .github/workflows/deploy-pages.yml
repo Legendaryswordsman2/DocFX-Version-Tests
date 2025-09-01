@@ -95,8 +95,8 @@ jobs:
           }
           JSON
 
-      - name: Add version switcher JS (navbar integration)
-        run: |
+            - name: Add version switcher JS (navbar integration)
+          run: |
           mkdir -p _site/assets/version-switcher
           cat > _site/assets/version-switcher/version-switcher.js <<'JS'
           (async function(){
@@ -128,13 +128,8 @@ jobs:
 
               // Build the <select>
               const select = document.createElement('select');
+              select.className = 'btvs-select';
               select.setAttribute('aria-label','Select documentation version');
-              select.style.background = 'transparent';
-              select.style.color = 'inherit';
-              select.style.border = '1px solid rgba(255,255,255,.25)';
-              select.style.borderRadius = '4px';
-              select.style.padding = '4px 6px';
-              select.style.marginLeft = '12px';
 
               versions.forEach(v=>{
                 const opt = document.createElement('option');
@@ -160,45 +155,38 @@ jobs:
               select.addEventListener('change', e => go(e.target.value));
 
               // Find a good spot in the Modern theme navbar (try a few patterns)
-              // Typical Modern theme structure:
-              // <div class="navbar ..."><div class="container"><div id="navbar" class="navbar-collapse collapse"> ... <ul class="nav navbar-nav navbar-right">...</ul></div></div></div>
               let mounted = false;
-
               function mountRight(item){
                 if (!item) return false;
-                // Wrap in <li> if targeting a <ul>
+                // If it's a <ul>, wrap select in <li> to match navbar structure
                 if (item.tagName === 'UL') {
                   const li = document.createElement('li');
                   li.appendChild(select);
                   item.appendChild(li);
                   return true;
                 }
-                // Otherwise append directly (e.g., a toolbar container)
                 item.appendChild(select);
                 return true;
               }
-
               const trySelectors = [
-                '.navbar .navbar-collapse .nav.navbar-nav.navbar-right', // preferred
+                '.navbar .navbar-collapse .nav.navbar-nav.navbar-right',
                 '.navbar .navbar-collapse .navbar-right',
                 '#navbar .nav.navbar-nav.navbar-right',
-                '.navbar .navbar-collapse', // broader
-                '.navbar .container',       // fallback
-                '.navbar'                   // last resort
+                '.navbar .navbar-collapse',
+                '.navbar .container',
+                '.navbar'
               ];
-
+              let mountTarget = null;
               for (const sel of trySelectors) {
-                const target = document.querySelector(sel);
-                if (target && mountRight(target)) { mounted = true; break; }
+                const t = document.querySelector(sel);
+                if (t && mountRight(t)) { mounted = true; mountTarget = t; break; }
               }
-
-              // As a final fallback, add it to the document end (shouldn't happen on Modern)
               if (!mounted) {
+                // Last-resort fallback (shouldn’t happen on Modern)
                 const wrap = document.createElement('div');
                 wrap.style.position='fixed';
                 wrap.style.top='0'; wrap.style.right='0';
-                wrap.style.padding='8px';
-                wrap.style.zIndex='99999';
+                wrap.style.padding='8px'; wrap.style.zIndex='99999';
                 wrap.style.background='rgba(0,0,0,.6)';
                 wrap.style.backdropFilter='blur(6px)';
                 wrap.style.color='#fff';
@@ -206,11 +194,67 @@ jobs:
                 wrap.appendChild(select);
                 document.body.appendChild(wrap);
               }
+
+              // Inject style that adapts to light/dark and to navbar text color
+              const style = document.createElement('style');
+              style.textContent = `
+                .btvs-select {
+                  font: 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+                  padding: 4px 8px;
+                  border-radius: 6px;
+                  border: 1px solid;
+                  background: transparent;
+                  /* color set below via computed style */
+                }
+                .btvs-select:focus {
+                  outline: 2px solid currentColor;
+                  outline-offset: 2px;
+                }
+                /* Light scheme defaults */
+                @media (prefers-color-scheme: light) {
+                  .btvs-select {
+                    background: rgba(0,0,0,.03);
+                    border-color: rgba(0,0,0,.2);
+                } }
+                /* Dark scheme defaults */
+                @media (prefers-color-scheme: dark) {
+                  .btvs-select {
+                    background: rgba(255,255,255,.07);
+                    border-color: rgba(255,255,255,.45);
+                } }
+              `;
+              document.head.appendChild(style);
+
+              // Match navbar's text color for perfect contrast
+              try {
+                const refEl =
+                  mountTarget && mountTarget.nodeType === 1
+                    ? mountTarget
+                    : document.querySelector('.navbar') || document.body;
+                const navColor = getComputedStyle(refEl).color;
+                select.style.color = navColor;
+              } catch {}
+
+              // If the site toggles themes dynamically, re-apply computed color on changes
+              const mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+              if (mq && mq.addEventListener) {
+                mq.addEventListener('change', () => {
+                  const refEl = document.querySelector('.navbar') || document.body;
+                  select.style.color = getComputedStyle(refEl).color;
+                });
+              }
+              // Watch for body/theme attribute flips (DocFX themes sometimes do this)
+              const obs = new MutationObserver(() => {
+                const refEl = document.querySelector('.navbar') || document.body;
+                select.style.color = getComputedStyle(refEl).color;
+              });
+              obs.observe(document.documentElement, { attributes: true, attributeFilter: ['class','data-theme'] });
             } catch (e) {
               console.warn('Version switcher failed:', e);
             }
           })();
           JS
+
 
       - name: Inject switcher into all version pages
         shell: bash
