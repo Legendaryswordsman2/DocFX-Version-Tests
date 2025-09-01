@@ -1,4 +1,4 @@
-name: Deploy Docs (multi-version)
+name: Deploy Docs (multi-version + switcher)
 
 on:
   push:
@@ -18,9 +18,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # If this is a project site (username.github.io/REPO), set the base path to /REPO
-      # If it's a user/organization site (username.github.io or custom domain), set to /
-      BASE_PATH: /DocFX-Version-Tests
+      # If this is a project site (username.github.io/REPO), set BASE_PATH to /REPO
+      # If it's a user/org site or custom domain, set to /
+      BASE_PATH: /BT-Character-Management-System-Docs
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,58 +32,185 @@ jobs:
             exit 1
           fi
 
-      - name: Determine latest version folder
-        id: latest
+      - name: Determine versions (sorted) and latest
+        id: versions
         shell: bash
         run: |
           shopt -s nullglob
-          # Collect folder names like V1.0.0, V1.1.0, etc
-          mapfile -t DIRS < <(find Versions -maxdepth 1 -mindepth 1 -type d -printf "%f\n")
+          mapfile -t DIRS < <(find Versions -maxdepth 1 -mindepth 1 -type d -printf "%f\n" | sed 's/^V//' | sort -V)
           if [ ${#DIRS[@]} -eq 0 ]; then
             echo "No version folders found in Versions/" >&2
             exit 1
           fi
+          LATEST="V${DIRS[-1]}"
 
-          # For safety, sort by the numeric part using sort -V
-          # (strip leading 'V' for sorting, then restore)
-          mapfile -t SORTED < <(printf "%s\n" "${DIRS[@]}" | sed 's/^V//' | sort -V)
-          LATEST="V${SORTED[-1]}"
-          echo "Latest detected: $LATEST"
+          # Build JSON array like ["V1.0.0","V1.1.0",...]
+          JSON_VERSIONS=$(printf '%s\n' "${DIRS[@]}" | sed 's/^/V/' | jq -R . | jq -s .)
           echo "latest=$LATEST" >> "$GITHUB_OUTPUT"
+          echo "versions=$JSON_VERSIONS" >> "$GITHUB_OUTPUT"
+          echo "Detected versions: $JSON_VERSIONS"
+          echo "Latest: $LATEST"
 
       - name: Build publish tree
         run: |
-          # Publish root in _site
           mkdir -p _site
-          # Copy all versions to the site
           rsync -a Versions/ _site/Versions/
-
-          # Add .nojekyll at root to keep DocFX assets intact
           touch _site/.nojekyll
 
-          # Write a root index.html that redirects to the latest docs
+          # Root index and 404 that point to latest
           cat > _site/index.html <<'HTML'
-          <!doctype html>
-          <meta charset="utf-8">
-          <title>Redirecting…</title>
+          <!doctype html><meta charset="utf-8">
           <meta http-equiv="refresh" content="0; url=__BASE__/Versions/__LATEST__/">
           <script>location.replace("__BASE__/Versions/__LATEST__/");</script>
-          Redirecting to the latest documentation…
           HTML
           sed -i "s|__BASE__|${BASE_PATH}|g" _site/index.html
-          sed -i "s|__LATEST__|${{ steps.latest.outputs.latest }}|g" _site/index.html
+          sed -i "s|__LATEST__|${{ steps.versions.outputs.latest }}|g" _site/index.html
 
-          # Write a 404.html that also forwards to the latest docs (nice SPA-ish fallback)
           cat > _site/404.html <<'HTML'
-          <!doctype html>
-          <meta charset="utf-8">
-          <title>Not found — Redirecting…</title>
+          <!doctype html><meta charset="utf-8">
           <meta http-equiv="refresh" content="0; url=__BASE__/Versions/__LATEST__/">
           <script>location.replace("__BASE__/Versions/__LATEST__/");</script>
-          The page you requested wasn’t found. Redirecting to the latest docs…
           HTML
           sed -i "s|__BASE__|${BASE_PATH}|g" _site/404.html
-          sed -i "s|__LATEST__|${{ steps.latest.outputs.latest }}|g" _site/404.html
+          sed -i "s|__LATEST__|${{ steps.versions.outputs.latest }}|g" _site/404.html
+
+      - name: Write versions.json (NEW)
+        run: |
+          cat > _site/versions.json <<JSON
+          {
+            "basePath": "${BASE_PATH}",
+            "latest": "${{ steps.versions.outputs.latest }}",
+            "versions": ${{ steps.versions.outputs.versions }}
+          }
+          JSON
+
+      - name: Add version switcher assets (NEW)
+        run: |
+          mkdir -p _site/assets/version-switcher
+
+          # CSS
+          cat > _site/assets/version-switcher/version-switcher.css <<'CSS'
+          .btvs {
+            position: fixed; top: 16px; right: 16px; z-index: 99999;
+            display: flex; gap: 8px; align-items: center;
+            padding: 8px 12px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,.15);
+            backdrop-filter: blur(6px);
+            background: rgba(32, 35, 42, 0.85); color: #fff; font: 14px/1.2 system-ui, Segoe UI, Roboto, Arial, sans-serif;
+          }
+          .btvs select {
+            border: 1px solid rgba(255,255,255,.2);
+            background: transparent; color: inherit; padding: 6px 8px; border-radius: 8px;
+          }
+          .btvs .tag {
+            font-size: 12px; padding: 2px 6px; border-radius: 6px; background: rgba(255,255,255,.15);
+          }
+          .btvs .sep { opacity: .5 }
+          @media (max-width: 520px) {
+            .btvs { top: auto; bottom: 16px; right: 16px; }
+          }
+          CSS
+
+          # JS
+          cat > _site/assets/version-switcher/version-switcher.js <<'JS'
+          (async function(){
+            try {
+              // Find basePath from the current URL by locating "/Versions/Vx.y.z/"
+              const m = location.pathname.match(/^(.*)\/Versions\/(V[^/]+)\//);
+              const basePathFromUrl = m ? m[1] : '';
+              const currentVersion = m ? m[2] : null;
+
+              // Fetch versions.json from site root
+              const versionsUrl = (basePathFromUrl || '') + '/versions.json';
+              const meta = await fetch(versionsUrl, { cache: 'no-store' }).then(r => r.json());
+
+              const basePath = meta.basePath || basePathFromUrl || '';
+              const versions = meta.versions || [];
+              const latest = meta.latest || (versions[versions.length-1] || null);
+
+              // Build UI
+              const wrap = document.createElement('div');
+              wrap.className = 'btvs';
+              wrap.innerHTML = `
+                <span class="sep">Docs</span>
+                <span class="tag">v</span>
+                <select aria-label="Select documentation version"></select>
+                <span class="tag" title="Latest stable">Latest</span>
+                <span>${latest || ''}</span>
+              `;
+              const select = wrap.querySelector('select');
+
+              // Populate versions (descending)
+              const vs = [...versions].sort((a,b)=>{
+                const av = a.replace(/^V/,'').split('.').map(Number);
+                const bv = b.replace(/^V/,'').split('.').map(Number);
+                for (let i=0;i<Math.max(av.length,bv.length);i++){
+                  const d = (bv[i]||0)-(av[i]||0);
+                  if (d) return d;
+                }
+                return 0;
+              });
+              vs.forEach(v=>{
+                const opt = document.createElement('option');
+                opt.value = v;
+                opt.textContent = v + (v===latest ? '  •' : '');
+                select.appendChild(opt);
+              });
+              if (currentVersion && vs.includes(currentVersion)) select.value = currentVersion;
+              else if (latest) select.value = latest;
+
+              // Navigate helper: try same path in target version, else fallback to target's root
+              async function navigateToVersion(v){
+                const rest = m ? location.pathname.replace(/^(.*)\/Versions\/(V[^/]+)\//, '') : '';
+                const targetSame = `${basePath}/Versions/${v}/${rest}`;
+                // If rest is empty, or same path likely exists, go there; otherwise probe with HEAD
+                if (!rest) { location.href = targetSame; return; }
+                try {
+                  const ok = await fetch(targetSame, { method: 'HEAD', cache: 'no-store' }).then(r => r.ok);
+                  location.href = ok ? targetSame : `${basePath}/Versions/${v}/`;
+                } catch {
+                  location.href = `${basePath}/Versions/${v}/`;
+                }
+              }
+
+              select.addEventListener('change', e=> navigateToVersion(e.target.value));
+
+              // Mount
+              const style = document.createElement('link');
+              style.rel = 'stylesheet';
+              style.href = (basePath || '') + '/assets/version-switcher/version-switcher.css';
+              document.documentElement.appendChild(style);
+              document.documentElement.appendChild(wrap);
+            } catch (e) {
+              console.warn('Version switcher failed:', e);
+            }
+          })();
+          JS
+
+      - name: Inject switcher into all version pages (NEW)
+        shell: bash
+        run: |
+          # For each HTML file under Versions/**, inject <script> before </body>
+          # and a small guard to avoid double-inject if rerun.
+          find _site/Versions -type f -name '*.html' | while read -r file; do
+            # Skip already-injected files
+            if grep -q 'assets/version-switcher/version-switcher.js' "$file"; then
+              continue
+            fi
+
+            # Insert script tag before </body> (if present), else append
+            if grep -q '</body>' "$file"; then
+              awk -v base="${BASE_PATH}" '
+                BEGIN{injected=0}
+                /<\/body>/ && injected==0 {
+                  print "  <script src=\"" base "/assets/version-switcher/version-switcher.js\" defer></script>"
+                  injected=1
+                }
+                {print}
+              ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+            else
+              printf '\n<script src="%s/assets/version-switcher/version-switcher.js" defer></script>\n' "${BASE_PATH}" >> "$file"
+            fi
+          done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
