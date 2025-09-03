@@ -3,8 +3,6 @@ name: Deploy Docs (multi-version + header switcher)
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'Versions/**'
   workflow_dispatch:
 
 permissions:
