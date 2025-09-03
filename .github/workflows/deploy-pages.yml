@@ -3,6 +3,8 @@ name: Deploy Docs (multi-version + header switcher)
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'Versions/**'
   workflow_dispatch:
 
 permissions:
@@ -37,12 +39,12 @@ jobs:
         run: |
           set -euo pipefail
           shopt -s nullglob
+          # Strip leading "V" for sort -V, then add back.
           mapfile -t DIRS < <(find Versions -maxdepth 1 -mindepth 1 -type d -printf "%f\n" | sed 's/^V//' | sort -V)
           if [ ${#DIRS[@]} -eq 0 ]; then
             echo "No version folders found in Versions/" >&2
             exit 1
           fi
-
           LATEST="V${DIRS[-1]}"
           JSON_VERSIONS=$(printf '%s\n' "${DIRS[@]}" | sed 's/^/V/' | jq -R . | jq -sc .)
 
@@ -60,34 +62,22 @@ jobs:
           mkdir -p _site
           touch _site/.nojekyll
 
-          # Publish all versions under /Versions
-          rsync -a "Versions/" "_site/Versions/"
+          # 1) Publish all versions under /Versions
+          rsync -a Versions/ _site/Versions/
 
-          # Copy latest to site root so base URL serves latest (no redirect)
-          rsync -a "Versions/${{ steps.versions.outputs.latest }}/" "_site/"
+          # 2) Publish the latest version as the *root* of the site
+          LATEST="${{ steps.versions.outputs.latest }}"
+          rsync -a --delete "_site/Versions/${LATEST}/" "_site/"
 
-          # 404: prefer latest's 404 if present; else minimal fallback to latest
-          if [ -f "Versions/${{ steps.versions.outputs.latest }}/404.html" ]; then
-            cp "Versions/${{ steps.versions.outputs.latest }}/404.html" "_site/404.html"
-          else
-            cat > _site/404.html <<'HTML'
-          <!doctype html>
-          <meta charset="utf-8">
-          <title>Not found</title>
-          <p>Page not found. Go to the latest docs.</p>
-          <script>
-            (function(){
-              var base = "{{BASE_PATH}}";
-              if (!base) base = "";
-              location.replace(base + "/Versions/{{LATEST}}/");
-            })();
-          </script>
+          # 3) 404 -> send users back to the base page (no version)
+          cat > _site/404.html <<'HTML'
+          <!doctype html><meta charset="utf-8">
+          <meta http-equiv="refresh" content="0; url=__BASE__/">
+          <script>location.replace("__BASE__/");</script>
           HTML
-            sed -i "s|{{BASE_PATH}}|${BASE_PATH}|g" _site/404.html
-            sed -i "s|{{LATEST}}|${{ steps.versions.outputs.latest }}|g" _site/404.html
-          fi
+          sed -i "s|__BASE__|${BASE_PATH}|g" _site/404.html
 
-      - name: Write versions.json
+      - name: Write versions.json (at site root)
         run: |
           cat > _site/versions.json <<JSON
           {
@@ -103,46 +93,25 @@ jobs:
           cat > _site/assets/version-switcher/version-switcher.js <<'JS'
           (async function(){
             try {
-              // --- Robust base path resolution ---
-              // Prefer the data-base attribute on the <script> tag we inject.
-              const findScript = () => {
-                // document.currentScript can be null with defer; fallback to scanning
-                const cs = document.currentScript;
-                if (cs && cs.src) return cs;
-                const all = Array.from(document.getElementsByTagName('script'));
-                return all.find(s => (s.src||'').includes('/assets/version-switcher/version-switcher.js')) || null;
-              };
-              const scriptEl = findScript();
+              // Derive basePath from the script tag src so it works on root and versioned pages.
+              const scriptEl = document.currentScript || document.querySelector('script[src*="assets/version-switcher/version-switcher.js"]');
+              const srcUrl = scriptEl ? new URL(scriptEl.src) : null;
+              const basePathFromScript = srcUrl ? srcUrl.pathname.replace(/\/assets\/version-switcher\/version-switcher\.js.*$/,'') : '';
 
-              // Highest priority: explicit base path provided via data attribute
-              const dataBase = scriptEl?.dataset?.base || '';
-
-              // If URL includes /Versions/Vx/ capture it (used to preserve subpage paths)
+              // Detect if we're on a versioned URL: /.../Versions/Vx.y.z/...
               const m = location.pathname.match(/^(.*)\/Versions\/(V[^/]+)\//);
-              const basePathFromUrl = m ? m[1] : '';
+              const currentVersion = m ? m[2] : null;
 
-              // Derive from script src (absolute) by trimming the known suffix
-              const baseFromSrc = (function(){
-                if (!scriptEl || !scriptEl.src) return '';
-                try {
-                  const u = new URL(scriptEl.src, location.href);
-                  return u.pathname.replace(/\/assets\/version-switcher\/version-switcher\.js.*$/, '');
-                } catch { return ''; }
-              })();
-
-              // Final base path preference: data-base > baseFromSrc > basePathFromUrl > ''
-              const prefixBase = dataBase || baseFromSrc || basePathFromUrl || '';
-              const metaUrl = `${prefixBase}/versions.json`;
-
+              // Fetch site metadata from the same base where this script was served.
+              const metaUrl = basePathFromScript + '/versions.json';
               const meta = await fetch(metaUrl, { cache: 'no-store' }).then(r => r.ok ? r.json() : null).catch(()=>null);
               if (!meta) return;
 
-              const basePath = meta.basePath || prefixBase || '';
+              const basePath = meta.basePath || basePathFromScript || '';
               const versions = Array.isArray(meta.versions) ? meta.versions.slice() : [];
-              const latest   = meta.latest || (versions[versions.length-1] || null);
-              const currentVersion  = m ? m[2] : null;
+              const latest = meta.latest || (versions.length ? versions[versions.length - 1] : null);
 
-              // Sort descending (newest first)
+              // Sort versions descending by semantic-ish numbers
               versions.sort((a,b)=>{
                 const av = a.replace(/^V/,'').split('.').map(Number);
                 const bv = b.replace(/^V/,'').split('.').map(Number);
@@ -153,7 +122,7 @@ jobs:
                 return 0;
               });
 
-              // Build selector (same look/behavior)
+              // Create dropdown
               const select = document.createElement('select');
               select.setAttribute('aria-label','Select documentation version');
               select.className = 'version-switcher';
@@ -164,33 +133,40 @@ jobs:
                 opt.textContent = v + (v===latest ? ' •' : '');
                 select.appendChild(opt);
               });
-              if (currentVersion && versions.includes(currentVersion)) select.value = currentVersion;
-              else if (latest) select.value = latest;
 
+              if (currentVersion && versions.includes(currentVersion)) {
+                select.value = currentVersion;
+              } else if (latest) {
+                select.value = latest;
+              }
+
+              // Navigate to chosen version.
               async function go(v){
-                // Preserve subpage path if possible
+                // If we were on a versioned page, try to keep the "rest" of the path.
                 const rest = m ? location.pathname.replace(/^(.*)\/Versions\/(V[^/]+)\//, '') : '';
-                const targetSame = `${basePath}/Versions/${v}/${rest}`;
-                if (!rest) { location.href = targetSame; return; }
+                const tryTarget = rest ? `${basePath}/Versions/${v}/${rest}` : `${basePath}/Versions/${v}/`;
+
+                if (!rest) {
+                  location.href = tryTarget;
+                  return;
+                }
                 try {
-                  const ok = await fetch(targetSame, { method: 'HEAD', cache: 'no-store' }).then(r => r.ok);
-                  location.href = ok ? targetSame : `${basePath}/Versions/${v}/`;
+                  const ok = await fetch(tryTarget, { method: 'HEAD', cache: 'no-store' }).then(r => r.ok);
+                  location.href = ok ? tryTarget : `${basePath}/Versions/${v}/`;
                 } catch {
                   location.href = `${basePath}/Versions/${v}/`;
                 }
               }
               select.addEventListener('change', e => go(e.target.value));
 
-              // Mount in the same header positions; no changes to placement
+              // Mount into common DocFX nav locations; fallback to body.
               const trySelectors = [
                 '.navbar .navbar-collapse .nav.navbar-nav.navbar-right',
                 '.navbar .navbar-collapse .navbar-right',
                 '#navbar .nav.navbar-nav.navbar-right',
                 '.navbar .navbar-collapse',
                 '.navbar .container',
-                '.navbar',
-                'header .container',
-                'header'
+                '.navbar'
               ];
               let mounted = false;
               function mountRight(item){
@@ -210,51 +186,52 @@ jobs:
               }
               if (!mounted) document.body.appendChild(select);
 
-              // Theme-aware styles (unchanged)
+              // Theme-aware styling; works on base page and versioned pages.
               const style = document.createElement('style');
               style.textContent = `
-                :root { --vs-bg: #ffffff; --vs-fg: #000000; --vs-bd: #c0c0c0; }
-                [data-theme="dark"], html.theme-dark, body.theme-dark, html[data-color-mode="dark"], body[data-color-mode="dark"] {
-                  --vs-bg: #222222; --vs-fg: #ffffff; --vs-bd: #444444;
-                }
-                @media (prefers-color-scheme: dark) {
-                  :root { color-scheme: light dark; }
-                  :root:not([data-theme="light"]):not(.theme-light) {
-                    --vs-bg: #222222; --vs-fg: #ffffff; --vs-bd: #444444;
-                  }
-                }
                 .version-switcher {
-                  border: 1px solid var(--vs-bd);
+                  border: 1px solid var(--color-border, rgba(0,0,0,.2));
                   border-radius: 4px;
                   padding: 4px 6px;
                   margin-left: 12px;
-                  background: var(--vs-bg);
-                  color: var(--vs-fg);
+                }
+                [data-theme="light"] .version-switcher, .theme-light .version-switcher {
+                  background: #fff;
+                  color: #000;
+                }
+                [data-theme="dark"] .version-switcher, .theme-dark .version-switcher {
+                  background: #222;
+                  color: #fff;
                 }
               `;
               document.head.appendChild(style);
-
             } catch (e) {
               console.warn('Version switcher failed:', e);
             }
           })();
           JS
 
-      - name: Inject switcher into all pages (root + versions)
+      - name: Inject switcher into all HTML pages (root + versions)
         shell: bash
         run: |
-          find _site -type f -name '*.html' ! -path '_site/assets/*' | while read -r file; do
-            if grep -q 'assets/version-switcher/version-switcher.js' "$file"; then
-              continue
-            fi
-            if grep -qi '</body>' "$file"; then
-              # Insert right before </body>, and pass BASE_PATH explicitly as data-base
-              sed -i "/<\/body>/I i <script src=\"${BASE_PATH}/assets/version-switcher/version-switcher.js\" defer data-base=\"${BASE_PATH}\"></script>" "$file"
-            else
-              # Fallback append (rare)
-              printf '\n<script src="%s/assets/version-switcher/version-switcher.js" defer data-base="%s"></script>\n' "${BASE_PATH}" "${BASE_PATH}" >> "$file"
-            fi
-          done
+          # Inject on all HTML pages we ship, excluding files inside /assets (where the script itself lives)
+          find _site -type f -name '*.html' \
+            ! -path '_site/assets/*' \
+            | while read -r file; do
+              # Skip 404.html (keeps the redirect minimal)
+              if [ "$(basename "$file")" = "404.html" ]; then
+                continue
+              fi
+              if grep -q 'assets/version-switcher/version-switcher.js' "$file"; then
+                continue
+              fi
+              if grep -q '</body>' "$file"; then
+                # Provide BASE_PATH explicitly before loading the script (not strictly required, but harmless).
+                sed -i "/<\/body>/i <script src=\"${BASE_PATH}/assets/version-switcher/version-switcher.js\" defer></script>" "$file"
+              else
+                printf '\n<script src="%s/assets/version-switcher/version-switcher.js\" defer></script>\n' "${BASE_PATH}" >> "$file"
+              fi
+            done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
