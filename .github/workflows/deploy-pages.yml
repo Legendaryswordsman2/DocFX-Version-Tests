@@ -57,17 +57,13 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p _site
-
-          # Publish all versions under /Versions
+          # Keep all versions
           rsync -a Versions/ _site/Versions/
-
-          # Copy latest to ROOT so base URL shows latest without redirect
+          # Copy latest to root so base URL shows latest (no redirect)
           rsync -a "_site/Versions/${{ steps.versions.outputs.latest }}/" _site/
-
-          # Prevent Jekyll processing
           touch _site/.nojekyll
 
-          # 404 -> base root (no version)
+          # 404 -> base root (no version in URL)
           cat > _site/404.html <<'HTML'
           <!doctype html><meta charset="utf-8">
           <title>Not Found</title>
@@ -76,7 +72,7 @@ jobs:
           HTML
           sed -i "s|__BASE__|${BASE_PATH}|g" _site/404.html
 
-      - name: Write versions.json (metadata for the switcher)
+      - name: Write versions.json
         run: |
           cat > _site/versions.json <<JSON
           {
@@ -86,34 +82,31 @@ jobs:
           }
           JSON
 
-      - name: Add version switcher JS (look/UX unchanged)
+      - name: Add version switcher JS (look/behavior unchanged)
         run: |
           mkdir -p _site/assets/version-switcher
           cat > _site/assets/version-switcher/version-switcher.js <<'JS'
           (async function(){
             try {
-              // Detect if URL already contains /Versions/Vx.y.z/
+              // Detect /Versions/Vx.y.z/ in URL (versioned pages)
               const m = location.pathname.match(/^(.*)\/Versions\/(V[^/]+)\//);
               const basePathFromUrl = m ? m[1] : '';
               const currentVersion = m ? m[2] : null;
 
-              // Infer BASE_PATH from our <script src="..."> when not in /Versions/.../
+              // Infer BASE_PATH from our <script src="..."> so base URL pages work
               const scriptEl = document.currentScript || document.querySelector('script[src*="assets/version-switcher/version-switcher.js"]');
               let hintedBase = '';
               if (scriptEl) {
                 try {
                   const u = new URL(scriptEl.src, location.href);
-                  // Trim trailing /assets/version-switcher/version-switcher.js
                   hintedBase = u.pathname.replace(/\/assets\/version-switcher\/version-switcher\.js.*$/, '');
                 } catch {}
               }
-
               const baseGuess = basePathFromUrl || hintedBase || '';
 
               async function fetchMeta() {
                 const candidates = [];
                 if (baseGuess) candidates.push(`${baseGuess}/versions.json`);
-                // try relative to current path, then site root as a last resort
                 const here = location.pathname.replace(/\/$/, '');
                 candidates.push(`${here}/versions.json`);
                 candidates.push(`/versions.json`);
@@ -133,7 +126,7 @@ jobs:
               const versions = Array.isArray(meta.versions) ? meta.versions.slice() : [];
               const latest = meta.latest || (versions[versions.length-1] || null);
 
-              // Sort desc by semantic version
+              // Sort desc semver
               versions.sort((a,b)=>{
                 const av = a.replace(/^V/,'').split('.').map(Number);
                 const bv = b.replace(/^V/,'').split('.').map(Number);
@@ -144,11 +137,10 @@ jobs:
                 return 0;
               });
 
-              // Build dropdown (same look/UX as before)
+              // Build dropdown (same UI)
               const select = document.createElement('select');
               select.setAttribute('aria-label','Select documentation version');
               select.className = 'version-switcher';
-
               versions.forEach(v=>{
                 const opt = document.createElement('option');
                 opt.value = v;
@@ -171,7 +163,7 @@ jobs:
               }
               select.addEventListener('change', e => go(e.target.value));
 
-              // Try to mount into Modern theme header; fallback remains the same
+              // Try to mount into Modern theme header, but WAIT if header isn't ready yet
               const trySelectors = [
                 '.navbar .navbar-collapse .nav.navbar-nav.navbar-right',
                 '.navbar .navbar-collapse .navbar-right',
@@ -181,23 +173,44 @@ jobs:
                 '.navbar'
               ];
 
-              let mounted = false;
-              function mountRight(item){
-                if (!item) return false;
-                if (item.tagName === 'UL') {
+              function mountInto(target){
+                if (!target) return false;
+                if (target.tagName === 'UL') {
                   const li = document.createElement('li');
                   li.appendChild(select);
-                  item.appendChild(li);
+                  target.appendChild(li);
                 } else {
-                  item.appendChild(select);
+                  target.appendChild(select);
                 }
                 return true;
               }
-              for (const sel of trySelectors) {
-                const target = document.querySelector(sel);
-                if (target && mountRight(target)) { mounted = true; break; }
+
+              function tryMount(){
+                for (const sel of trySelectors) {
+                  const el = document.querySelector(sel);
+                  if (el && mountInto(el)) return true;
+                }
+                return false;
               }
-              if (!mounted) document.body.appendChild(select);
+
+              function ensureMounted(){
+                if (tryMount()) return;
+                // Fallback to body so it's visible while we wait
+                if (!select.isConnected) document.body.appendChild(select);
+                // Watch for header arriving, then move into it
+                const obs = new MutationObserver(()=>{
+                  if (tryMount()) { obs.disconnect(); }
+                });
+                obs.observe(document.documentElement, { childList: true, subtree: true });
+                // Safety: stop observing after 10s
+                setTimeout(()=>obs.disconnect(), 10000);
+              }
+
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', ensureMounted);
+              } else {
+                ensureMounted();
+              }
 
               // Theme-aware styles (unchanged)
               const style = document.createElement('style');
@@ -225,20 +238,31 @@ jobs:
           })();
           JS
 
-      - name: Inject switcher into ALL pages (base + versioned)
+      - name: Inject switcher into ALL pages (base + versioned, robust)
         shell: bash
         run: |
-          find _site -type f -name '*.html' | while read -r file; do
+          set -euo pipefail
+          # Insert before </body> (case-insensitive). If missing, append at end.
+          find _site -type f -name '*.html' -print0 | while IFS= read -r -d '' file; do
             # Skip if already present
-            if grep -q 'assets/version-switcher/version-switcher.js' "$file"; then
+            if grep -qi 'assets/version-switcher/version-switcher.js' "$file"; then
               continue
             fi
-            if grep -q '</body>' "$file"; then
-              sed -i "/<\/body>/i <script src=\"${BASE_PATH}/assets/version-switcher/version-switcher.js\" defer></script>" "$file"
+            if grep -qi '</body>' "$file"; then
+              perl -0777 -pe 's#</body>#<script src="'"${BASE_PATH}"'/assets/version-switcher/version-switcher.js" defer></script></body>#i' -i "$file"
             else
               printf '\n<script src="%s/assets/version-switcher/version-switcher.js" defer></script>\n' "${BASE_PATH}" >> "$file"
             fi
           done
+
+          # Belt & suspenders: explicitly ensure root index.html has the script
+          if [ -f "_site/index.html" ] && ! grep -qi 'assets/version-switcher/version-switcher.js' _site/index.html; then
+            if grep -qi '</body>' _site/index.html; then
+              perl -0777 -pe 's#</body>#<script src="'"${BASE_PATH}"'/assets/version-switcher/version-switcher.js" defer></script></body>#i' -i _site/index.html
+            else
+              printf '\n<script src="%s/assets/version-switcher/version-switcher.js" defer></script>\n' "${BASE_PATH}" >> _site/index.html
+            fi
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
