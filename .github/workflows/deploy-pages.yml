@@ -36,7 +36,6 @@ jobs:
         run: |
           set -euo pipefail
           shopt -s nullglob
-          # Collect subfolders of Versions/, drop leading V for sorting, sort as versions
           mapfile -t DIRS < <(find Versions -maxdepth 1 -mindepth 1 -type d -printf "%f\n" | sed 's/^V//' | sort -V)
           if [ ${#DIRS[@]} -eq 0 ]; then
             echo "No version folders found in Versions/" >&2
@@ -44,7 +43,6 @@ jobs:
           fi
 
           LATEST="V${DIRS[-1]}"
-
           JSON_VERSIONS=$(printf '%s\n' "${DIRS[@]}" | sed 's/^/V/' | jq -R . | jq -sc .)
 
           {
@@ -60,17 +58,16 @@ jobs:
           set -euo pipefail
           mkdir -p _site
 
-          # 1) Keep all versioned builds under /Versions
+          # Publish all versions under /Versions
           rsync -a Versions/ _site/Versions/
 
-          # 2) Copy the latest version's files to the ROOT so base URL shows latest without redirect
+          # Copy latest to ROOT so base URL shows latest without redirect
           rsync -a "_site/Versions/${{ steps.versions.outputs.latest }}/" _site/
 
           # Prevent Jekyll processing
           touch _site/.nojekyll
 
-          # Make a 404 that bounces users to the base path root (no version) if a URL is broken
-          # (Project Pages usually serve 404.html at BASE_PATH/404.html)
+          # 404 -> base root (no version)
           cat > _site/404.html <<'HTML'
           <!doctype html><meta charset="utf-8">
           <title>Not Found</title>
@@ -89,24 +86,54 @@ jobs:
           }
           JSON
 
-      - name: Add version switcher JS (unchanged look & behavior)
+      - name: Add version switcher JS (look/UX unchanged)
         run: |
           mkdir -p _site/assets/version-switcher
           cat > _site/assets/version-switcher/version-switcher.js <<'JS'
           (async function(){
             try {
+              // Detect if URL already contains /Versions/Vx.y.z/
               const m = location.pathname.match(/^(.*)\/Versions\/(V[^/]+)\//);
               const basePathFromUrl = m ? m[1] : '';
               const currentVersion = m ? m[2] : null;
 
-              const metaUrl = (basePathFromUrl || '') + '/versions.json';
-              const meta = await fetch(metaUrl, { cache: 'no-store' }).then(r => r.json()).catch(()=>null);
+              // Infer BASE_PATH from our <script src="..."> when not in /Versions/.../
+              const scriptEl = document.currentScript || document.querySelector('script[src*="assets/version-switcher/version-switcher.js"]');
+              let hintedBase = '';
+              if (scriptEl) {
+                try {
+                  const u = new URL(scriptEl.src, location.href);
+                  // Trim trailing /assets/version-switcher/version-switcher.js
+                  hintedBase = u.pathname.replace(/\/assets\/version-switcher\/version-switcher\.js.*$/, '');
+                } catch {}
+              }
+
+              const baseGuess = basePathFromUrl || hintedBase || '';
+
+              async function fetchMeta() {
+                const candidates = [];
+                if (baseGuess) candidates.push(`${baseGuess}/versions.json`);
+                // try relative to current path, then site root as a last resort
+                const here = location.pathname.replace(/\/$/, '');
+                candidates.push(`${here}/versions.json`);
+                candidates.push(`/versions.json`);
+                for (const url of candidates) {
+                  try {
+                    const r = await fetch(url, { cache: 'no-store' });
+                    if (r.ok) return await r.json();
+                  } catch {}
+                }
+                return null;
+              }
+
+              const meta = await fetchMeta();
               if (!meta) return;
 
-              const basePath = meta.basePath || basePathFromUrl || '';
+              const basePath = meta.basePath || baseGuess || '';
               const versions = Array.isArray(meta.versions) ? meta.versions.slice() : [];
               const latest = meta.latest || (versions[versions.length-1] || null);
 
+              // Sort desc by semantic version
               versions.sort((a,b)=>{
                 const av = a.replace(/^V/,'').split('.').map(Number);
                 const bv = b.replace(/^V/,'').split('.').map(Number);
@@ -117,6 +144,7 @@ jobs:
                 return 0;
               });
 
+              // Build dropdown (same look/UX as before)
               const select = document.createElement('select');
               select.setAttribute('aria-label','Select documentation version');
               select.className = 'version-switcher';
@@ -143,6 +171,7 @@ jobs:
               }
               select.addEventListener('change', e => go(e.target.value));
 
+              // Try to mount into Modern theme header; fallback remains the same
               const trySelectors = [
                 '.navbar .navbar-collapse .nav.navbar-nav.navbar-right',
                 '.navbar .navbar-collapse .navbar-right',
@@ -168,10 +197,9 @@ jobs:
                 const target = document.querySelector(sel);
                 if (target && mountRight(target)) { mounted = true; break; }
               }
-
               if (!mounted) document.body.appendChild(select);
 
-              /* Theme-aware styles (unchanged) */
+              // Theme-aware styles (unchanged)
               const style = document.createElement('style');
               style.textContent = `
                 .version-switcher {
@@ -200,7 +228,6 @@ jobs:
       - name: Inject switcher into ALL pages (base + versioned)
         shell: bash
         run: |
-          # Inject into every HTML under _site (ensures base pages without /Versions/ also have it)
           find _site -type f -name '*.html' | while read -r file; do
             # Skip if already present
             if grep -q 'assets/version-switcher/version-switcher.js' "$file"; then
@@ -209,7 +236,7 @@ jobs:
             if grep -q '</body>' "$file"; then
               sed -i "/<\/body>/i <script src=\"${BASE_PATH}/assets/version-switcher/version-switcher.js\" defer></script>" "$file"
             else
-              printf '\n<script src="%s/assets/version-switcher/version-switcher.js\" defer></script>\n' "${BASE_PATH}" >> "$file"
+              printf '\n<script src="%s/assets/version-switcher/version-switcher.js" defer></script>\n' "${BASE_PATH}" >> "$file"
             fi
           done
 
